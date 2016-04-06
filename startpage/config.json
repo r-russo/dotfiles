@@ -1,0 +1,51 @@
+{
+    "bool": {
+        "borders":              true,
+        "alwaysopen":           false,
+        "mascot":               true,
+        "allowVersionCheck":    true
+    },
+    
+    "style": {
+        "heading_font":         "Roboto Condensed",
+        "link_font":            "Roboto",
+        "heading_font_size":    "18px",
+        "link_font_size":       "14px",
+        "background":           "#2c2b33",
+        "foreground":           "#d0d1dc",
+        "heading_color":        "#2c2b33",
+        "link_color":           "#757085",
+        "border_color":         "#9f9db6",
+        "border_width":         "4px",
+        "search_color":         "#aaaaaa",
+        "search_bg_color":      "#2c2b33"
+    },
+    
+    "ext": {
+        "images":              ["ext/akarin02.png",
+                                "ext/asakura01.png",
+                                "ext/Haruhi-chan.png",
+                                "ext/himawari02.png",
+                                "ext/renge01.png",
+                                "ext/sakurako01.png",
+                                "ext/mugi01.png",
+                                "ext/mio03.png",
+                                "ext/yukino01.png",
+                                "ext/homura01.png",
+                                "ext/mio01.png",
+                                "ext/akarin01.png",
+                                "ext/kmio01.png",
+                                "ext/reina01.png",
+                                "ext/mio02.png",
+                                "ext/kyui01.png",
+                                "ext/yui01.png",
+                                "ext/himawari01.png",
+                                "ext/nattsun01.png"],
+
+        "bottom":               "0",
+        "right":                "0",
+        "height":               "500px",
+        "width":                "500px",
+        "opacity":              ".8"
+    }
+}

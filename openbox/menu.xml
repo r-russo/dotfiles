@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="mat" label="Matemática">
+		<item icon="/usr/share/icons/hicolor/16x16/apps/octave.png" label="Octave">
+			<action name="Execute">
+				<execute>/usr/bin/octave --force-gui</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/matlab.png" label="MATLAB 2013">
+			<action name="Execute">
+				<execute>matlab2013</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/matlab.png" label="MATLAB 2012">
+			<action name="Execute">
+				<execute>matlab2012</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/pixmaps/spyder3.png" label="Spyder">
+			<action name="Execute">
+				<execute>spyder3</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/hicolor/128x128/apps/wolfram-mathematicapi.png" label="Mathematica 9">
+			<action name="Execute">
+				<execute>/usr/local/Wolfram/Mathematica/9.0/Executables/Mathematica %F</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/pixmaps/geogebra.png" label="Geogebra">
+			<action name="Execute">
+				<execute>geogebra</execute>
+			</action>
+		</item>
+	</menu>
+
+	<menu id="sim" label="Simulación">
+		<item icon="/home/russo/.local/share/icons/hicolor/32x32/apps/0E18_scad3.0.png" label="LTSpice">
+			<action name="Execute">
+				<execute>env WINEPREFIX="/home/russo/.wine" wine C:\\windows\\command\\start.exe /Unix /home/russo/.wine/dosdevices/c:/users/russo/Start\ Menu/LTspice\ IV.lnk</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/.local/share/icons/hicolor/32x32/apps/3D55_tina.0.png" label="TINA-TI">
+			<action name="Execute">
+				<execute>env WINEPREFIX="/home/russo/.wine" wine C:\\windows\\command\\start.exe /Unix /home/russo/.wine/dosdevices/c:/users/Public/Start\ Menu/Programs/Tina\ 9\ -\ TI/Tina-TI.lnk</execute>
+			</action>
+		</item>
+	</menu>
+
+	<menu id="war" label="Warcraft">
+		<item icon="/home/russo/WoW/icon.png" label="WoW">
+			<action name="Execute">
+				<execute>wow</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/.local/share/icons/hicolor/32x32/apps/8865_Warcraft III.0.png" label="Warcraft III">
+			<action name="Execute">
+				<execute>wine explorer /desktop=w3,1280x720 &quot;/home/russo/.wine/drive_c/Program Files (x86)/Warcraft III/War3.exe&quot; -classic -opengl</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/.local/share/icons/hicolor/32x32/apps/5548_Frozen Throne.0.png" label="Wacraft III: The Frozen Throne">
+			<action name="Execute">
+				<execute>wine explorer /desktop=w3,1280x720 &quot;/home/russo/.wine/drive_c/Program Files (x86)/Warcraft III/War3.exe&quot; -opengl</execute>
+			</action>
+		</item>
+	</menu>
+
+	<menu id="th" label="Touhou">
+		<item icon="/home/russo/Juegos/TH06 ~ The Embodiment of Scarlet Devil/ico.png" label="Touhou 6">
+			<action name="Execute">
+				<execute>th6</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/Juegos/TH07 ~ Perfect Cherry Blossom/ico.png" label="Touhou 7">
+			<action name="Execute">
+				<execute>th7</execute>
+			</action>
+		</item>
+	</menu>
+
+	<menu id="juegos" label="Juegos">
+		<!--<menu id="war"/>-->
+		<menu id="th"/>
+		<item icon="/home/russo/.icons/undertale.png" label="Undertale">
+			<action name="Execute">
+				<execute>wine "/home/russo/Juegos/Undertale/UNDERTALE.exe"</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/.icons/neptunia.png" label="Hyperdimension Neptunia">
+			<action name="Execute">
+				<execute>env WINEPREFIX="/home/russo/.wine" wine C:\\windows\\command\\start.exe /Unix /home/russo/.wine/dosdevices/c:/users/Public/Escritorio/Hyperdimension\ Neptunia\ Re\ Birth1.lnk</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/Juegos/Megamari/ico.png" label="Megamari">
+			<action name="Execute">
+				<execute>megamari</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/Juegos/Rosenkreuz Stilette ~Blades of the Rose Cross~/ico.png" label="Rosenkreuzstilette">
+			<action name="Execute">
+				<execute>rosenkreuzstilette</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/Juegos/Rosenkreuzstilette Freudenstachel/ico.png" label="Rosenkreuzstilette Freudenstachel">
+			<action name="Execute">
+				<execute>rks_fs</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/Juegos/Touhou Koumajou Densetsu 2 ~ Stranger's Requiem/ico.png" label="Koumajou Densetsu II">
+			<action name="Execute">
+				<execute>koumajou2</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/Juegos/[Fuwanovel] Clannad -English-/ico.png" label="Clannad">
+			<action name="Execute">
+				<execute>rlvm "/home/russo/Juegos/[Fuwanovel] Clannad -English-/"</execute>
+			</action>
+		</item>
+	</menu>
+
+	<menu id="emu" label="Emuladores">
+		<item icon="/usr/share/icons/hicolor/16x16/apps/snes9x.png" label="Snes9X">
+			<action name="Execute">
+				<execute>snes9x-gtk</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/hicolor/16x16/apps/vbam.png" label="VBA-M">
+			<action name="Execute">
+				<execute>gvbam</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/pixmaps/ppsspp.svg" label="ppsspp">
+			<action name="Execute">
+				<execute>ppspspp</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/.icons/Nintendo-DS-icon.png" label="DeSmuME">
+			<action name="Execute">
+				<execute>desmume</execute>
+			</action>
+		</item>
+	</menu>
+
+	<menu id="virtualbox" label="VirtualBox" icon="/usr/share/icons/hicolor/48x48/mimetypes/virtualbox.png">
+		<item icon="/home/russo/.icons/os_icons/os_winxp.png" label="Windows XP">
+			<action name="Execute">
+				<execute>/usr/lib/virtualbox/VirtualBox --comment "Windows XP" --startvm "1ed96653-a1a6-4d9b-81a6-11e1f33f72eb"</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/.icons/os_icons/os_win7_64.png" label="Windows 7">
+			<action name="Execute">
+				<execute>/usr/lib/virtualbox/VirtualBox --comment "Windows 7" --startvm "d107ccb9-a460-44cb-881f-fb051de6193f"</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/.icons/os_icons/os_ubuntu_64.png" label="Lubuntu">
+			<action name="Execute">
+				<execute>/usr/lib/virtualbox/VirtualBox --comment "Lubuntu" --startvm "519965aa-6aac-4d1b-aca1-f212caca3911"</execute>
+			</action>
+		</item>
+		<item icon="/home/russo/.icons/os_icons/os_debian_64.png" label="Debian">
+			<action name="Execute">
+				<execute>/usr/lib/virtualbox/VirtualBox --comment "Debian" --startvm "979bf196-6b2f-48be-afaf-8fc9051c1284"</execute>
+			</action>
+		</item>
+	</menu>
+
+	<menu id="root-menu" label="Openbox 3">
+		<menu id="mat"/>
+		<menu id="sim"/>
+		<menu id="juegos"/>
+		<menu id="emu" />
+		<menu id="virtualbox" />
+		<separator/>
+		<item label="Preferencias del escritorio">
+			<action name="Execute">
+				<execute>pcmanfm --desktop-pref</execute>
+			</action>
+		</item>
+		<item label="Preferencias de Openbox">
+			<action name="Execute">
+				<execute>obconf</execute>
+			</action>
+		</item>
+		<item label="Reconfigurar Openbox">
+			<action name="Reconfigure"/>
+		</item>
+		<item label="Salir">
+			<action name="Execute">
+				<execute>oblogout</execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>

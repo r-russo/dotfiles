@@ -1,0 +1,53 @@
+alignment top_right
+background yes
+border_width 5
+default_color CD6565
+default_outline_color white
+default_shade_color white
+draw_borders yes
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont Droid Sans:size=11
+gap_x 50
+gap_y 60
+#minimum_size 300 5
+#maximum_size 300 0
+minimum_size 300
+maximum_width 300
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_class Conky
+own_window_type override
+own_window_transparent no
+#own_window_colour 454545
+own_window_colour D8C4C4
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+double_buffer yes
+no_buffers yes
+
+#color1 white
+#color2 bbbbbb
+
+color1 black
+color2 555555
+color3 ff5f5f # urgente
+color4 e9ff78 # medio
+
+TEXT
+#${color1}${font Droid Sans:Italic:size=11}Hoy
+#${execi 60 nichicalendar --conky}
+#${image /home/russo/Imágenes/Nichijou/hoy.jpg -s 200x320 -p 50,28}
+#${voffset 300}
+#${color1}${hr 3}
+${color1}${font Droid Sans:Italic:size=11}Para hacer...
+${color2}${font Droid Sans:size=11}${execpi 5 todo --conky}

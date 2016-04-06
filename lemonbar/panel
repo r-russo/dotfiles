@@ -1,0 +1,204 @@
+#!/bin/sh
+
+# Configuración
+
+DEV="enp3s0"
+RX=`cat /sys/class/net/$DEV/statistics/rx_bytes`
+TX=`cat /sys/class/net/$DEV/statistics/tx_bytes`
+TIEMPO=`date +%s.%N`
+
+. ~/.lemonbar/conf.sh
+
+# Íconos
+
+RELOJ="%{T2}%{T-}"
+TEMP="%{T2}%{T-}"
+MEM="%{T2}%{T-}"
+ICPU="%{T2}%{T-}"
+VOL="%{T2}%{T-}"
+MPD="%{T2}%{T-}"
+VOLM="%{T2}%{T-}"
+DISCO="%{T2}%{T-}"
+REPRODUCIENDO="%{T2}%{T-}"
+PAUSADO="%{T2}%{T-}"
+DETENIDO="%{T2}%{T-}"
+NET_DOWN="%{T2}%{T-}"
+NET_UP="%{T2}%{T-}"
+
+# Funciones
+
+calcularColorVol()
+{
+    if [ $1 -lt $2 ]; then
+        echo $ROJO
+    else
+        if [ $1 -lt $3 ]; then
+            echo $AMARILLO
+        else
+            echo $VERDE
+        fi
+    fi
+}
+
+calcularColor()
+{
+    if [ $1 -lt $2 ]; then
+        echo $VERDE
+    else
+        if [ $1 -lt $3 ]; then
+            echo $AMARILLO
+        else
+            echo $ROJO
+        fi
+    fi
+}
+
+round()
+{
+    echo $(printf %.$2f $(echo "scale=$2;(((10^$2)*$1)+0.5)/(10^$2)" | bc))
+}
+
+# Barra
+
+sep()
+{
+    echo -n "%{F$SEPARADOR}⬩%{F-}"
+}
+
+cpu()
+{
+    CPU=`mpstat | head -n4 | tail -n1 | sed "s/,/./g"| awk '{print 100 - $12}'`
+    CPU=$(round $CPU 0)
+    COLOR=$(calcularColor $CPU 60 90)
+    echo -n "%{A:urxvt -e htop:}%{F$ICONO}$ICPU %{F$BLANCO}CPU: %{F$COLOR}$CPU%%{F-}%{A}"
+}
+
+ram()
+{
+    RAMT=`free | head -n2 | tail -n1 | awk '{print $2}'`
+    RAMU=`free | head -n2 | tail -n1 | awk '{print $3}'`
+    SWAPT=`free | head -n5 | tail -n1 | awk '{print $2}'`
+    SWAPU=`free | head -n5 | tail -n1 | awk '{print $3}'`
+
+    RAM=$(round $((RAMU*100/RAMT)) 0)
+    SWAP=$(round $((SWAPU*100/SWAPT)) 0)
+
+    COLOR_RAM=$(calcularColor $RAM 60 90)
+    COLOR_SWAP=$(calcularColor $SWAP 60 90)
+
+    echo -n "%{F$ICONO}$MEM %{F$BLANCO}RAM:%{F-} %{F$COLOR_RAM}$RAM%%{F-} SWAP: %{F$COLOR_SWAP}$SWAP%%{F-}"
+}
+
+temp()
+{
+    CPU0=`sensors | grep "Core 0" | awk '{print $3}' | tr -d '+°C'`
+    CPU1=`sensors | grep "Core 2" | awk '{print $3}' | tr -d '+°C'`
+    CPU0=$(round $CPU0 0)
+    CPU1=$(round $CPU1 0)
+
+    HDD=`nc localhost 7634 | cut -d '|' -f4`
+    GPU=`nvidia-smi -a | grep "GPU Current Temp" | awk '{print $5}'`
+
+    COLOR_CPU0=$(calcularColor $CPU0 80 90)
+    COLOR_CPU1=$(calcularColor $CPU1 80 90)
+    COLOR_HDD=$(calcularColor $HDD 50 70)
+    COLOR_GPU=$(calcularColor $GPU 70 90)
+
+    echo -n "%{F$ICONO}$TEMP %{F$BLANCO}CPU0:%{F-} %{F$COLOR_CPU0}$CPU0°C%{F-} \
+CPU1: %{F$COLOR_CPU1}$CPU1°C%{F-} \
+HDD: %{F$COLOR_HDD}$HDD°C%{F-} \
+GPU: %{F$COLOR_GPU}$GPU°C%{F-}"
+}
+
+volumen()
+{
+    MASTER=`amixer get Master | tail -n1 | awk '{print $5}' | tr -d '[%]'`
+    ESTADO=`amixer get Master | tail -n1 | awk '{print $6}' | tr -d '[]'`
+    if [ $ESTADO == "on" ]; then
+        COLOR=$(calcularColorVol $MASTER 10 30 50)
+        ICO=$VOL
+    else
+        COLOR=$ROJO
+        ICO=$VOLM
+    fi
+  
+    echo "%{F$COLOR}$ICO $MASTER%%{F-}"
+  
+}
+
+discos()
+{
+    ROOT=`df -H | grep sda5 | awk '{print $5}' | tr -d '%'`
+    HOME=`df -H | grep sda7 | awk '{print $5}' | tr -d '%'`
+    INT=`df -H | grep sdb3 | awk '{print $5}' | tr -d '%'`
+
+    COLOR_ROOT=$(calcularColor $ROOT 60 90)
+    COLOR_HOME=$(calcularColor $HOME 60 90)
+    COLOR_INT=$(calcularColor $INT 60 90)
+
+    echo "%{F$ICONO}$DISCO%{F-} /: %{F$COLOR_ROOT}$ROOT% %{F$BLANCO}/home: %{F$COLOR_HOME}$HOME%%{F-}"
+    
+}
+
+musica()
+{
+    ESTADO=`mpc | head -n 2 | tail -n 1 | awk '{print $1}'`
+    PISTA=`mpc | head -n 1`
+     
+    if [ "$ESTADO" == "[playing]" ]; then
+        COLOR=$VERDE
+        ESTADO=$REPRODUCIENDO
+    else
+        if [ "$ESTADO" == "[paused]" ]; then
+            COLOR=$AMARILLO
+            ESTADO=$PAUSADO
+        else
+            COLOR=$ROJO
+            ESTADO=$DETENIDO
+        fi
+    fi
+    
+    echo "%{A1:urxvt -e ncmpcpp -s visualizer:}%{F$ICONO}$MPD %{F-}MPD%{A}: %{F$COLOR}%{A1:mpc toggle:}$ESTADO%{A}%{F-}"  
+}
+
+internet()
+{
+    RXN=`cat /sys/class/net/$DEV/statistics/rx_bytes`
+    TXN=`cat /sys/class/net/$DEV/statistics/tx_bytes`
+    TIEMPOI=`date +%s.%N`
+
+    DELTA=$(python -c "print(round($TIEMPOI - $TIEMPO,2))")
+    RECIBIDO=$(python -c "print(round(($RXN - $RX)/$DELTA/1024))")
+    TRANSMITIDO=$(python -c "print(round(($TXN - $TX)/$DELTA/1024))")
+
+    if [ $RECIBIDO -gt 800 ]; then
+        RECIBIDO=$(python -c "print(round($RECIBIDO/1024,2))")
+        UNIDADRX="MB/s"
+    else
+        UNIDADRX="kB/s"
+    fi
+
+    if [ $TRANSMITIDO -gt 800 ]; then
+        TRANSMITIDO=$(python -c "print(round($TRANSMITIDO/1024,2))")
+        UNIDADTX="MB/s"
+    else
+        UNIDADTX="kB/s"
+    fi
+
+    echo "%{F$VERDE}$NET_DOWN $(printf "%4s" "$RECIBIDO") $UNIDADRX %{F$ROJO}$NET_UP $(printf "%4s" "$TRANSMITIDO") $UNIDADTX%{F-}"
+}
+
+fechahora()
+{
+    HORA=`date +%H:%M`
+    #FECHA=`date +%d/%m/%y`
+    FECHA=`date +"%A, %d de %B"`
+    echo -ne "%{F$BLANCO}$FECHA   %{F$ICONO}$RELOJ%{F-} %{F$BLANCO}$HORA%{F-}"
+}
+
+while true; do
+    echo "%{F-}%{B-}%{l} $(cpu) $(sep) $(ram) $(sep) $(temp) \
+%{c}$(fechahora) \
+%{r}%{F-}%{B-}$(volumen) $(sep) $(musica) $(sep) $(discos) "
+    sleep .5
+done

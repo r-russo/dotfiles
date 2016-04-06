@@ -1,0 +1,37 @@
+alignment bottom_left
+background yes
+border_width 0
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont Droid Sans:size=24
+gap_x 20
+gap_y 30
+minimum_size 0 0
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_class Conky
+own_window_type desktop
+own_window_transparent yes
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+double_buffer yes
+
+TEXT
+$uptime_short
+${font Droid Sans:size=72}${time %H:%M}
+${voffset -40}${font Droid Sans:size=30}${time %d/%m/%y}

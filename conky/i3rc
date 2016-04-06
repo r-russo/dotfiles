@@ -1,0 +1,77 @@
+out_to_console yes
+out_to_x no
+background no
+update_interval 1
+total_run_times 0
+use_spacer none
+
+override_utf8_locale yes
+
+TEXT
+,[
+{"full_text": "%", "color": "\#FFB089"},
+#CPU
+#
+{"full_text": "CPU:"},
+${if_match ${cpu cpu0} < 60}{"full_text": "${cpu cpu0}%","color": "\#91DE87"},
+$else${if_match ${cpu cpu0} < 90}{"full_text": "${cpu cpu0}%","color": "\#DEDD87"},
+$else{"full_text": "${cpu cpu0}%","color": "\#DE8788"}$endif$endif
+#
+#RAM
+#
+{"full_text": "RAM:"},
+${if_match $memperc < 60}{"full_text": "$memperc%","color": "\#91DE87"},
+$else${if_match $memperc < 90}{"full_text": "$memperc%","color": "\#DEDD87"},
+$else{"full_text": "$memperc%","color": "\#DE8788"}$endif$endif
+#
+#SWAP
+#
+{"full_text": "SWAP:"},
+${if_match $swapperc < 60}{"full_text": "$swapperc%","color": "\#91DE87"},
+$else${if_match $swapperc < 90}{"full_text": "$memperc%","color": "\#DEDD87"},
+$else{"full_text": "$swapperc%","color": "\#DE8788"}$endif$endif
+#
+{"full_text": "t", "color": "\#FFB089"},
+${execi 5 ~/.conky/temp-i3.sh}
+#
+{"full_text": "fs", "color": "\#FFB089"},
+#
+#/
+#
+{"full_text": "/:"},
+${if_match ${fs_used_perc /} < 60}{"full_text": "${fs_used_perc /}%","color": "\#91DE87"},
+$else${if_match ${fs_used_perc /} < 90}{"full_text": "${fs_used_perc /}%","color": "\#DEDD87"},
+$else{"full_text": "${fs_used_perc /}%","color": "\#DE8788"}$endif$endif
+#
+#/home
+#
+{"full_text": "/home:"},
+${if_match ${fs_used_perc /home} < 60}{"full_text": "${fs_used_perc /home}%","color": "\#91DE87"},
+$else${if_match ${fs_used_perc /home} < 90}{"full_text": "${fs_used_perc /home}%","color": "\#DEDD87"},
+$else{"full_text": "${fs_used_perc /home}%","color": "\#DE8788"}$endif$endif
+#
+{"full_text": "m", "color": "\#FFB089"},
+#
+${if_match "$mpd_status" == "Playing"}{"full_text": "$mpd_status ${scroll 20 $mpd_title} [$mpd_elapsed - $mpd_length]","color": "\#91DE87"},
+$else${if_match "$mpd_status" == "Paused"}{"full_text": "$mpd_status ${scroll 20 $mpd_title} [$mpd_elapsed - $mpd_length]","color": "\#DEDD87"},
+$else{"full_text": "$mpd_status", "color": "\#DE8788"},$endif$endif
+#
+{"full_text": "n", "color": "\#FFB089"},
+#
+{"full_text": "d ${downspeed enp3s0}", "color": "\#91DE87"},
+{"full_text": "u ${upspeed enp3s0}", "color": "\#DE8788"},
+#
+{"full_text": "v", "color": "\#FFB089"},
+#
+${execi 1 ~/.conky/vol-i3.sh}
+{"full_text": "d", "color": "\#FFB089"},
+{"full_text": "${time %H:%M} - ${time %d/%m/%y}"}
+]
+
+#\\x07d \\x04${downspeed enp3s0} \\x07u \\x06${upspeed enp3s0} \\x03- \
+#
+#
+#\\x07v ${execi 2 ~/.conky/vol.sh} \\x03-\\x01 \
+#
+#
+#\\x07d \\x03${time %H:%M} \\x01- ${time %d/%m/%y} 

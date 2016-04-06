@@ -1,0 +1,40 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+
+
+start-pulseaudio-x11 &
+numlockx on &
+setxkbmap dvorak es &
+(compton -b --config ~/.config/compton.conf && nvidia-settings --load-config-only) &
+mpd &
+
+#volwheel &
+(sleep 2 && tint2) &
+(sleep 2 && conky -c ~/.conky/conkyrc) &
+(sleep 2 && conky -c ~/.conky/conkytodo) &
+#feh --bg-fill ~/Imágenes/Fondos/$(cat ~/.fondo) &
+nitrogen --restore &
+sh ~/.dzen/main.sh &
+/usr/lib/deja-dup/deja-dup/deja-dup-monitor &
+xfce4-power-manager &
+
+(sleep 4 && thunderbird) &
+(sleep 1 && liferea) &
+(sleep 3 && deluge) &
+(sleep 2 && sonata --hidden) &
+(sleep 2 && dropboxd) &
