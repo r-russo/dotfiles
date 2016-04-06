@@ -16,6 +16,8 @@
 #
 #xfce-mcs-manager &
 
+set_dbus &
+
 start-pulseaudio-x11 &
 numlockx on &
 setxkbmap dvorak es &
