@@ -38,3 +38,4 @@ xfce4-power-manager &
 (sleep 3 && ktorrent) &
 #(sleep 2 && sonata --hidden) &
 (sleep 2 && dropboxd) &
+(sleep 2 && psyncgui) &
