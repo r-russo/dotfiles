@@ -7,4 +7,4 @@ Todo:
 
 Current theme:
 
-
+![alt tag](https://github.com/r-russo/dotfiles/raw/master/currentscrot.png)
