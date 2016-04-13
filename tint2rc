@@ -16,11 +16,11 @@ border_color_pressed = #2f2f2f 0
 # Background 2: Active task
 rounded = 0
 border_width = 0
-background_color = #ccccd7 100
+background_color = #d18395 100
 border_color = #ffffff 40
-background_color_hover = #ccccd7 100
+background_color_hover = #d18395 100
 border_color_hover = #ffffff 40
-background_color_pressed = #ccccd7 100
+background_color_pressed = #d18395 100
 border_color_pressed = #ffffff 40
 
 # Background 3: Urgent task
