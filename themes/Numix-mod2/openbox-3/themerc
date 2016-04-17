@@ -2,7 +2,7 @@
 # Author: Satyajit Sahoo <satyajit.happy@gmail.com>
 # License: GPL-3.0+
 
-# Color principal (actual: d18395)
+# Color principal (actual: dac6a6)
 #  - menu.items.active.bg.color
 #  - window.active.button.pressed.image.color
 #  - window.inactive.button.pressed.image.color
@@ -23,7 +23,7 @@ menu.items.text.color: #dcdcdc
 menu.items.disabled.text.color: #888888
 
 menu.items.active.bg: flat solid
-menu.items.active.bg.color: #d18395
+menu.items.active.bg.color: #dac6a6
 menu.items.active.text.color: #111111
 
 menu.separator.color: #262626
@@ -55,7 +55,7 @@ window.active.button.unpressed.image.color: #dcdcdc
 
 window.active.button.pressed.bg: flat solid
 window.active.button.pressed.bg.color: #2d2d2d
-window.active.button.pressed.image.color: #d18395
+window.active.button.pressed.image.color: #dac6a6
 
 window.active.button.disabled.bg: flat solid
 window.active.button.disabled.bg.color: #2d2d2d
@@ -85,7 +85,7 @@ window.inactive.button.unpressed.image.color: #888888
 
 window.inactive.button.pressed.bg: flat solid
 window.inactive.button.pressed.bg.color: #2d2d2d
-window.inactive.button.pressed.image.color: #d18395
+window.inactive.button.pressed.image.color: #dac6a6
 
 window.inactive.button.disabled.bg: flat solid
 window.inactive.button.disabled.bg.color: #2d2d2d
@@ -103,7 +103,7 @@ osd.label.bg.color: #2d2d2d
 osd.label.text.color: #dcdcdc
 
 osd.hilight.bg: flat solid
-osd.hilight.bg.color: #d18395
+osd.hilight.bg.color: #dac6a6
 
 osd.unhilight.bg: flat solid
 osd.unhilight.bg.color: #888888
@@ -120,7 +120,7 @@ osd.button.focused.bg: flat solid border
 osd.button.focused.bg.color: #303030
 osd.button.focused.*.border.color: #1e1e1e
 
-osd.button.focused.box.color: #d18395
+osd.button.focused.box.color: #dac6a6
 
 
 # Fonts
