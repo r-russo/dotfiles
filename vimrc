@@ -25,6 +25,10 @@ set modeline
 set nu
 set encoding=utf-8
 
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
 au Filetype python setl et ts=4 sw=4
 
 set background=dark
