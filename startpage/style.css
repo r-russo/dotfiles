@@ -8,18 +8,14 @@ body {
     background-color: #333333;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    position: relative;
-    margin: 0;
     padding-left: 10%;
     padding-right: 10%;
+    font-size: 14px;
 }
 
 #time {
     margin-bottom: 5%;
-    padding-top: 5%;
+    padding-top: 2%;
     padding-bottom: 2%;
     color: #eaeaea;
     font-family: "Roboto Condensed";
@@ -35,7 +31,7 @@ body {
     color: #eaeaea;
     font-family: "Roboto";
     width: 45%;
-    padding: 20px;
+    height: 45%;
     background: #555555;
     border: solid #444444 1px;
     line-height: 1.8;
@@ -65,6 +61,10 @@ img {
 a {
     color: #cacaca;
     text-decoration: none;
+}
+
+a:hover {
+    color: #eaeaea;
 }
 
 .content {
