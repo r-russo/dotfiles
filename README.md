@@ -7,4 +7,8 @@ Todo:
 
 Current theme:
 
-![alt tag](https://github.com/r-russo/dotfiles/raw/master/currentscrot.png)
+![alt tag](https://github.com/r-russo/dotfiles/raw/master/scrot.png)
+
+Current startpage:
+
+![alt tag](https://github.com/r-russo/dotfiles/raw/master/start.png)

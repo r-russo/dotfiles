@@ -140,12 +140,17 @@
 		</item>
 	</menu>
 
-	<menu id="virtualbox" label="VirtualBox" icon="/usr/share/icons/hicolor/48x48/mimetypes/virtualbox.png">
+        <menu id="virtualbox" label="VirtualBox" icon="/usr/share/icons/hicolor/48x48/mimetypes/virtualbox.png">
+                <item label="VirtualBox">
+                    <action name="Execute">
+                        <execute>virtualbox</execute>
+                    </action>
+                </item>
 		<item icon="/home/russo/.icons/os_icons/os_winxp.png" label="Windows XP">
 			<action name="Execute">
 				<execute>/usr/lib/virtualbox/VirtualBox --comment "Windows XP" --startvm "1ed96653-a1a6-4d9b-81a6-11e1f33f72eb"</execute>
 			</action>
-		</item>
+                    </item>
 		<item icon="/home/russo/.icons/os_icons/os_win7_64.png" label="Windows 7">
 			<action name="Execute">
 				<execute>/usr/lib/virtualbox/VirtualBox --comment "Windows 7" --startvm "d107ccb9-a460-44cb-881f-fb051de6193f"</execute>

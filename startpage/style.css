@@ -27,7 +27,7 @@ body {
 #time {
     padding-top: 2%;
     padding-bottom: 2%;
-    color: #eaeaea;
+    color: #333333;
     font-family: "Roboto Condensed";
     font-size: 72px;
     text-align: center;
@@ -35,13 +35,13 @@ body {
 
 .links {
     float: left;
-    color: #eaeaea;
+    color: #333333;
     font-family: "Roboto";
     width: 68%;
     height: 100%;
     line-height: 1.8;
-    background-color: #444444;
-    border: solid #666666 2px;
+    background-color: #f9d6e1;
+    border: solid #bea4ac 2px;
 }
 
 .pic {
@@ -50,7 +50,7 @@ body {
     height: 100%;
     text-align: left;
     background-color: #f9d6e1;
-    border: solid #666666 2px;
+    border: solid #bea4ac 2px;
 
     background-image: url(pic.png);
     background-repeat: no-repeat;
@@ -67,12 +67,12 @@ body {
 }
 
 a {
-    color: #aaaaaa;
+    color: #666666;
     text-decoration: none;
 }
 
 a:hover {
-    color: #eaeaea;
+    color: #333333;
 }
 
 .content {

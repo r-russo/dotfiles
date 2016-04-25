@@ -35,7 +35,8 @@ mpd &
 xfce4-power-manager &
 
 (sleep 4 && thunderbird) &
-(sleep 3 && ktorrent) &
+#(sleep 3 && ktorrent) &
+deluge &
 #(sleep 2 && sonata --hidden) &
 (sleep 2 && dropboxd) &
 (sleep 2 && psyncgui) &
