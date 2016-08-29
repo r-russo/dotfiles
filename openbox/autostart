@@ -16,7 +16,11 @@
 #
 #xfce-mcs-manager &
 
-set_dbus &
+set_dbus & 
+
+lxpolkit &
+wmname LG3D &
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' &
 
 start-pulseaudio-x11 &
 numlockx on &
@@ -25,18 +29,14 @@ xcompmgr &
 #(compton -b --config ~/.config/compton.conf && nvidia-settings --load-config-only) &
 mpd &
 
-(sleep 2 && tint2) &
+(sleep 2 && tint2 -c ~/.config/tint2/tint2_template) &
 #(sleep 15 && conky -d -c ~/.conky/todo) &
-#nitrogen --restore &
-(sleep 5 && pcmanfm --desktop) &
-#(sleep 60 && sh ~/.dzen/main.sh) &
+nitrogen --restore &
 (sleep 2 && sh ~/.lemonbar/bar.sh) &
-/usr/lib/deja-dup/deja-dup/deja-dup-monitor &
+/usr/libexec/deja-dup/deja-dup-monitor &
 xfce4-power-manager &
 
 (sleep 4 && thunderbird) &
-#(sleep 3 && ktorrent) &
 deluge &
-#(sleep 2 && sonata --hidden) &
-(sleep 2 && dropboxd) &
-(sleep 2 && psyncgui) &
+dropbox &
+psyncgui &

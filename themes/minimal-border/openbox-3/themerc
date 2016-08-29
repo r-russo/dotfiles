@@ -1,0 +1,130 @@
+# Window geometry
+padding.width: 2
+border.width: 3
+window.client.padding.width: 0
+window.client.padding.height: 0
+window.handle.width: 0
+
+# Menu geometry
+menu.border.width: 2
+menu.overlap.x: -5
+menu.overlap.y: 0
+
+# Border colors
+window.active.border.color: #c9d0db
+window.inactive.border.color: #5e789b
+menu.border.color: #c9d0db
+window.active.client.color: #ffffff
+window.inactive.client.color: #cccccc
+
+# Window title justification
+window.label.text.justify: Left
+
+# Active window
+window.active.title.bg: Solid Flat
+window.active.title.bg.color: #c9d0db
+
+window.active.label.bg: Parentrelative
+window.active.label.text.color: #252525
+
+window.active.button.unpressed.bg: Solid Flat
+window.active.button.unpressed.bg.color: #c9d0db
+window.active.button.unpressed.image.color: #c9d0db
+
+window.active.button.pressed.bg: Solid Flat
+window.active.button.pressed.bg.color: #c9d0db
+window.active.button.pressed.image.color: #c9d0db
+
+window.active.button.disabled.bg: Solid Flat
+window.active.button.disabled.bg.color: #c9d0db
+window.active.button.disabled.image.color: #c9d0db
+
+window.active.button.hover.bg: Solid Flat
+window.active.button.hover.bg.color: #c9d0db
+window.active.button.hover.image.color: #9a9a9a
+
+window.active.button.toggled.unpressed.bg: Solid Flat
+window.active.button.toggled.unpressed.bg.color: #c9d0db
+window.active.button.toggled.unpressed.image.color: #c9d0db
+
+window.active.button.toggled.pressed.bg: Solid Flat
+window.active.button.toggled.pressed.bg.color: #c9d0db
+window.active.button.toggled.pressed.image.color: #c9d0db
+
+window.active.button.toggled.hover.bg: Solid Flat
+window.active.button.toggled.hover.bg.color: #c9d0db
+window.active.button.toggled.hover.image.color: #9a9a9a
+
+# Inactive windows
+window.inactive.title.bg: Flat Solid
+window.inactive.title.bg.color: #5e789b
+
+window.inactive.label.bg: Parentrelative
+window.inactive.label.text.color: #5e789b
+
+window.inactive.button.unpressed.bg: Solid Flat
+window.inactive.button.unpressed.bg.color: #5e789b
+window.inactive.button.unpressed.image.color: #5e789b
+
+window.inactive.button.pressed.bg: Solid Flat
+window.inactive.button.pressed.bg.color: #5e789b
+window.inactive.button.pressed.image.color: #5e789b
+
+window.inactive.button.disabled.bg: Solid Flat
+window.inactive.button.disabled.bg.color: #5e789b
+window.inactive.button.disabled.image.color: #5e789b
+
+window.inactive.button.toggled.bg: Solid Flat
+window.inactive.button.toggled.bg.color: #5e789b
+window.inactive.button.toggled.image.color: #5e789b
+
+window.inactive.button.hover.bg: Solid Flat
+window.inactive.button.hover.bg.color: #5e789b
+window.inactive.button.hover.image.color: #5e789b
+
+window.inactive.button.toggled.unpressed.bg: Solid Flat
+window.inactive.button.toggled.unpressed.bg.color: #5e789b
+window.inactive.button.toggled.unpressed.image.color: #5e789b
+
+window.inactive.button.toggled.pressed.bg: Solid Flat
+window.inactive.button.toggled.pressed.bg.color: #5e789b
+window.inactive.button.pressed.toggled.image.color: #5e789b
+
+window.inactive.button.toggled.hover.bg: Solid Flat
+window.inactive.button.toggled.hover.bg.color: #5e789b
+window.inactive.button.toggled.hover.image.color: #5e789b
+
+# Menus
+menu.title.bg: Solid Flat
+menu.title.bg.color: #c9d0db
+menu.title.text.color: #252525
+menu.title.text.justify: Left
+
+menu.separator.color: #9a9a9a
+menu.separator.width: 1
+menu.separator.padding.width: 3
+menu.separator.padding.height: 3
+
+menu.items.bg: Flat Solid
+menu.items.bg.color: #252525
+menu.items.text.color: #9a9a9a
+menu.items.disabled.text.color: #aaaaaa
+
+menu.items.active.bg: Solid Flat
+menu.items.active.bg.color: #c9d0db
+menu.items.active.text.color: #252525
+menu.items.active.disabled.text.color: #aaaaaa
+
+# OSD
+osd.bg: Solid Flat
+osd.bg.color: #252525
+osd.border.color: #252525
+
+osd.label.bg: Solid Flat
+osd.label.bg.color: #252525
+osd.label.text.color: #9a9a9a
+
+osd.hilight.bg: Solid Flat
+osd.hilight.bg.color: #c9d0db
+osd.unhilight.bg: Solid Flat
+osd.unhilight.bg.color: #252525

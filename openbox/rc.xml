@@ -34,9 +34,10 @@
        from 1, specifying a particular monitor.  Or it can be one of the
        following: 'Mouse' - where the mouse is, or
                   'Active' - where the active window is -->
+    <center>yes</center>
   </placement>
   <theme>
-    <name>Numix-mod2</name>
+    <name>minimal-border</name>
     <titleLayout>LIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -202,12 +203,12 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>spectacle</command>
+        <command>screenshot 75</command>
       </action>
     </keybind>
     <keybind key="S-Print">
       <action name="Execute">
-        <command>import png:- | xclip -selection c -t image/png</command>
+        <command>screenshot 75 region</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
@@ -232,7 +233,7 @@
     </keybind>
     <keybind key="W-f">
       <action name="Execute">
-        <command>nemo</command>
+        <command>thunar</command>
       </action>
     </keybind>
     <keybind key="W-e">
@@ -254,7 +255,9 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
     <keybind key="W-1">
-      <action name="Desktop"/>
+      <action name="Desktop">
+        <desktop>1</desktop>
+      </action>
     </keybind>
     <keybind key="W-2">
       <action name="Desktop">
@@ -273,6 +276,7 @@
     </keybind>
     <keybind key="W-S-1">
       <action name="SendToDesktop">
+        <desktop>1</desktop>
         <follow>no</follow>
       </action>
     </keybind>
