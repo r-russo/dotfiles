@@ -1,1 +1,1 @@
-%{F$YELLOW}%{T2}%{T-}  %{F$GREEN}29°C %{F-} h: 70%  p: 1013.55 hPa
+%{A1:urxvt -hold -g 130x42 -e bash -c 'curl wttr.in/Mar%20del%20Plata':}%{F$YELLOW}%{T2}%{T-} %{F$GREEN}19°C %{F-} h: 68%  p: 1013.26 hPa%{A}

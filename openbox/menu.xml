@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
-	<menu id="None-725515" label="New Menu">
-		<item label="New Item">
-			<action name="Execute">
-				<execute>command</execute>
-			</action>
-		</item>
-	</menu>
 	<menu id="mat" label="Matemática">
 		<item icon="/usr/share/icons/hicolor/16x16/apps/octave.png" label="Octave">
 			<action name="Execute">
@@ -20,7 +13,7 @@
 		</item>
 		<item icon="/usr/share/pixmaps/spyder3.png" label="Spyder">
 			<action name="Execute">
-				<execute>spyder</execute>
+				<execute>spyder3</execute>
 			</action>
 		</item>
 	</menu>
@@ -68,30 +61,24 @@
 		</item>
 		<item icon="/home/r-russo/.icons/os_icons/os_winxp.png" label="Windows XP">
 			<action name="Execute">
-				<execute>/usr/lib/virtualbox/VirtualBox --comment &quot;Windows XP&quot; --startvm &quot;1ed96653-a1a6-4d9b-81a6-11e1f33f72eb&quot;</execute>
+				<execute>/usr/bin/VirtualBox --comment &quot;Windows XP&quot; --startvm &quot;1ed96653-a1a6-4d9b-81a6-11e1f33f72eb&quot;</execute>
 			</action>
 		</item>
 		<item icon="/home/r-russo/.icons/os_icons/os_win7_64.png" label="Windows 7">
 			<action name="Execute">
-				<execute>/usr/lib/virtualbox/VirtualBox --comment &quot;Windows 7&quot; --startvm &quot;d107ccb9-a460-44cb-881f-fb051de6193f&quot;</execute>
-			</action>
-		</item>
-		<item icon="/home/r-russo/.icons/os_icons/os_ubuntu_64.png" label="Lubuntu">
-			<action name="Execute">
-				<execute>/usr/lib/virtualbox/VirtualBox --comment &quot;Lubuntu&quot; --startvm &quot;519965aa-6aac-4d1b-aca1-f212caca3911&quot;</execute>
-			</action>
-		</item>
-		<item icon="/home/r-russo/.icons/os_icons/os_debian_64.png" label="Debian">
-			<action name="Execute">
-				<execute>/usr/lib/virtualbox/VirtualBox --comment &quot;Debian&quot; --startvm &quot;979bf196-6b2f-48be-afaf-8fc9051c1284&quot;</execute>
+				<execute>/usr/bin/VirtualBox --comment &quot;Windows 7&quot; --startvm &quot;d107ccb9-a460-44cb-881f-fb051de6193f&quot;</execute>
 			</action>
 		</item>
 	</menu>
 	<menu id="root-menu" label="Openbox 3">
+		<item label="Steam">
+			<action name="Execute">
+				<execute>steam</execute>
+			</action>
+		</item>
 		<menu id="mat"/>
 		<menu id="sim"/>
 		<menu id="emu"/>
-		<menu id="juegos"/>
 		<menu id="virtualbox"/>
 		<separator/>
 		<item label="Fondo de pantalla">
@@ -116,17 +103,17 @@
 			<separator/>
 			<item label="Apagar">
 				<action name="Execute">
-					<execute>gksu poweroff</execute>
+					<execute>poweroff</execute>
 				</action>
 			</item>
 			<item label="Reiniciar">
 				<action name="Execute">
-					<execute>gksu reboot</execute>
+					<execute>reboot</execute>
 				</action>
 			</item>
 			<item label="Suspender">
 				<action name="Execute">
-					<execute>gksu suspend</execute>
+					<execute>systemctl suspend</execute>
 				</action>
 			</item>
 		</menu>

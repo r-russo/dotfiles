@@ -74,7 +74,7 @@ cpu()
            sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | \
            awk '{print $1}'`
     COLOR=$(calcularColor $CPU 60 90)
-    echo -n "%{A:urxvt -e htop:}%{F$MAIN}$ICPU %{F$WHITE}CPU: %{F$COLOR}$CPU%%{F-}%{A}"
+    echo -n "%{A:urxvt -e htop &:}%{F$MAIN}$ICPU %{F$WHITE}CPU: %{F$COLOR}$CPU%%{F-}%{A}"
 }
 
 ram()
@@ -101,12 +101,14 @@ temp()
     CPU1=$(round $CPU1 0)
 
     #HDD=`nc localhost 7634 | cut -d '|' -f4`
-    GPU=`nvidia-smi -a | grep "GPU Current Temp" | awk '{print $5}'`
+    #GPU=`nvidia-smi -a | grep "GPU Current Temp" | awk '{print $5}'`
+    GPU=`sensors | grep temp1 | tail -1 | awk '{print $2}' | tr -d '+°C'`
+    GPU=$(round $GPU 0)
 
     COLOR_CPU0=$(calcularColor $CPU0 80 90)
     COLOR_CPU1=$(calcularColor $CPU1 80 90)
     COLOR_HDD=$(calcularColor $HDD 50 70)
-    COLOR_GPU=$(calcularColor $GPU 70 90)
+    COLOR_GPU=$(calcularColor $GPU 90 12li0)
 
     echo -n "%{F$MAIN}$TEMP %{F$WHITE}cpu0:%{F-} %{F$COLOR_CPU0}$CPU0°C%{F-} \
 cpu1: %{F$COLOR_CPU1}$CPU1°C%{F-} \
@@ -125,15 +127,14 @@ volumen()
         ICO=$VOLM
     fi
 
-    echo "%{F$COLOR}$ICO $MASTER%%{F-}"
+    echo "%{A1:pavucontrol &:}%{F$COLOR}$ICO $MASTER%%{F-}%{A}"
 
 }
 
 discos()
 {
-    ROOT=`df -H | grep sdb1 | awk '{print $5}' | tr -d '%'`
-    HOME=`df -H | grep sda7 | awk '{print $5}' | tr -d '%'`
-    INT=`df -H | grep sdb3 | awk '{print $5}' | tr -d '%'`
+    ROOT=`df -H | grep sda1 | awk '{print $5}' | tr -d '%'`
+    HOME=`df -H | grep sdb7 | awk '{print $5}' | tr -d '%'`
 
     COLOR_ROOT=$(calcularColor $ROOT 60 90)
     COLOR_HOME=$(calcularColor $HOME 60 90)
@@ -196,7 +197,7 @@ fechahora()
     HORA=`date +%H:%M`
     #FECHA=`date +%d/%m/%y`
     FECHA=`date +%Y-%m-%d`
-    echo -ne "%{F$WHITE}$FECHA   %{F$MAIN}$RELOJ%{F-} %{F$WHITE}$HORA%{F-}"
+    echo -ne "%{A1:orage -t:}%{F$WHITE}$FECHA%{A}   %{F$MAIN}$RELOJ%{F-} %{F$WHITE}$HORA%{F-}"
 }
 
 tiempo()
@@ -204,9 +205,14 @@ tiempo()
     envsubst < ~/.lemonbar/weather_info
 }
 
+gmail()
+{
+    envsubst < ~/.lemonbar/gmail_notifications
+}
+
 while true; do
-    echo "%{F-}%{B-}%{l} $(ram) $(sep) $(temp) \
-         %{c}$(fechahora) \
-         %{r}%{F-}%{B-} $(tiempo) $(sep) $(volumen) $(sep) $(musica) $(sep) $(discos) "
+    echo "%{F-}%{l} $(ram) $(sep) $(temp)\
+         %{B-}%{c}$(fechahora) \
+         %{r}%{F-}$(gmail) $(sep) $(tiempo) $(sep) $(volumen) $(sep) $(musica) $(sep) $(discos) "
     sleep .5
 done

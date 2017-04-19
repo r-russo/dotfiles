@@ -31,10 +31,12 @@ elif datos['icon'] in ['clear-night', 'partly-cloudy-night']:
 else:
     color = "%{F$GRAY}"
 
-if datos['temperature'] < 10:
+if datos['temperature'] <= 10:
     color_temp = "%{F$BLUE}"
-elif datos['temperature'] < 30:
+elif datos['temperature'] <= 20:
     color_temp = "%{F$GREEN}"
+elif datos['temperature'] <= 30:
+    color_temp = "%{F$YELLOW}"
 else:
     color_temp = "%{F$RED}"
 
@@ -46,10 +48,11 @@ else:
     ultima_actualizacion = ''
 
 icono = '%{T2}' + iconos[datos['icon']] + '%{T-}'
-lemon_out = ultima_actualizacion + color + icono + '  ' + \
+lemon_out = "%{A1:urxvt -hold -g 130x42 -e bash -c 'curl wttr.in/Mar%20del%20Plata':}" + \
+            ultima_actualizacion + color + icono + ' ' + \
             color_temp + str(round(datos['temperature'])) + '°C' + ' ' \
             '%{F-} h: ' + str(round(datos['humidity']*100)) + '%' \
-            '  p: ' + str(datos['pressure']) + ' hPa'
+            '  p: ' + str(datos['pressure']) + ' hPa' + '%{A}'
 
 wdir = os.path.dirname(os.path.realpath(__file__))
 archivo = open(wdir + '/weather_info', mode='w')

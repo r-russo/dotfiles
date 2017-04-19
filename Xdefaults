@@ -49,8 +49,9 @@
 *.color20:      base04
 *.color21:      base06
 
-!URxvt*foreground:   #cacaca
-URxvt*background:   [90]#2b303b
+URxvt*foreground:   #cacaca
+!URxvt*background:   [95]#3c3e40
+URxvt*background: #33393b
 
 !URxvt*cursorColor:       #C2C4DF
 !URxvt*colorBD:           #ffffff
@@ -59,15 +60,18 @@ URxvt*background:   [90]#2b303b
 URxvt.depth: 32
 URxvt.scrollstyle: plain
 URxvt.scrollBar: false
-URxvt.font: xft:Termsyn:size=11
+URxvt.font: xft:Fira Code:size=11
+!URxvt.font: xft:Termsyn:size=11
+!URxvt.font: xft:Tamzen:size=11
 !URxvt.font: xft:DejaVu Sans Mono:pixelsize=12
 !URxvt.font: xft:Inconsolata:pixelsize=14
 !URxvt.font: xft:tewi
-!URxvt.letterSpace: -1
+URxvt.letterSpace: -1
 
 URxvt*scrollBar_right: false
 URxvt*scrollBar_floating: false
 URxvt.geometry: 80x24
+URxvt.internalBorder:  10
 
 ! LibXft
 Xft.antialias:  1

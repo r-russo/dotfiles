@@ -25,7 +25,9 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 
 #PROMPT="%{$fg_no_bold[green]%}%n %{$fg_bold[white]%}%~ %{$fg_no_bold[magenta]%}> %{$reset_color%}"
-PROMPT="%B%F{green}%n%f %F{blue}%~%f%b %F{yellow}>%f " 
+#PROMPT="%B%F{green}%n%f %F{blue}%~%f%b %F{yellow}>%f "
+PROMPT="%B%F{green}%~%f%b %F{blue}·%f " 
+
           
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
@@ -95,8 +97,17 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias nano='nano -w'
 alias wine32='WINEARCH=win32 WINEPREFIX=~/.wine32 wine'
+alias pacs='pacman -Ss'
+alias pacsa='pacaur -Sas'
+alias paci='pacaur -S'
+alias pacu='pacaur -Syur'
+alias pacua='pacaur -Syu'
+alias tmux="TERM=screen-256color-bce tmux"
+alias wine32="WINEPREFIX=$HOME/.wine32 WINEARCH=win32 wine"
+alias winetricks32="WINEPREFIX=$HOME/.wine32 WINEARCH=win32 winetricks"
 
 export PANEL_FIFO="/tmp/panel-fifo"
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 export EDITOR=vim
+export PAGER=most

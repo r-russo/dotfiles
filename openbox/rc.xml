@@ -37,7 +37,7 @@
     <center>yes</center>
   </placement>
   <theme>
-    <name>minimal-border</name>
+    <name>Arcbox</name>
     <titleLayout>LIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -52,8 +52,8 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Roboto Condensed,</name>
-      <size>9</size>
+      <name>Lato</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -61,8 +61,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Roboto Condensed,</name>
-      <size>9</size>
+      <name>Lato</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -70,7 +70,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Roboto</name>
+      <name>Lato Light</name>
       <size>9</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -79,7 +79,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Roboto</name>
+      <name>Lato</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -88,7 +88,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Roboto</name>
+      <name>Lato</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -97,7 +97,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Roboto</name>
+      <name>Lato</name>
       <size>9</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -176,6 +176,11 @@
     <keybind key="C-A-Left">
       <action name="GoToDesktop"/>
     </keybind>
+    <keybind key="W-e">
+      <action name="Execute">
+        <command>emacs</command>
+      </action>
+    </keybind>
     <keybind key="XF86AudioPlay">
       <action name="Execute">
         <command>mpc toggle</command>
@@ -203,7 +208,7 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>screenshot 75</command>
+        <command>xfce4-screenshooter</command>
       </action>
     </keybind>
     <keybind key="S-Print">
@@ -236,11 +241,6 @@
         <command>thunar</command>
       </action>
     </keybind>
-    <keybind key="W-e">
-      <action name="Execute">
-        <command>emacs</command>
-      </action>
-    </keybind>
     <keybind key="W-p">
       <action name="Execute">
         <command>dmenu-exec</command>
@@ -248,7 +248,7 @@
     </keybind>
     <keybind key="W-b">
       <action name="Execute">
-        <command>firefox</command>
+        <command>chromium</command>
       </action>
     </keybind>
     <keybind key="W-d">

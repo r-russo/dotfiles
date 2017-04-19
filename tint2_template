@@ -2,7 +2,7 @@
 # Background 1: Default task, Iconified task, Panel, Tooltip
 rounded = 0
 border_width = 0
-background_color = #252525 100
+background_color = #404040 100
 border_color = #2f2f2f 0
 background_color_hover = #000000 100
 border_color_hover = #2f2f2f 0
@@ -12,11 +12,11 @@ border_color_pressed = #2f2f2f 0
 # Background 2: Active task
 rounded = 0
 border_width = 0
-background_color = #c9d0db 100
+background_color = #ffa696 100
 border_color = #ffffff 40
-background_color_hover = #c9d0db 100
+background_color_hover = #ffa696 100
 border_color_hover = #ffffff 40
-background_color_pressed = #c9d0db 100
+background_color_pressed = #ffa696 100
 border_color_pressed = #ffffff 40
 
 # Background 3: Urgent task
@@ -32,11 +32,11 @@ border_color_pressed = #ffffff 60
 # Background 4: Systray
 rounded = 0
 border_width = 0
-background_color = #252525 100
+background_color = #404040 100
 border_color = #ffffff 40
-background_color_hover = #252525 100
+background_color_hover = #404040 100
 border_color_hover = #ffffff 40
-background_color_pressed = #252525 100
+background_color_pressed = #404040 100
 border_color_pressed = #ffffff 40
 
 #-------------------------------------
@@ -95,9 +95,9 @@ task_padding = 10 0 0
 task_font = Roboto 8
 task_tooltip = 1
 task_font_color = #f5f5f5 100
-task_active_font_color = #252525 100
-task_urgent_font_color = #252525 100
-task_iconified_font_color = #9a9a9a 100
+task_active_font_color = #404040 100
+task_urgent_font_color = #404040 100
+task_iconified_font_color = #bababa 100
 task_icon_asb = 100 0 0
 task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0

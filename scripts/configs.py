@@ -282,7 +282,7 @@ mouse_scroll_down = iconify
 systray_padding = 5 0 2
 systray_background_id = 4
 systray_sort = ascending
-systray_icon_size = 0
+systray_icon_size = 22
 systray_icon_asb = 100 0 0
 systray_monitor = 1
 
