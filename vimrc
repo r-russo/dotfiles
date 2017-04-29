@@ -2,13 +2,18 @@
 set nocompatible
 filetype off
 
+if exists('py2') && has('python')
+elseif has('python3')
+endif
+
 " Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
+Plugin 'davidhalter/jedi-vim'
 "Plugin 'klen/python-mode'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
@@ -64,8 +69,6 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix |
 au FileType python nnoremap <buffer> <F5>
             \ :exec '!clear; python' shellescape(@%,1)<cr>
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let python_highlight_all=1
 
 " airline

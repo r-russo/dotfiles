@@ -4,6 +4,21 @@
             box-sizing: border-box;
 }*/
 
+@font-face{
+    font-family: "Lato Thin";
+    src: local("Lato Thin");
+}
+
+@font-face{
+    font-family: "Lato";
+    src: local("Lato Regular");
+}
+
+@font-face{
+    font-family: "Lato Semibold";
+    src: local("Lato Semibold");
+}
+
 body {
     background-color: #6a7187;
     margin: 0;
