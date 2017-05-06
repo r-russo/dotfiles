@@ -1,34 +1,27 @@
-# The following lines were added by compinstall
-
-zstyle ':completion:*' completer _complete _ignored _approximate
-zstyle ':completion:*' file-sort name
-zstyle ':completion:*' format 'Completando %d'
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SEn %p: pulsa TAB para más o el caracter a insertar%s
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
-zstyle ':completion:*' menu select=1
-zstyle ':completion:*' select-prompt %SSelección actual: %p%s
-zstyle ':completion:*' special-dirs true
-zstyle :compinstall filename '/home/russo/.zshrc'
-
-autoload -U compinit promptinit colors
-compinit
-promptinit
-colors
-# End of lines added by compinstall
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile0
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory autocd notify
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory autocd notify COMPLETE_ALIASES
+unsetopt beep extendedglob nomatch
 bindkey -e
 # End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/russo/.zshrc'
+zstyle ':completion:*' menu select
 
-#PROMPT="%{$fg_no_bold[green]%}%n %{$fg_bold[white]%}%~ %{$fg_no_bold[magenta]%}> %{$reset_color%}"
-#PROMPT="%B%F{green}%n%f %F{blue}%~%f%b %F{yellow}>%f "
-PROMPT="%B%F{green}%~%f%b %F{blue}·%f " 
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+#
+# Search up-down
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
 
-          
+[[ -n "$key[Up]"   ]] && bindkey -- "$key[Up]"   up-line-or-beginning-search
+[[ -n "$key[Down]" ]] && bindkey -- "$key[Down]" down-line-or-beginning-search
+
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -A key
@@ -70,44 +63,21 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
-[[ -n "${key[Up]}"      ]] && bindkey  "${key[Up]}"      history-beginning-search-backward
-[[ -n "${key[Down]}"    ]] && bindkey  "${key[Down]}"    history-beginning-search-forward
+PROMPT='%F{green}%~ %F{blue}$ %f'
 
-## This sets the window title to the last run command. ##
-[[ -t 1 ]] || return
 case $TERM in
-       *xterm*|*rxvt*|(dt|k|E|a)term)
-#    xterm|rxvt-unicode-256color)
-    preexec () {
-    print -Pn "\e]2;[%l] [%n@%m] <$1>\a"        # (1)
-#    print -Pn "\e]2;$1\a"                      # (2)
-#    print -Pn "\e\"$1\e\134"                   # (3) copied from screen*), does not work
+  (*xterm* | rxvt)
+
+    # Write some info to terminal title.
+    # This is seen when the shell prompts for input.
+    function precmd {
+      print -Pn "\e]0;zsh%L %(1j,%j job%(2j|s|); ,)%~\a"
     }
-    ;;
-    screen*)
-        preexec () {
-        # this doesn't do anything... *wah*
-        #print -Pn "\e\"[screen] [%l] [%n@%m] <$1>\e\134"
-        print -Pn "\e\"$1\e\134"                # (4) works also nicely with tmux
+    # Write command and args to terminal title.
+    # This is seen while the shell waits for a command to complete.
+    function preexec {
+      printf "\033]0;%s\a" "$1"
     }
-  ;; 
+
+  ;;
 esac
-
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias nano='nano -w'
-alias wine32='WINEARCH=win32 WINEPREFIX=~/.wine32 wine'
-alias pacs='pacman -Ss'
-alias pacsa='pacaur -Sas'
-alias paci='pacaur -S'
-alias pacu='pacaur -Syur'
-alias pacua='pacaur -Syu'
-alias tmux="TERM=screen-256color-bce tmux"
-alias wine32="WINEPREFIX=$HOME/.wine32 WINEARCH=win32 wine"
-alias winetricks32="WINEPREFIX=$HOME/.wine32 WINEARCH=win32 winetricks"
-
-export PANEL_FIFO="/tmp/panel-fifo"
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-
-export EDITOR=vim
-export PAGER=most
