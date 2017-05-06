@@ -3,6 +3,7 @@
 sxhkd -m 1 &
 xsetroot -cursor_name left_ptr &
 nitrogen --restore &
+numlockx on &
 compton &
 firefox &
 thunderbird &
