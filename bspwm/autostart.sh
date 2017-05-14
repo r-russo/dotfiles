@@ -1,7 +1,9 @@
 #!/bin/sh
 
+setxkbmap dvorak es &
 sxhkd -m 1 &
 xsetroot -cursor_name left_ptr &
+start-pulseaudio-x11 &
 nitrogen --restore &
 numlockx on &
 compton &
@@ -11,6 +13,6 @@ redshift &
 polybar main &
 deluge &
 mpd &
-lxpolkit &
+#lxpolkit &
 Telegram &
-unclutter &
+#unclutter &

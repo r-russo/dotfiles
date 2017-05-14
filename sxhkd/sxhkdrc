@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-    urxvt256c-ml
+    urxvt
 
 # program launcher
 super + p
@@ -12,7 +12,7 @@ super + p
 
 # shortcuts
 super + b
-    firefox-esr
+    firefox
 
 super + shift + f
     thunar
