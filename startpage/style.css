@@ -5,18 +5,18 @@
 }*/
 
 @font-face{
-    font-family: "Lato Thin";
-    src: local("Lato Thin");
+    font-family: "Fira Sans Thin";
+    src: local("Fira Sans Thin");
 }
 
 @font-face{
-    font-family: "Lato";
-    src: local("Lato Regular");
+    font-family: "Fira Sans";
+    src: local("Fira Sans");
 }
 
 @font-face{
-    font-family: "Lato Semibold";
-    src: local("Lato Semibold");
+    font-family: "Fira Sans SemiBold";
+    src: local("Fira Sans SemiBold");
 }
 
 body {
@@ -43,7 +43,7 @@ body {
     padding-top: 2%;
     padding-bottom: 8%;
     color: #333333;
-    font-family: "Lato Thin";
+    font-family: "Fira Sans Thin";
     font-size: 72px;
     text-align: center;
 }
@@ -51,7 +51,7 @@ body {
 .links {
     float: left;
     color: #333333;
-    font-family: "Lato";
+    font-family: "Fira Sans";
     width: 68%;
     height: 100%;
     line-height: 1.8;
@@ -78,7 +78,7 @@ body {
     text-align: right;
     display: inline-block;
     width: 120px;
-    font-family: "Lato Semibold";
+    font-family: "Fira Sans SemiBold";
 }
 
 a {

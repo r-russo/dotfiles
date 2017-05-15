@@ -22,7 +22,7 @@ call vundle#end()
 
 filetype plugin indent on
 set modelines=0
-set number
+set relativenumber
 set numberwidth=4
 set ruler
 set visualbell
@@ -42,9 +42,8 @@ set showcmd
 
 set hlsearch
 set showmatch
-set listchars=tab:▸\
 highlight SpecialKey ctermfg=DarkGray
-set listchars=tab:>-,trail:·
+set listchars=trail:·
 set list
 
 set foldmethod=indent

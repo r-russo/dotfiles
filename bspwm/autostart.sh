@@ -13,6 +13,5 @@ redshift &
 polybar main &
 deluge &
 mpd &
-#lxpolkit &
 Telegram &
-#unclutter &
+tint2 &
