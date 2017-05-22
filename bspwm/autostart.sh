@@ -2,10 +2,13 @@
 
 setxkbmap dvorak es &
 sxhkd -m 1 &
+numlockx on &
 xsetroot -cursor_name left_ptr &
 start-pulseaudio-x11 &
 nitrogen --restore &
 numlockx on &
+copyq &
+lxpolkit & 
 compton &
 firefox &
 thunderbird &
@@ -14,4 +17,4 @@ polybar main &
 deluge &
 mpd &
 Telegram &
-tint2 &
+(sleep 10 && tint2) &

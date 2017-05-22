@@ -7,22 +7,24 @@ elseif has('python3')
 endif
 
 " Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-"Bundle 'Valloric/YouCompleteMe'
-Plugin 'davidhalter/jedi-vim'
-"Plugin 'klen/python-mode'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+"Plug 'tmhedberg/SimpylFold'
+Plug 'vim-scripts/indentpython.vim'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'davidhalter/jedi-vim'
+"Plug 'klen/python-mode'
+"Plug 'scrooloose/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'lervag/vimtex'
+Plug 'sirver/UltiSnips'
+Plug 'honza/vim-snippets'
+call plug#end()
 
 filetype plugin indent on
 set modelines=0
 set relativenumber
+set number
 set numberwidth=4
 set ruler
 set visualbell
@@ -36,23 +38,28 @@ set shiftwidth=4
 set cursorline
 set colorcolumn=+1
 
+set guifont=Fira\ Mono\ 12
+set guioptions=0
+
 set hidden
 set ttyfast
 set showcmd
 
 set hlsearch
 set showmatch
-highlight SpecialKey ctermfg=DarkGray
 set listchars=trail:·
 set list
 
 set foldmethod=indent
 set foldlevel=99
+set spelllang=es
 
 " keymaps
-let mapleader = "\<space>"
-noremap <space> za
+let mapleader = ","
+let maplocalleader = ","
 nnoremap <leader>w :%s/\s\+$//e <return>
+nnoremap j <Up>
+nnoremap k <Down>
 " unhighlight
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
@@ -87,6 +94,18 @@ let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_loc_list_height=5
 let g:syntastic_python_checkers = ['flake8']
+
+" latex
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'general'
+au FileType tex set spell
+au FileType tex set textwidth=80
+
+" snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
 
 syntax on
 colorscheme bubblegum-256-dark

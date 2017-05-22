@@ -4,7 +4,7 @@ bspc config border_width         2
 bspc config window_gap          12
 bspc config top_padding         24
 
-bspc config split_ratio          0.6
+bspc config split_ratio          0.54
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
@@ -22,3 +22,4 @@ bspc rule -a TelegramDesktop desktop=^8
 bspc rule -a Nitrogen state=floating
 bspc rule -a Lxappearance state=floating
 bspc rule -a Ahoviewer state=floating
+bspc rule -a Zathura state=tiled

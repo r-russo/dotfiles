@@ -21,7 +21,10 @@ XF86Audio{Next,Prev,Stop,Play}
     mpc {next,prev,stop,toggle}
 
 Print
-    xfce4-screenshooter
+    screenshot
+
+super + Print
+    screenshot s
 
 # make sxhkd reload its configuration files:
 super + Escape
