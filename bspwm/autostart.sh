@@ -3,12 +3,13 @@
 setxkbmap dvorak es &
 sxhkd -m 1 &
 numlockx on &
+dunst &
 xsetroot -cursor_name left_ptr &
 start-pulseaudio-x11 &
 nitrogen --restore &
 numlockx on &
 copyq &
-lxpolkit & 
+lxpolkit &
 compton &
 firefox &
 thunderbird &

@@ -61,7 +61,9 @@ nnoremap <leader>w :%s/\s\+$//e <return>
 nnoremap j <Up>
 nnoremap k <Down>
 " unhighlight
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap <silent><C-l> :nohl<CR><C-l>
+" insert
+inoremap <C-s> <Esc>:w<CR>a
 
 " python
 let g:SimpylFold_docstring_preview=1
@@ -100,6 +102,8 @@ let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'general'
 au FileType tex set spell
 au FileType tex set textwidth=80
+au FileType tex inoremap <A-i> <Esc>o\item 
+au BufNewFile main.tex 0r ~/.vim/templates/latex
 
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
