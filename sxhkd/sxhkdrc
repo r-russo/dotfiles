@@ -71,7 +71,7 @@ super + ctrl + {x,y,z}
 #
 
 # focus the node in the given direction
-super + {_,shift + }{Left,Down,Up,Right}
+super + {_,shift + }{h,k,j,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
@@ -105,7 +105,7 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {Left,Down,Up,Right}
+super + ctrl + {h,k,j,l}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio

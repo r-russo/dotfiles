@@ -58,8 +58,6 @@ set spelllang=es
 let mapleader = ","
 let maplocalleader = ","
 nnoremap <leader>w :%s/\s\+$//e <return>
-nnoremap j <Up>
-nnoremap k <Down>
 " unhighlight
 nnoremap <silent><C-l> :nohl<CR><C-l>
 " insert
@@ -99,12 +97,13 @@ let g:syntastic_python_checkers = ['flake8']
 
 " latex
 let g:tex_flavor = 'latex'
-let g:vimtex_view_method = 'general'
-au FileType tex set spell
-au FileType tex set textwidth=80
-au FileType tex inoremap <A-i> <Esc>o\item 
+let g:vimtex_view_method = 'zathura'
+au FileType tex
+            \ set spell |
+            \ set textwidth=80 |
+            \ inoremap ì <Esc>o\item |
+            \ nnoremap <leader>p o<Esc>o\par 
 au BufNewFile main.tex 0r ~/.vim/templates/latex
-
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
