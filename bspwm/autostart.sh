@@ -4,7 +4,7 @@ setxkbmap dvorak es &
 sxhkd -m 1 &
 numlockx on &
 xsetroot -cursor_name left_ptr &
-start-pulseaudio-x11 &
+#start-pulseaudio-x11 &
 nitrogen --restore &
 numlockx on &
 copyq &
