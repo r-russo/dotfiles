@@ -1,6 +1,6 @@
 #!/bin/sh
 
-setxkbmap dvorak es &
+#setxkbmap dvorak es &
 sxhkd -m 1 &
 numlockx on &
 xsetroot -cursor_name left_ptr &

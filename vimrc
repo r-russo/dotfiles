@@ -19,6 +19,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'lervag/vimtex'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
+Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 
 filetype plugin indent on
