@@ -26,10 +26,17 @@ ICON_MPD="%{F$ICON_COLOR}%{T2}%{T-}%{F-}"
 ICON_VOLUME="%{F$GREEN}%{T2}%{T-}%{F-}"
 ICON_VOLUME_LOW="%{F$YELLOW}%{T2}%{T-}%{F-}"
 ICON_MUTE="%{F$RED}%{T2}%{T-}%{F-}"
+ICON_RAM="%{F$ICON_COLOR}%{T2}%{T-}%{F-}"
 
 ICON_PLAYING="%{T2}%{T-}"
 ICON_STOP="%{T2}%{T-}"
 ICON_PAUSE="%{T2}%{T-}"
+
+SLEEP_MPD=0.5
+SLEEP_RAM=1
+SLEEP_VOLUME=1
+SLEEP_DISKS=10
+SLEEP_DATE=1
 
 if xdo id -a "$PANEL_WM_NAME" > /dev/null ; then
     printf "%s\n" "The panel is already running." >&2
@@ -43,12 +50,12 @@ mkfifo "$PANEL_FIFO"
 
 bspc config top_padding $PANEL_HEIGHT
 bspc subscribe report > "$PANEL_FIFO" &
-xtitle -sf 'T%s\n' > "$PANEL_FIFO" &
+xtitle -sf 'T%s\n' -t 40 > "$PANEL_FIFO" &
 
 # fecha (D)
 while true; do
     echo `date +"D$ICON_CLOCK%{F-} %Y-%m-%d - %H:%M:%S"`
-    sleep 1
+    sleep $SLEEP_DATE
 done > "$PANEL_FIFO" &
 
 # mpd (M)
@@ -69,21 +76,21 @@ while true; do
 
     echo "M$ICON_MPD %{A1:urxvt -e ncmpcpp &:}mpd%{A}: %{F$F}%{A1:mpc toggle:}$ICON%{A}%{F-}"
 
-    sleep 0.1
+    sleep $SLEEP_MPD
 done > "$PANEL_FIFO" &
 
 # disks (F)
 while true; do
-    FROOT=`df -H | grep sdb1 | awk '{print $5}' | tr -d '%'`
-    FHOME=`df -H | grep sdc7 | awk '{print $5}' | tr -d '%'`
+    FROOT=`df -H | grep -w / | awk '{print $5}' | tr -d '%'`
+    FHOME=`df -H | grep -w /home | awk '{print $5}' | tr -d '%'`
     COLOR_ROOT=$(getColor $FROOT 70 90)
     COLOR_HOME=$(getColor $FHOME 70 90)
     echo "F$ICON_DISKS /: %{F$COLOR_ROOT}$FROOT%%{F-} /home: %{F$COLOR_HOME}$FHOME%%{F-}"
 
-    sleep 10
+    sleep $SLEEP_DISKS
 done > "$PANEL_FIFO" &
 
-# volume
+# volume (V)
 while true; do
     VOL=`amixer get Master | tail -n1 | awk '{print $5}' | tr -d '[%]'`
     STATE=`amixer get Master | tail -n1 | awk '{print $6}' | tr -d '[]'`
@@ -98,8 +105,19 @@ while true; do
         ICON="$ICON_MUTE"
     fi
 
-    echo "V%{A1:pavucontrol &:}$ICON $VOL%%{F-}%{A}"
-    sleep 0.1
+    echo "V%{A1:pavucontrol &:}$ICON $VOL%%{A}"
+    sleep $SLEEP_VOLUME
+done > "$PANEL_FIFO" &
+
+# RAM (R)
+while true; do
+    RAM_USED=`free | head -n 2 | tail -n 1 | awk '{print $6}'`
+    RAM_TOTAL=`free | head -n 2 | tail -n 1 | awk '{print $2}'`
+    PERC_FREE=$((RAM_USED*100/RAM_TOTAL))
+    COLOR=$(getColor $PERC_FREE 70 90)
+
+    echo "R$ICON_RAM %{F$COLOR}$PERC_FREE%%{F-}"
+    sleep $SLEEP_RAM
 done > "$PANEL_FIFO" &
 
 panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_WM_NAME" -g x$PANEL_HEIGHT \
