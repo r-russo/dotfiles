@@ -72,6 +72,8 @@ while true; do
     elif [ "$STATE" == "[stopped]" ]; then
         F="$RED"
         ICON="$ICON_STOP"
+    else
+        exit
     fi
 
     echo "M$ICON_MPD %{A1:urxvt -e ncmpcpp &:}mpd%{A}: %{F$F}%{A1:mpc toggle:}$ICON%{A}%{F-}"
@@ -92,7 +94,7 @@ done > "$PANEL_FIFO" &
 
 # volume (V)
 while true; do
-    VOL=`amixer get Master | tail -n1 | awk '{print $5}' | tr -d '[%]'`
+    VOL=`amixer get Master | tail -n1 | awk '{print $4}' | tr -d '[%]'`
     STATE=`amixer get Master | tail -n1 | awk '{print $6}' | tr -d '[]'`
 
     if [ $STATE == "on" ]; then
