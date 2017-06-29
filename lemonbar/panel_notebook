@@ -27,16 +27,24 @@ ICON_VOLUME="%{F$GREEN}%{T2}%{T-}%{F-}"
 ICON_VOLUME_LOW="%{F$YELLOW}%{T2}%{T-}%{F-}"
 ICON_MUTE="%{F$RED}%{T2}%{T-}%{F-}"
 ICON_RAM="%{F$ICON_COLOR}%{T2}%{T-}%{F-}"
+ICON_WIFI="%{F$ICON_COLOR}%{T2}%{T-}%{F-}"
 
 ICON_PLAYING="%{T2}%{T-}"
 ICON_STOP="%{T2}%{T-}"
 ICON_PAUSE="%{T2}%{T-}"
+ICON_AC="%{T2}%{T-}"
+ICON_BAT_FULL="%{T2}%{T-}"
+ICON_BAT_TQ="%{T2}%{T-}"
+ICON_BAT_HALF="%{T2}%{T-}"
+ICON_BAT_OQ="%{T2}{T-}"
 
 SLEEP_MPD=0.5
 SLEEP_RAM=1
 SLEEP_VOLUME=1
 SLEEP_DISKS=10
 SLEEP_DATE=1
+SLEEP_WIFI=30
+SLEEP_BAT=5
 
 if xdo id -a "$PANEL_WM_NAME" > /dev/null ; then
     printf "%s\n" "The panel is already running." >&2
@@ -59,38 +67,38 @@ while true; do
 done > "$PANEL_FIFO" &
 
 # mpd (M)
-while true; do
-    STATE=`mpc | head -n 2 | tail -n 1 | awk '{print $1}'`
-    TRACK=`mpc | head -n 1`
-
-    if [ "$STATE" == "[playing]" ]; then
-        F="$GREEN"
-        ICON="$ICON_PLAYING"
-    elif [ "$STATE" == "[paused]" ]; then
-        F="$YELLOW"
-        ICON="$ICON_PAUSE"
-    elif [ "$STATE" == "[stopped]" ]; then
-        F="$RED"
-        ICON="$ICON_STOP"
-    else
-        exit
-    fi
-
-    echo "M$ICON_MPD %{A1:urxvt -e ncmpcpp &:}mpd%{A}: %{F$F}%{A1:mpc toggle:}$ICON%{A}%{F-}"
-
-    sleep $SLEEP_MPD
-done > "$PANEL_FIFO" &
+#while true; do
+#    STATE=`mpc | head -n 2 | tail -n 1 | awk '{print $1}'`
+#    TRACK=`mpc | head -n 1`
+#
+#    if [ "$STATE" == "[playing]" ]; then
+#        F="$GREEN"
+#        ICON="$ICON_PLAYING"
+#    elif [ "$STATE" == "[paused]" ]; then
+#        F="$YELLOW"
+#        ICON="$ICON_PAUSE"
+#    elif [ "$STATE" == "[stopped]" ]; then
+#        F="$RED"
+#        ICON="$ICON_STOP"
+#    else
+#        exit
+#    fi
+#
+#    echo "M$ICON_MPD %{A1:urxvt -e ncmpcpp &:}mpd%{A}: %{F$F}%{A1:mpc toggle:}$ICON%{A}%{F-}"
+#
+#    sleep $SLEEP_MPD
+#done > "$PANEL_FIFO" &
 
 # disks (F)
-while true; do
-    FROOT=`df -H | grep -w / | awk '{print $5}' | tr -d '%'`
-    FHOME=`df -H | grep -w /home | awk '{print $5}' | tr -d '%'`
-    COLOR_ROOT=$(getColor $FROOT 70 90)
-    COLOR_HOME=$(getColor $FHOME 70 90)
-    echo "F$ICON_DISKS /: %{F$COLOR_ROOT}$FROOT%%{F-} /home: %{F$COLOR_HOME}$FHOME%%{F-}"
-
-    sleep $SLEEP_DISKS
-done > "$PANEL_FIFO" &
+#while true; do
+#    FROOT=`df -H | grep -w / | awk '{print $5}' | tr -d '%'`
+#    FHOME=`df -H | grep -w /home | awk '{print $5}' | tr -d '%'`
+#    COLOR_ROOT=$(getColor $FROOT 70 90)
+#    COLOR_HOME=$(getColor $FHOME 70 90)
+#    echo "F$ICON_DISKS /: %{F$COLOR_ROOT}$FROOT%%{F-} /home: %{F$COLOR_HOME}$FHOME%%{F-}"
+#
+#    sleep $SLEEP_DISKS
+#done > "$PANEL_FIFO" &
 
 # volume (V)
 while true; do
@@ -121,6 +129,48 @@ while true; do
     echo "R$ICON_RAM %{F$COLOR}$PERC_FREE%%{F-}"
     sleep $SLEEP_RAM
 done > "$PANEL_FIFO" &
+
+# net (N)
+while true; do
+    SSID=`iw wlp3s0 link | grep SSID | awk '{print $2}'`
+    SIGNAL=`iw wlp3s0 link | grep signal: | awk '{print $2}'`
+    #if [ "$(iw wlp3s0 link)" == 'Not connected.' ]; then
+    #    exit
+    #fi
+    echo "N$ICON_WIFI %{F$WHITE}$SSID%{F-} ($SIGNAL dBm)"
+    sleep $SLEEP_WIFI
+done > "$PANEL_FIFO" &
+
+# battery (B)
+while true; do
+    DEV="/org/freedesktop/UPower/devices/battery_BAT0"
+    DEV_AC="/org/freedesktop/UPower/devices/line_power_AC"
+    STATE=`upower -i $DEV | grep state | awk '{print $2}'`
+    CHARGE=`upower -i $DEV | grep percentage | awk '{print $2}' | tr -d '%'`
+    AC=`upower -i $DEV_AC | grep online | awk '{print $2}'`
+    if [ "$AC" == "yes" ]; then
+        ICON=$ICON_AC
+        COLOR=$WHITE
+    else
+        if [ $CHARGE -gt 75 ]; then
+            ICON=$ICON_BAT_FULL
+            COLOR=$GREEN
+        elif [ $CHARGE -gt 50 ]; then
+            ICON=$ICON_BAT_TQ
+            COLOR=$GREEN
+        elif [ $CHARGE -gt 25 ]; then
+            ICON=$ICON_BAT_HALF
+            COLOR=$YELLOW
+        else
+            ICON=$ICON_BAT_OQ
+            COLOR=$RED
+        fi
+    fi
+
+    echo "B%{F$COLOR}$ICON%{F-} ($CHARGE%)"
+    sleep $SLEEP_BAT
+done > "$PANEL_FIFO" &
+
 
 panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_WM_NAME" -g x$PANEL_HEIGHT \
     -f "$PANEL_FONT" -o 0 -f "$ICON_FONT" -o -2 -F "$FG" -B "$BG" | sh &
