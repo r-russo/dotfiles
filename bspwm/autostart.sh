@@ -18,3 +18,5 @@ deluge &
 mpd &
 Telegram &
 (sleep 10 && tint2) &
+
+export XDG_CURRENT_DESKTOP=KDE

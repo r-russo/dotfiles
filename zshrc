@@ -63,3 +63,4 @@ unfunction zkbd_file; unset keyfile ret
 [[ -n "$key[Down]"      ]] && bindkey -- "$key[Down]"      down-line-or-search
 [[ -n "$key[Left]"      ]] && bindkey -- "$key[Left]"      backward-char
 [[ -n "$key[Right]"     ]] && bindkey -- "$key[Right]"     forward-char
+
