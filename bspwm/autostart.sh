@@ -1,6 +1,6 @@
 #!/bin/sh
 
-setxkbmap dvorak es &
+setxkbmap latam &
 sxhkd -m 1 &
 numlockx on &
 xsetroot -cursor_name left_ptr &
@@ -18,5 +18,6 @@ deluge &
 mpd &
 Telegram &
 (sleep 10 && tint2) &
+(sleep 10 && xmodmap ~/.Xmodmap) &
 
 export XDG_CURRENT_DESKTOP=KDE
