@@ -1,0 +1,5 @@
+clear lock
+keycode 66 = Escape Caps_Lock Escape Caps_Lock
+
+keycode  48 = braceleft bracketleft braceleft bracketleft asciicircum braceleft asciicircum
+keycode  51 = braceright bracketright braceright bracketright grave braceright grave braceright braceright bracketright grave braceright
