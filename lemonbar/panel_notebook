@@ -13,8 +13,8 @@ getColor()
 
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_HEIGHT=28
-PANEL_FONT="Fira Mono-9"
-ICON_FONT="FontAwesome-9"
+PANEL_FONT="Fira Mono-8"
+ICON_FONT="FontAwesome-8"
 PANEL_WM_NAME=bspwm_panel
 
 . panel_colors
