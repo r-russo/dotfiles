@@ -16,6 +16,8 @@ SAVEHISTORY=10000
 setopt append_history
 setopt auto_cd
 
+bindkey -v
+
 # terminal title
 print -Pn "\e]0; %n@%M: %~\a"
 
