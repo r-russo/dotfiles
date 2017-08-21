@@ -16,8 +16,6 @@ SAVEHISTORY=10000
 setopt append_history
 setopt auto_cd
 
-bindkey -v
-
 # terminal title
 print -Pn "\e]0; %n@%M: %~\a"
 
@@ -65,4 +63,3 @@ unfunction zkbd_file; unset keyfile ret
 [[ -n "$key[Down]"      ]] && bindkey -- "$key[Down]"      down-line-or-search
 [[ -n "$key[Left]"      ]] && bindkey -- "$key[Left]"      backward-char
 [[ -n "$key[Right]"     ]] && bindkey -- "$key[Right]"     forward-char
-
