@@ -42,7 +42,7 @@ URxvt.scrollBar_right: false
 URxvt.scrollBar_floating: false
 
 URxvt.geometry: 80x24
-URxvt.internalBorder: 10
+URxvt.internalBorder: 1
 
 ! LibXft
 Xft.antialias:  1
