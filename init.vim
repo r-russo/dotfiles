@@ -86,7 +86,7 @@ let python_highlight_all=1
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 " let g:airline_powerline_fonts=1
-let g:airline_theme='bubblegum'
+let g:airline_theme='base16_chalk'
 
 " syntastic
 set statusline+=%#warningmsg#
