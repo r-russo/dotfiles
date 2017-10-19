@@ -9,16 +9,13 @@ endif
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/indentpython.vim'
-"Plug 'davidhalter/jedi-vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
-"Plug 'epeli/slimux'
 Plug 'benmills/vimux'
 Plug 'baskerville/bubblegum'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'ryanoasis/vim-devicons'
 Plug 'lervag/vimtex'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
@@ -85,7 +82,7 @@ let python_highlight_all=1
 " airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
-" let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
 let g:airline_theme='base16_chalk'
 
 " syntastic
@@ -114,13 +111,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
-
-" slimux
-map <Leader>s :SlimuxREPLSendLine<CR>
-vmap <Leader>s :SlimuxREPLSendSelection<CR>
-map <Leader>b :SlimuxREPLSendBuffer<CR>
-map <Leader>a :SlimuxShellLast<CR>
-map <Leader>k :SlimuxSendKeysLast<CR>
 
 syntax on
 let base16colorspace=256
