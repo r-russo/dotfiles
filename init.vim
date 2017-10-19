@@ -15,8 +15,10 @@ Plug 'zchee/deoplete-jedi'
 "Plug 'epeli/slimux'
 Plug 'benmills/vimux'
 Plug 'baskerville/bubblegum'
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'lervag/vimtex'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
@@ -43,9 +45,6 @@ set expandtab
 set shiftwidth=4
 set cursorline
 set colorcolumn=+1
-
-set guifont=Fira\ Mono\ 12
-set guioptions=0
 
 set hidden
 set ttyfast
@@ -86,7 +85,7 @@ let python_highlight_all=1
 " airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=0
+" let g:airline_powerline_fonts=1
 let g:airline_theme='bubblegum'
 
 " syntastic
@@ -124,4 +123,5 @@ map <Leader>a :SlimuxShellLast<CR>
 map <Leader>k :SlimuxSendKeysLast<CR>
 
 syntax on
-colorscheme bubblegum-256-dark
+let base16colorspace=256
+colorscheme base16-chalk

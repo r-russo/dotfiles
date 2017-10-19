@@ -34,7 +34,7 @@ URxvt.color21:      #e8e6df
 
 URxvt.depth: 32
 URxvt.scrollstyle: plain
-URxvt.font: xft:Fira Mono:size=11
+URxvt.font: xft:FuraCode Nerd Font Mono:size=12
 URxvt.letterSpace: -1
 
 URxvt.scrollBar: false
