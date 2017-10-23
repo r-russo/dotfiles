@@ -76,6 +76,8 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix |
 au FileType python nnoremap <buffer> <F5>
+            \ :VimuxRunCommand('python ' . bufname("%"))<CR>
+au FileType python nnoremap <buffer> <F17>
             \ :exec '!clear; python' shellescape(@%,1)<cr>
 let python_highlight_all=1
 
@@ -111,6 +113,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
+
+" vimux
+let g:VimuxHeight = "40"
+let g:VimuxOrientation = "h"
 
 syntax on
 let base16colorspace=256
