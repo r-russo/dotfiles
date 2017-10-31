@@ -1,4 +1,4 @@
 typeset -U path
 path=(~/bin $path[@])
 
-xmodmap ~/.Xmodmap
+(sleep 20 && xmodmap ~/.Xmodmap) &
