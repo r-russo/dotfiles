@@ -117,6 +117,7 @@ let g:UltiSnipsEditSplit="vertical"
 " vimux
 let g:VimuxHeight = "40"
 let g:VimuxOrientation = "h"
+map <Leader>c :VimuxInterruptRunner<CR>
 
 syntax on
 let base16colorspace=256
