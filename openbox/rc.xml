@@ -37,7 +37,7 @@
     <center>yes</center>
   </placement>
   <theme>
-    <name>Arcbox</name>
+    <name>Triste-Froly</name>
     <titleLayout>LIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -52,7 +52,7 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Lato</name>
+      <name>Fira Sans</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -61,7 +61,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Lato</name>
+      <name>Fira Sans</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -70,8 +70,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Lato Light</name>
-      <size>9</size>
+      <name>Fira Sans</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -79,8 +79,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Lato</name>
-      <size>8</size>
+      <name>Fira Sans</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -88,8 +88,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Lato</name>
-      <size>8</size>
+      <name>Fira Sans</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -97,8 +97,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Lato</name>
-      <size>9</size>
+      <name>Fira Sans</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -203,17 +203,12 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>urxvt -depth 0 -g 150x30 -e &quot;ranger&quot;</command>
+        <command>rofi -show run</command>
       </action>
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>xfce4-screenshooter</command>
-      </action>
-    </keybind>
-    <keybind key="S-Print">
-      <action name="Execute">
-        <command>screenshot 75 region</command>
+        <command>spectacle</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
@@ -231,32 +226,25 @@
         <command>amixer set Master 2%+</command>
       </action>
     </keybind>
-    <keybind key="W-t">
-      <action name="Execute">
-        <command>urxvt</command>
-      </action>
-    </keybind>
     <keybind key="W-f">
       <action name="Execute">
         <command>thunar</command>
       </action>
     </keybind>
-    <keybind key="W-p">
-      <action name="Execute">
-        <command>dmenu-exec</command>
-      </action>
-    </keybind>
     <keybind key="W-b">
       <action name="Execute">
-        <command>chromium</command>
+        <command>firefox-beta</command>
       </action>
     </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
     <keybind key="W-1">
-      <action name="Desktop">
-        <desktop>1</desktop>
+      <action name="Desktop"/>
+    </keybind>
+    <keybind key="W-Return">
+      <action name="Execute">
+        <command>termite</command>
       </action>
     </keybind>
     <keybind key="W-2">
@@ -276,7 +264,6 @@
     </keybind>
     <keybind key="W-S-1">
       <action name="SendToDesktop">
-        <desktop>1</desktop>
         <follow>no</follow>
       </action>
     </keybind>
