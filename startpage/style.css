@@ -5,18 +5,18 @@
 }*/
 
 @font-face{
-    font-family: "Fira Sans Thin";
-    src: local("Fira Sans Thin");
+    font-family: "Liberation Sans";
+    src: local("Liberation Sans");
 }
 
 @font-face{
-    font-family: "Fira Sans";
-    src: local("Fira Sans");
+    font-family: "Liberation Sans";
+    src: local("Liberation Sans");
 }
 
 @font-face{
-    font-family: "Fira Sans SemiBold";
-    src: local("Fira Sans SemiBold");
+    font-family: "Liberation Sans";
+    src: local("Liberation Sans");
 }
 
 body {
@@ -43,7 +43,7 @@ body {
     padding-top: 2%;
     padding-bottom: 8%;
     color: #333333;
-    font-family: "Fira Sans Thin";
+    font-family: "Liberation Sans";
     font-size: 72px;
     text-align: center;
 }
@@ -51,7 +51,7 @@ body {
 .links {
     float: left;
     color: #333333;
-    font-family: "Fira Sans";
+    font-family: "Liberation Sans";
     width: 68%;
     height: 100%;
     line-height: 1.8;
@@ -78,7 +78,7 @@ body {
     text-align: right;
     display: inline-block;
     width: 120px;
-    font-family: "Fira Sans SemiBold";
+    font-family: "Liberation Sans";
 }
 
 a {
