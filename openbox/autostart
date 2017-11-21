@@ -25,34 +25,16 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswi
 start-pulseaudio-x11 &
 numlockx on &
 setxkbmap latam &
-# xcompmgr &
 compton -CGc &
-#(compton -b --config ~/.config/compton.conf && nvidia-settings --load-config-only) &
 mpd &
 
-#tint2 -c ~/.config/tint2/tint2_template &
 tint2 -c ~/.config/tint2/tint2rc &
 
-#(sleep 2 && conky -d -c ~/.conky/todo) &
 nitrogen --restore &
-#sh ~/.lemonbar/bar.sh &
-#/usr/libexec/deja-dup/deja-dup-monitor &
 xfce4-power-manager &
-
-#thunderbird-beta &
-#deluge &
-#dropbox &
-#psyncgui &
-
-#xrdb -load ~/.Xdefaults &
-#weather.py &
-#gmail.py &
-
-#backup &
-#franz-bin &
-#redshift-gtk &
-#orage &
+xfce4-volumed-pulse &
 
 nm-applet &
 thunderbird &
 Telegram &
+synclient TouchPadOff=1 &

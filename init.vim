@@ -19,6 +19,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'lervag/vimtex'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
+Plug 'heavenshell/vim-pydocstring'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'
