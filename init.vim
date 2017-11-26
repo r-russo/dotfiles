@@ -25,7 +25,7 @@ call plug#end()
 let g:python_host_prog = '/usr/bin/python'
 let g:deoplete#sources#jedi#server_timeout = 120
 autocmd CompleteDone * pclose
-call deoplete#enable()
+let g:deoplete#enable_at_startup = 1
 
 filetype plugin indent on
 set modelines=0
