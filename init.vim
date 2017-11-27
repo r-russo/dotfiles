@@ -11,6 +11,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/indentpython.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
+Plug 'heavenshell/vim-pydocstring'
+Plug 'nvie/vim-flake8'
 Plug 'benmills/vimux'
 Plug 'baskerville/bubblegum'
 Plug 'chriskempson/base16-vim'
@@ -19,13 +21,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'lervag/vimtex'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
-Plug 'heavenshell/vim-pydocstring'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'
 let g:deoplete#sources#jedi#server_timeout = 120
+let g:deoplete#enable_at_startup = 1
 autocmd CompleteDone * pclose
-call deoplete#enable()
 
 filetype plugin indent on
 set modelines=0
