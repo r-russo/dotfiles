@@ -13,3 +13,8 @@ alias tl='todo.sh list'
 alias t='todo.sh'
 
 alias emg='cd ~/PPS/emg'
+
+alias xi='sudo xbps-install -S'
+alias xu='sudo xbps-install -Su'
+alias xs='xbps-query -Rs'
+alias xr='sudo xbps-remove'

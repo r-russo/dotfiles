@@ -122,5 +122,7 @@ let g:VimuxOrientation = "h"
 map <Leader>c :VimuxInterruptRunner<CR>
 
 syntax on
-let base16colorspace=256
-colorscheme base16-chalk
+colorscheme bubblegum-256-dark
+"let base16colorspace=256
+"set background=dark
+"colorscheme base16-chalk
