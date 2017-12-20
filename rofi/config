@@ -7,7 +7,7 @@ rofi.lines:                          6
 ! "Number of columns" Set from: Default
 rofi.columns:                        3
 ! "Font to use" Set from: Default
-rofi.font:                           Liberation Sans 9
+rofi.font:                           Noto Sans 11
 ! "Color scheme for normal row" Set from: Default
 rofi.color-normal:                   #33393b,#d3d0c8,#3f474a,#6699cc,#fffcf2
 ! "Color scheme for urgent row" Set from: Default
