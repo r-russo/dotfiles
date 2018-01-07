@@ -15,9 +15,8 @@ Plug 'heavenshell/vim-pydocstring'
 Plug 'nvie/vim-flake8'
 Plug 'benmills/vimux'
 Plug 'baskerville/bubblegum'
-Plug 'chriskempson/base16-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'lervag/vimtex'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
@@ -85,25 +84,15 @@ let python_highlight_all=1
 
 " airline
 set laststatus=2
-let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=0
-let g:airline_theme='base16_chalk'
-
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_loc_list_height=5
-let g:syntastic_python_checkers = ['flake8']
+"let g:airline#extensions#tabline#enabled=1
+"let g:airline_powerline_fonts=0
+"let g:airline_theme='base16_chalk'
 
 " latex
 let g:tex_flavor = 'latex'
-let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
 au FileType tex
             \ set spell |
             \ set textwidth=80 |
@@ -123,6 +112,3 @@ map <Leader>c :VimuxInterruptRunner<CR>
 
 syntax on
 colorscheme bubblegum-256-dark
-"let base16colorspace=256
-"set background=dark
-"colorscheme base16-chalk

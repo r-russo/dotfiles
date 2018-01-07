@@ -13,6 +13,7 @@ alias tl='todo.sh list'
 alias t='todo.sh'
 
 alias emg='cd ~/PPS/emg'
+alias informe_trabajo='cd ~/Documentos/Trabajo\ Final/informe_trabajo'
 
 alias xi='sudo xbps-install -S'
 alias xu='sudo xbps-install -Su'
