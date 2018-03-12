@@ -9,12 +9,14 @@ endif
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/indentpython.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'zchee/deoplete-jedi'
+Plug 'roxma/nvim-completion-manager'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'nvie/vim-flake8'
 Plug 'benmills/vimux'
-Plug 'baskerville/bubblegum'
+Plug 'flazz/vim-colorschemes'
+"Plug 'baskerville/bubblegum'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'lervag/vimtex'

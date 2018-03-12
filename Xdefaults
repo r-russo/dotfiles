@@ -1,36 +1,40 @@
-! Base16 Eighties
-! Scheme: Chris Kempson (http://chriskempson.com)
+! special
+*.foreground:   #c7ccd1
+*.background:   #262626
+*.borderColor:   #262626
+*.cursorColor:  #c7ccd1
 
-URxvt.foreground:   #d3d0c8
-URxvt.background:   [90]#33393b
-URxvt.cursorColor:  #d3d0c8
+! black
+*.color0:       #1c2023
+*.color8:       #747c84
 
-URxvt.color0:       #2d2d2d
-URxvt.color1:       #f2777a
-URxvt.color2:       #99cc99
-URxvt.color3:       #ffcc66
-URxvt.color4:       #6699cc
-URxvt.color5:       #cc99cc
-URxvt.color6:       #66cccc
-URxvt.color7:       #d3d0c8
+! red
+*.color1:       #c7ae95
+*.color9:       #c7ae95
 
-URxvt.color8:       #747369
-URxvt.color9:       #f2777a
-URxvt.color10:      #99cc99
-URxvt.color11:      #ffcc66
-URxvt.color12:      #6699cc
-URxvt.color13:      #cc99cc
-URxvt.color14:      #66cccc
-URxvt.color15:      #f2f0ec
+! green
+*.color2:       #95c7ae
+*.color10:      #95c7ae
 
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-URxvt.color16:      #f99157
-URxvt.color17:      #d27b53
-URxvt.color18:      #393939
-URxvt.color19:      #515151
-URxvt.color20:      #a09f93
-URxvt.color21:      #e8e6df
+! yellow
+*.color3:       #aec795
+*.color11:      #aec795
+
+! blue
+*.color4:       #ae95c7
+*.color12:      #ae95c7
+
+! magenta
+*.color5:       #c795ae
+*.color13:      #c795ae
+
+! cyan
+*.color6:       #95aec7
+*.color14:      #95aec7
+
+! white
+*.color7:       #c7ccd1
+*.color15:      #f3f4f5
 
 URxvt.depth: 32
 URxvt.scrollstyle: plain
@@ -42,7 +46,7 @@ URxvt.scrollBar_right: false
 URxvt.scrollBar_floating: false
 
 URxvt.geometry: 80x24
-URxvt.internalBorder: 1
+URxvt.internalBorder: 10
 
 ! LibXft
 Xft.antialias:  1
