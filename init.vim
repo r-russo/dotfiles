@@ -92,9 +92,9 @@ set laststatus=2
 
 " latex
 let g:tex_flavor = 'latex'
-let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_view_general_options_latexmk = '--unique'
+" let g:vimtex_view_general_viewer = 'mupdf'
+" let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+" let g:vimtex_view_general_options_latexmk = '--unique'
 au FileType tex
             \ set spell |
             \ set textwidth=80 |
