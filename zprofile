@@ -1,5 +1,2 @@
 typeset -U path
-path=(~/bin $path[@])
-
-export QT_QPA_PLATFORMTHEME="qt5ct"
-xmodmap ~/.Xmodmap
+path=(~/.local/bin $path[0])

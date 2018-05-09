@@ -112,5 +112,8 @@ let g:VimuxHeight = "40"
 let g:VimuxOrientation = "h"
 map <Leader>c :VimuxInterruptRunner<CR>
 
+" md
+au BufRead,BufNewFile *.md setlocal textwidth=80
+
 syntax on
 colorscheme bubblegum-256-dark

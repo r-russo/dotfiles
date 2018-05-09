@@ -1,37 +1,44 @@
-autoload -Uz compinit promptinit
-autoload zkbd
+autoload -Uz compinit promptinit up-line-or-beginning-search down-line-or-beginning-search
 compinit
 promptinit
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
 
-# completion
-zstyle ':completion:*' menu select
-zstyle ':completion::complete:*' use-cache on 
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-
-# options
 setopt COMPLETE_ALIASES
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHISTORY=10000
-setopt append_history
-setopt auto_cd
 
-# terminal title
-print -Pn "\e]0; %n@%M: %~\a"
+# This will set the default prompt to the walters theme
+prompt walters
 
-# sources
-source ~/.zshrc.d/aliases.zsh
+zstyle ':completion:*' menu select
 
-# antigen
-source ~/.zshrc.d/antigen.zsh
+# Antigen
+source ~/.zsh.d/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle pip
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen theme subnixr/minimal
+antigen theme clean
 antigen apply
 
-# keyboard
+# Window title
+autoload -Uz add-zsh-hook
+
+function xterm_title_precmd () {
+    print -Pn '\e]2;%n@%m %1~\a'
+}
+
+function xterm_title_preexec () {
+    print -Pn '\e]2;%n@%m %1~ %# '
+    print -n "${(q)1}\a"
+}
+
+if [[ "$TERM" == (screen*|xterm*|rxvt*) ]]; then
+    add-zsh-hook -Uz precmd xterm_title_precmd
+    add-zsh-hook -Uz preexec xterm_title_preexec
+fi
+
+# Key bindings
+autoload zkbd
 function zkbd_file() {
     [[ -f ~/.zkbd/${TERM}-${VENDOR}-${OSTYPE} ]] && printf '%s' ~/".zkbd/${TERM}-${VENDOR}-${OSTYPE}" && return 0
     [[ -f ~/.zkbd/${TERM}-${DISPLAY}          ]] && printf '%s' ~/".zkbd/${TERM}-${DISPLAY}"          && return 0
@@ -59,13 +66,8 @@ unfunction zkbd_file; unset keyfile ret
 [[ -n "$key[Insert]"    ]] && bindkey -- "$key[Insert]"    overwrite-mode
 [[ -n "$key[Backspace]" ]] && bindkey -- "$key[Backspace]" backward-delete-char
 [[ -n "$key[Delete]"    ]] && bindkey -- "$key[Delete]"    delete-char
-[[ -n "$key[Up]"        ]] && bindkey -- "$key[Up]"        up-line-or-search
-[[ -n "$key[Down]"      ]] && bindkey -- "$key[Down]"      down-line-or-search
+[[ -n "$key[Up]"        ]] && bindkey -- "$key[Up]"        up-line-or-beginning-search
+[[ -n "$key[Down]"      ]] && bindkey -- "$key[Down]"      down-line-or-beggining-search
 [[ -n "$key[Left]"      ]] && bindkey -- "$key[Left]"      backward-char
 [[ -n "$key[Right]"     ]] && bindkey -- "$key[Right]"     forward-char
 
-PATH="/home/russo/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/russo/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/russo/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/russo/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/russo/perl5"; export PERL_MM_OPT;
