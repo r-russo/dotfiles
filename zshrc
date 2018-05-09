@@ -6,15 +6,15 @@ zle -N down-line-or-beginning-search
 
 setopt COMPLETE_ALIASES
 
-# This will set the default prompt to the walters theme
-prompt walters
-
 zstyle ':completion:*' menu select
+
+source ~/.zsh.d/aliases.zsh
 
 # Antigen
 source ~/.zsh.d/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
+antigen bundle heroku
 antigen bundle pip
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme clean

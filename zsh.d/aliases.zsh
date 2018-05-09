@@ -1,0 +1,6 @@
+alias pup='trizen -Syu'
+alias pi='sudo pacman -S'
+alias ps='trizen -r'
+alias psa='trizen'
+alias pr='pacman -R'
+alias prd='pacman -Rcc'
