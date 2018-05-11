@@ -38,7 +38,7 @@
 
 URxvt.depth: 32
 URxvt.scrollstyle: plain
-URxvt.font: xft:Noto Mono:size=11
+URxvt.font: xft:Noto Sans Mono Regular:size=11
 URxvt.letterSpace: -1
 
 URxvt.scrollBar: false
