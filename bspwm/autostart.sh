@@ -11,7 +11,6 @@ compton &
 firefox &
 thunderbird &
 redshift-gtk &
-deluge &
 mpd &
 Telegram &
 sonata &
