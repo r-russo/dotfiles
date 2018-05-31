@@ -16,25 +16,15 @@
 #
 #xfce-mcs-manager &
 
-set_dbus & 
-
 lxpolkit &
-wmname LG3D &
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' &
-
-start-pulseaudio-x11 &
-numlockx on &
-setxkbmap latam &
-compton -CGc &
+redshift-gtk &
+pa-applet &
 mpd &
-
-tint2 -c ~/.config/tint2/tint2rc &
-
-nitrogen --restore &
-xfce4-power-manager &
-xfce4-volumed-pulse &
-
-nm-applet &
+sonata &
+compton &
 thunderbird &
-Telegram &
-synclient TouchPadOff=1 &
+tint2 &
+setxkbmap latam &
+telegram-desktop &
+nitrogen --restore &
+numlockx on &
