@@ -4,20 +4,17 @@ setxkbmap latam &
 sxhkd -m 1 &
 numlockx on &
 xsetroot -cursor_name left_ptr &
-#start-pulseaudio-x11 &
 nitrogen --restore &
 numlockx on &
-copyq &
 lxpolkit &
 compton &
 firefox &
 thunderbird &
 redshift-gtk &
-panel &
 deluge &
 mpd &
 Telegram &
-(sleep 10 && tint2) &
-(sleep 10 && xmodmap ~/.Xmodmap) &
+sonata &
+#(sleep 10 && tint2) &
+#(sleep 10 && xmodmap ~/.Xmodmap) &
 
-export XDG_CURRENT_DESKTOP=KDE
