@@ -10,10 +10,8 @@ lxpolkit &
 compton &
 firefox &
 thunderbird &
-redshift-gtk &
+redshift &
 mpd &
-Telegram &
-sonata &
-#(sleep 10 && tint2) &
-#(sleep 10 && xmodmap ~/.Xmodmap) &
+telegram-desktop &
 
+polybar main &
