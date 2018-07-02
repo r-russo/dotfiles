@@ -9,9 +9,11 @@ numlockx on &
 lxpolkit &
 compton &
 firefox &
-thunderbird &
+# thunderbird &
 redshift &
 mpd &
 telegram-desktop &
 
 polybar main &
+xset s 1800 1800 &
+xset dpms 1800 1800 3600 &

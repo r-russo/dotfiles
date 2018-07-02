@@ -12,7 +12,7 @@ bspc config normal_border_color  "#44475a"
 bspc config active_border_color  "#bd93f9"
 bspc config focused_border_color  "#bd93f9"
 
-bspc monitor -d term 2 3 misc 4 5 games chat mail www
+bspc monitor -d term 2 3 misc 5 6 games chat mail www
 
 bspc rule -a Firefox desktop=^10
 bspc rule -a Thunderbird desktop=^9
