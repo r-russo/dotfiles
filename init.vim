@@ -6,7 +6,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/indentpython.vim'
 Plug 'roxma/nvim-completion-manager'
 Plug 'heavenshell/vim-pydocstring'
-Plug 'nvie/vim-flake8'
+"Plug 'nvie/vim-flake8'
+Plug 'w0rp/ale'
 Plug 'benmills/vimux'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'lervag/vimtex'
@@ -83,5 +84,8 @@ map <leader>c :VimuxInterruptRunner<CR>
 inoremap jk <Esc>
 nnoremap <leader>w :%s/\s\+$//e <return>
 nnoremap <silent><C-l> :nohl<CR><C-l>
+nnoremap <C-l> :tabnext<CR>
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-n> :tabnew<CR>
 
 colorscheme dracula
