@@ -3,11 +3,11 @@ elseif has('python3')
 endif
 " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'vim-scripts/indentpython.vim'
-Plug 'roxma/nvim-completion-manager'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-jedi'
+Plug 'roxma/nvim-yarp'
 Plug 'heavenshell/vim-pydocstring'
-"Plug 'nvie/vim-flake8'
-Plug 'w0rp/ale'
 Plug 'benmills/vimux'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'lervag/vimtex'
@@ -58,6 +58,7 @@ set writebackup
 filetype plugin indent on
 let mapleader=','
 let maplocalleader = ","
+autocmd BufEnter * call ncm2#enable_for_buffer()
 
 au FileType python nnoremap <buffer> <F5>
             \ :VimuxRunCommand('python ' . bufname("%"))<CR>
@@ -83,9 +84,9 @@ map <leader>c :VimuxInterruptRunner<CR>
 
 inoremap jk <Esc>
 nnoremap <leader>w :%s/\s\+$//e <return>
-nnoremap <silent><C-l> :nohl<CR><C-l>
 nnoremap <C-l> :tabnext<CR>
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-n> :tabnew<CR>
+nmap <silent> <C-m> <Plug>(pydocstring)
 
 colorscheme dracula
