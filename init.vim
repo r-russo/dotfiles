@@ -59,6 +59,7 @@ filetype plugin indent on
 let mapleader=','
 let maplocalleader = ","
 autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
 
 au FileType python nnoremap <buffer> <F5>
             \ :VimuxRunCommand('python ' . bufname("%"))<CR>
