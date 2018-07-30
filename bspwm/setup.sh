@@ -22,3 +22,4 @@ bspc rule -a Nitrogen state=floating
 bspc rule -a Lxappearance state=floating
 bspc rule -a Zathura state=tiled
 bspc rule -a "GNU Octave" state=floating
+bspc rule -a PCSX2 state=floating
