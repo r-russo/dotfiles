@@ -69,6 +69,6 @@ unfunction zkbd_file; unset keyfile ret
 [[ -n "$key[Backspace]" ]] && bindkey -- "$key[Backspace]" backward-delete-char
 [[ -n "$key[Delete]"    ]] && bindkey -- "$key[Delete]"    delete-char
 [[ -n "$key[Up]"        ]] && bindkey -- "$key[Up]"        up-line-or-beginning-search
-[[ -n "$key[Down]"      ]] && bindkey -- "$key[Down]"      down-line-or-beggining-search
+[[ -n "$key[Down]"      ]] && bindkey -- "$key[Down]"      down-line-or-beginning-search
 [[ -n "$key[Left]"      ]] && bindkey -- "$key[Left]"      backward-char
 [[ -n "$key[Right]"     ]] && bindkey -- "$key[Right]"     forward-char
