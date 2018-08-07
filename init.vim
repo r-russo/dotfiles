@@ -55,10 +55,16 @@ set backupskip=~/tmp/*
 set directory=~/tmp/vim
 set writebackup
 
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
 filetype plugin indent on
 let mapleader=','
 let maplocalleader = ","
 autocmd BufEnter * call ncm2#enable_for_buffer()
+autocmd BufWritePost *.c,*.py call system("ctags -R")
 set completeopt=noinsert,menuone,noselect
 
 au FileType python nnoremap <buffer> <F5>
