@@ -22,11 +22,11 @@ config_folders=("alacritty" "bspwm" "dunst" "mpv" "nvim" "openbox" \
 home_configs=("compton.conf" "tmux.conf" "Xdefaults" "zshenv" "zshrc")
 
 for folder in ${config_folders[@]}; do
-    ln -svt $DIR/$folder $HOME/.config/
+    ln -svT $DIR/$folder $HOME/.config/
 done
 
 for config in ${home_configs[@]}; do
-    ln -sv $DIR/$config $HOME/.$config
+    ln -svT $DIR/$config $HOME/.$config
 done
 
-ln -svt $DIR/zsh.d $HOME/.zsh.d
+ln -svT $DIR/zsh.d $HOME/.zsh.d
