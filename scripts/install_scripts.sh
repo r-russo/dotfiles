@@ -7,16 +7,6 @@ if [ ! -d "$HOME/.config" ]; then
     mkdir $HOME/.config
 fi
 
-if [ ! -d "$HOME/.config/nvim" ]; then
-    echo "$HOME/.config/nvim doesn't exist. Making dir..."
-    mkdir $HOME/.config/nvim
-fi
-
-if [ ! -d "$HOME/.config/mpv" ]; then
-    echo "$HOME/.config/mpv doesn't exist. Making dir..."
-    mkdir $HOME/.config/mpv
-fi
-
 config_folders=("alacritty" "bspwm" "dunst" "mpv" "nvim" "openbox" \
     "polybar" "rofi" "startpage" "sxhkd" "tint2")
 home_configs=("compton.conf" "tmux.conf" "Xdefaults" "zshenv" "zshrc")
