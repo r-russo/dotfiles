@@ -1,7 +1,8 @@
 #!/bin/sh
 
 setxkbmap latam &
-if [ "$HOST" = "thinkpad" ]; then
+
+if [ "$(hostname)" = "thinkpad" ]; then
     sxhkd -m 1 -c ~/.config/sxhkd/sxhkd-laptop &
     polybar main_laptop &
 else
