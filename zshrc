@@ -1,4 +1,6 @@
 autoload -Uz compinit promptinit up-line-or-beginning-search down-line-or-beginning-search
+autoload -U colors
+colors
 compinit
 promptinit
 zle -N up-line-or-beginning-search
