@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-jedi'
+Plug 'ncm2/ncm2-path'
+Plug 'zchee/deoplete-jedi'
 Plug 'roxma/nvim-yarp'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'benmills/vimux'
@@ -15,11 +17,13 @@ Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
 Plug 'w0rp/ale'
+Plug 'JuliaEditorSupport/julia-vim'
+
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'
-let g:deoplete#sources#jedi#server_timeout = 120
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#sources#jedi#server_timeout = 120
+"et g:deoplete#enable_at_startup = 1
 autocmd CompleteDone * pclose
 
 syntax enable
