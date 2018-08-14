@@ -43,7 +43,7 @@ font-1 = "FuraCode Nerd Font:size=11"
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = pulseaudio mpd date powermenu
+modules-right = pulseaudio date powermenu
 
 ;tray-position = right
 ;tray-padding = 2 tray-transparent = true tray-background = #0063ff
@@ -90,10 +90,12 @@ modules-left = bspwm
 modules-center = xwindow
 modules-right = pulseaudio mpd date powermenu
 
-;tray-position = right
-;tray-padding = 2 tray-transparent = true tray-background = #0063ff
+tray-position = right
+tray-padding = 0
+;tray-transparent = true
+;tray-background = #0063ff
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
