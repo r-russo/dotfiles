@@ -1,7 +1,7 @@
 #!/bin/sh
 
-bspc config border_width         3
-bspc config window_gap          10
+bspc config border_width        4
+bspc config window_gap          5
 
 bspc config split_ratio          0.6
 bspc config borderless_monocle   true
