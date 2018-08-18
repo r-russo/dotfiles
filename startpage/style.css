@@ -5,22 +5,22 @@
 }*/
 
 @font-face{
-    font-family: "Liberation Sans";
-    src: local("Liberation Sans");
+    font-family: "Noto Sans"
+    src: local("Noto Sans");
 }
 
 @font-face{
-    font-family: "Liberation Sans";
-    src: local("Liberation Sans");
+    font-family: "Noto Sans";
+    src: local("Noto Sans");
 }
 
 @font-face{
-    font-family: "Liberation Sans";
-    src: local("Liberation Sans");
+    font-family: "Noto Sans";
+    src: local("Noto Sans");
 }
 
 body {
-    background-color: #6a7187;
+    background-color: #282a36;
     margin: 0;
     padding: 0;
     padding-left: 10%;
@@ -42,21 +42,21 @@ body {
 #time {
     padding-top: 2%;
     padding-bottom: 8%;
-    color: #333333;
-    font-family: "Liberation Sans";
+    color: #6272a4;
+    font-family: "Noto Sans";
     font-size: 72px;
     text-align: center;
 }
 
 .links {
     float: left;
-    color: #333333;
-    font-family: "Liberation Sans";
+    color: #f8f8f2;
+    font-family: "Noto Sans";
     width: 68%;
     height: 100%;
     line-height: 1.8;
-    background-color: #dcdfe8;
-    border: solid #bec9e8 2px;
+    /* background-color: #dcdfe8; */
+    /* border: solid #bec9e8 2px; */
 }
 
 .pic {
@@ -64,7 +64,7 @@ body {
     width: 30%;
     height: 100%;
     text-align: left;
-    border: solid #bec9e8 2px;
+    /* border: solid #bec9e8 2px; */
 
     background-image: url(pic.jpg);
     background-repeat: no-repeat;
@@ -78,26 +78,20 @@ body {
     text-align: right;
     display: inline-block;
     width: 120px;
-    font-family: "Liberation Sans";
+    font-family: "Noto Sans";
 }
 
 a {
-    color: #666666;
+    color: #f8f8f2;
     text-decoration: none;
 }
 
 a:hover {
-    color: #333333;
+    color: #ff79c6;
 }
 
 .content {
     text-align: left;
     margin-left: 120px;
     padding-left: 10px;
-}
-
-.sleepy {
-    margin-top: 2%;
-    text-align: center;
-    font-size: 48px;
 }
