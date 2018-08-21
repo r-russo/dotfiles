@@ -74,5 +74,5 @@ unfunction zkbd_file; unset keyfile ret
 [[ -n "$key[Right]"     ]] && bindkey -- "$key[Right]"     forward-char
 
 # TMUX
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+#[[ $- != *i* ]] && return
+#[[ -z "$TMUX" ]] && exec tmux

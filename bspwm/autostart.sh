@@ -5,14 +5,12 @@ setxkbmap latam &
 if [ "$(hostname)" = "thinkpad" ]; then
     sxhkd -m 1 -c ~/.config/sxhkd/sxhkdrc-laptop &
     polybar main_laptop &
-    telegram-desktop &
 else
     sxhkd -m 1 &
     polybar main &
     firefox &
     redshift &
     nextcloud &
-    Telegram &
 fi
 numlockx on &
 xsetroot -cursor_name left_ptr &
@@ -21,6 +19,7 @@ numlockx on &
 lxpolkit &
 compton &
 # thunderbird &
+telegram-desktop &
 mpd &
 
 xset s 1800 1800 &
