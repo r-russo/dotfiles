@@ -19,7 +19,7 @@ numlockx on &
 lxpolkit &
 compton &
 # thunderbird &
-telegram-desktop &
+(sleep 4 && telegram-desktop) &
 mpd &
 
 xset s 1800 1800 &
