@@ -17,14 +17,13 @@
 #xfce-mcs-manager &
 
 lxpolkit &
-redshift-gtk &
+redshift -l -38:-57.5 &
 pa-applet &
 mpd &
-sonata &
 compton &
-thunderbird &
 tint2 &
 setxkbmap latam &
 telegram-desktop &
 nitrogen --restore &
 numlockx on &
+firefox &
