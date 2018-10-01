@@ -366,9 +366,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind action="Press" button="W-Right">
-        <action name="Focus"/>
-        <action name="Raise"/>
-        <action name="Unshade"/>
+        <action name="ToggleMaximize"/>
       </mousebind>
       <mousebind action="Drag" button="W-Right">
         <action name="Resize"/>
@@ -443,11 +441,11 @@
         <action name="Raise"/>
         <action name="Unshade"/>
       </mousebind>
-      <mousebind action="Press" button="Middle">
+      <!--<mousebind action="Press" button="Middle">
         <action name="Lower"/>
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
-      </mousebind>
+      </mousebind> -->
       <mousebind action="Press" button="Right">
         <action name="Focus"/>
         <action name="Raise"/>
@@ -702,9 +700,9 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-      <application class="*">
-          <decor>no</decor>
-      </application>
+    <application class="*">
+      <decor>no</decor>
+    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
