@@ -183,7 +183,7 @@
     </keybind>
     <keybind key="W-p">
       <action name="Execute">
-        <command>alacritty -e python</command>
+        <command>alacritty -e ipython</command>
       </action>
     </keybind>
     <keybind key="W-Up">
