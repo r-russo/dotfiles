@@ -8,7 +8,7 @@ if [ ! -d "$HOME/.config" ]; then
 fi
 
 config_folders=("alacritty" "bspwm" "dunst" "mpv" "nvim" "openbox" \
-    "polybar" "rofi" "startpage" "sxhkd" "tint2")
+    "polybar" "rofi" "startpage" "sxhkd" "tint2" "rclone")
 home_configs=("compton.conf" "tmux.conf" "Xdefaults" "zshenv" "zshrc")
 
 for folder in ${config_folders[@]}; do
