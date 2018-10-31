@@ -38,7 +38,7 @@
 
 URxvt.depth: 32
 URxvt.scrollstyle: plain
-URxvt.font: xft:FuraCode Nerd Font:size=11
+URxvt.font: xft:Hack:size=11
 URxvt.letterSpace: -1
 
 URxvt.scrollBar: false
