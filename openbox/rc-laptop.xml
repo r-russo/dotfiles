@@ -183,7 +183,7 @@
     </keybind>
     <keybind key="W-p">
       <action name="Execute">
-        <command>alacritty -e ipython</command>
+        <command>urxvt-e ipython</command>
       </action>
     </keybind>
     <keybind key="W-Up">
@@ -194,7 +194,7 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>spectacle</command>
+        <command>scrot</command>
       </action>
     </keybind>
     <keybind key="W-Left">
@@ -239,7 +239,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>alacritty</command>
+        <command>urxvt</command>
       </action>
     </keybind>
     <keybind key="W-f">
@@ -712,10 +712,6 @@
     <manageDesktops>yes</manageDesktops>
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
-  <applications>
-    <application class="*">
-      <decor>no</decor>
-    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
