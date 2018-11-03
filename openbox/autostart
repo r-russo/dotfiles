@@ -16,14 +16,17 @@
 #
 #xfce-mcs-manager &
 
-lxpolkit &
-redshift -l -38:-57.5 &
-pa-applet &
-mpd &
-compton &
-tint2 &
 setxkbmap latam &
 telegram-desktop &
 nitrogen --restore &
 numlockx on &
-firefox &
+lxpolkit &
+pa-applet &
+mpd &
+compton &
+tint2 &
+
+if [ "$(hostname)" = "arch" ]; then
+    redshift -l -38:-57.5 &
+    firefox &
+fi
