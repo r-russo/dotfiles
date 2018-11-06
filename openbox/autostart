@@ -31,4 +31,5 @@ if [ "$(hostname)" = "arch" ]; then
     firefox &
 else
     synclient TouchpadOff=1 &
+    nm-applet &
 fi
