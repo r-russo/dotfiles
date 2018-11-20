@@ -28,7 +28,6 @@ tint2 &
 
 if [ "$(hostname)" = "arch" ]; then
     redshift -l -38:-57.5 &
-    firefox &
 else
     synclient TouchpadOff=1 &
     nm-applet &
