@@ -82,6 +82,13 @@ let g:tex_flavor = 'latex'
 au FileType tex set spell |
                         \ nnoremap <leader>p o<Esc>o\par
 
+set conceallevel=2
+set concealcursor=nc
+let g:tex_conceal="gam"
+
+let g:indentLine_conceallevel  = &conceallevel
+let g:indentLine_concealcursor = &concealcursor
+
 " Snippets
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<C-b>"
