@@ -183,7 +183,7 @@
     </keybind>
     <keybind key="W-p">
       <action name="Execute">
-        <command>urxvt256c -e ipython</command>
+        <command>urxvt256c -e ipython3</command>
       </action>
     </keybind>
     <keybind key="W-Up">
