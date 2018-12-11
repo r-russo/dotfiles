@@ -1,14 +1,11 @@
-if exists('py2') && has('python')
-elseif has('python3')
-endif
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-jedi'
 Plug 'ncm2/ncm2-path'
-Plug 'zchee/deoplete-jedi'
 Plug 'roxma/nvim-yarp'
+Plug 'davidhalter/jedi-vim'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'benmills/vimux'
 Plug 'rafi/awesome-vim-colorschemes'
@@ -17,14 +14,28 @@ Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
 Plug 'w0rp/ale'
-Plug 'JuliaEditorSupport/julia-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'
-"let g:deoplete#sources#jedi#server_timeout = 120
-"et g:deoplete#enable_at_startup = 1
 autocmd CompleteDone * pclose
+
+" NCM2
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+set shortmess+=c
+let g:ncm2#matcher = 'substrfuzzy'
+
+" Jedi
+let g:jedi#auto_initialization = 1
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#smart_auto_mappings = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#completions_command = ""
+let g:jedi#show_call_signatures = "1"
 
 syntax enable
 
@@ -67,14 +78,11 @@ set foldlevel=2
 filetype plugin indent on
 let mapleader=','
 let maplocalleader = ","
-autocmd BufEnter * call ncm2#enable_for_buffer()
 autocmd BufWritePost *.c,*.py call system("ctags -R")
 set completeopt=noinsert,menuone,noselect
 
 au FileType python nnoremap <buffer> <F5>
             \ :VimuxRunCommand('python ' . bufname("%"))<CR>
-" au FileType python nnoremap <buffer> <F5>
-"             \ :exec '!clear; python' shellescape(@%,1)<cr>
 
 " Latex
 let g:tex_flavor = 'latex'
@@ -100,11 +108,20 @@ let g:VimuxHeight = "40"
 let g:VimuxOrientation = "h"
 map <leader>c :VimuxInterruptRunner<CR>
 
+" Remaps
 inoremap jk <Esc>
 nnoremap <leader>w :%s/\s\+$//e <return>
-nnoremap <C-l> :tabnext<CR>
-nnoremap <C-h> :tabprevious<CR>
-nnoremap <C-n> :tabnew<CR>
+" splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+" tabs
+nnoremap tn :tabnew<Space>
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
+nnoremap th :tabfirst<CR>
+nnoremap tl :tablast<CR>
 nmap <silent> <C-m> <Plug>(pydocstring)
 
 colorscheme dracula
