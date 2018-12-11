@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -184,7 +183,7 @@
     </keybind>
     <keybind key="W-p">
       <action name="Execute">
-        <command>urxvt-e ipython</command>
+        <command>urxvt256c -e ipython3</command>
       </action>
     </keybind>
     <keybind key="W-Up">
@@ -240,7 +239,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>urxvt</command>
+        <command>urxvt256c</command>
       </action>
     </keybind>
     <keybind key="W-f">
