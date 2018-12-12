@@ -117,11 +117,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " tabs
-nnoremap tn :tabnew<Space>
-nnoremap tk :tabnext<CR>
-nnoremap tj :tabprev<CR>
-nnoremap th :tabfirst<CR>
-nnoremap tl :tablast<CR>
+nnoremap <leader>n :tabnew<Space>
+nnoremap <leader>k :tabnext<CR>
+nnoremap <leader>j :tabprev<CR>
+nnoremap <leader>h :tabfirst<CR>
+nnoremap <leader>l :tablast<CR>
 nmap <silent> <C-m> <Plug>(pydocstring)
 
 colorscheme dracula
