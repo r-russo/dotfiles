@@ -117,7 +117,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " tabs
-nnoremap <leader>n :tabnew<Space>
 nnoremap <leader>k :tabnext<CR>
 nnoremap <leader>j :tabprev<CR>
 nnoremap <leader>h :tabfirst<CR>
