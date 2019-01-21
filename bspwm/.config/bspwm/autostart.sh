@@ -8,9 +8,8 @@ if [ "$(hostname)" = "thinkpad" ]; then
 else
     sxhkd -m 1 &
     polybar main &
-    firefox &
+    # firefox &
     redshift &
-    nextcloud &
 fi
 numlockx on &
 xsetroot -cursor_name left_ptr &
@@ -18,7 +17,7 @@ nitrogen --restore &
 numlockx on &
 lxpolkit &
 compton &
-# thunderbird &
+dunst &
 (sleep 4 && telegram-desktop) &
 mpd &
 

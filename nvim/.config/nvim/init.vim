@@ -8,7 +8,6 @@ Plug 'roxma/nvim-yarp'
 Plug 'davidhalter/jedi-vim'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'benmills/vimux'
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'lervag/vimtex'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
@@ -16,6 +15,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -123,4 +123,7 @@ nnoremap <leader>h :tabfirst<CR>
 nnoremap <leader>l :tablast<CR>
 nmap <silent> <C-m> <Plug>(pydocstring)
 
-colorscheme dracula
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif

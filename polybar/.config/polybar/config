@@ -7,15 +7,25 @@
 ;
 ;=====================================================
 
+
+[desktop]
+screen-width = 1860
+screen-height = 1080
+bar-height = 30
+offset-x = 30
+offset-y = 1048
+
 [colors]
-background = #282a36
-background-alt = #44475a
-border = #44475a
-foreground = #f8f8f2
-icon = #6272a4
-primary = #bd93f9
-secondary = #ffb86c
-alert = #ff5555
+background = ${xrdb:background:#282a36}
+background-focused = ${xrdb:color12:#44475a}
+border = ${xrdb:color4:#44475a}
+foreground = ${xrdb:foreground:#f8f8f2}
+fg-empty = ${xrdb:color8:#f8f8f2}
+fg-focused = ${xrdb:color0:#f8f8f2}
+icon = ${xrdb:color4:#6272a4}
+primary = ${xrdb:color3:#bd93f9}
+secondary = ${xrdb:color6:#ffb86c}
+alert = ${xrdb:color1:#ff5555}}
 
 [bar/main_laptop]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -63,18 +73,17 @@ cursor-click = pointer
 cursor-scroll = pointer
 
 [bar/main]
-;monitor = ${env:MONITOR:HDMI-1}
-width = 1920
-height = 36
-offset-x = 0
-offset-y = 0
+width = ${desktop.screen-width}
+height = ${desktop.bar-height}
+offset-x = ${desktop.offset-x}
+offset-y = ${desktop.offset-y}
 radius = 0
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-size = 0
+border-size = 2
 border-color = ${colors.border}
 
 padding-left = 0
@@ -117,7 +126,8 @@ label = %title:0:80:...%
 type = internal/bspwm
 
 label-focused = %name%
-label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.background-focused}
+label-focused-foreground = ${colors.fg-focused}
 label-focused-padding = 2
 
 label-occupied = %name%
@@ -128,7 +138,7 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 label-empty = %name%
-label-empty-foreground = ${colors.icon}
+label-empty-foreground = ${colors.fg-empty}
 label-empty-padding = 2
 
 [module/mpd]
@@ -216,9 +226,9 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.icon}
 label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-close-foreground = ${colors.icon}
 label-separator = |
 label-separator-foreground = ${colors.foreground}
 
@@ -252,7 +262,7 @@ screenchange-reload = true
 ;compositing-border = over
 
 [global/wm]
-margin-top = 5
+margin-top = 0
 margin-bottom = 0
 
 ; vim:ft=dosini

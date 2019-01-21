@@ -7,16 +7,10 @@ if [ ! -d "$HOME/.config" ]; then
     mkdir $HOME/.config
 fi
 
-config_folders=("alacritty" "bspwm" "dunst" "mpv" "nvim" "openbox" \
-    "polybar" "rofi" "startpage" "sxhkd" "tint2" "rclone")
-home_configs=("compton.conf" "tmux.conf" "Xdefaults" "zshenv" "zshrc")
+config_folders=("alacritty" "bspwm" "compton" "dunst" "mpv" "nvim" "openbox" \
+    "polybar" "rofi" "sxhkd" "tint2" "tmux" "Xresources" "zsh")
 
+cd $DIR
 for folder in ${config_folders[@]}; do
-    ln -sfvT $DIR/$folder $HOME/.config/$folder
+	stow $folder
 done
-
-for config in ${home_configs[@]}; do
-    ln -sfvT $DIR/$config $HOME/.$config
-done
-
-ln -sfvT $DIR/zsh.d $HOME/.zsh.d

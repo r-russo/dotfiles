@@ -1,16 +1,23 @@
 #!/bin/sh
 
+normal_border_color=$(xrdb -query | grep background | awk '{print $2}')
+active_border_color=$(xrdb -query | grep foreground | awk '{print $2}')
+focused_border_color=$(xrdb -query | grep foreground | awk '{print $2}')
+presel_feedback_color=$(xrdb -query | grep color3 | awk '{print $2}')
+
 bspc config border_width        4
 bspc config window_gap          5
+bspc config bottom_padding      30
 
 bspc config split_ratio          0.6
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 
-bspc config normal_border_color  "#44475a"
-bspc config active_border_color  "#bd93f9"
-bspc config focused_border_color  "#bd93f9"
+bspc config normal_border_color  "$normal_border_color"
+bspc config active_border_color  "$active_border_color"
+bspc config focused_border_color  "$focused_border_color"
+bspc config presel_feedback_color  "$presel_feedback_color"
 
 bspc monitor -d term 2 3 misc 5 6 games chat torrent www
 
