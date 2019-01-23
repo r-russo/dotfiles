@@ -79,6 +79,7 @@ unfunction zkbd_file; unset keyfile ret
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
+BASE16_SHELL_SET_BACKGROUND=false
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"

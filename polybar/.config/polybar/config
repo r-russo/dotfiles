@@ -11,14 +11,15 @@
 [desktop]
 screen-width = 1860
 screen-height = 1080
-bar-height = 30
+bar-height = 28
+border = 5
 offset-x = 30
-offset-y = 1048
+offset-y = 1047
 
 [colors]
-background = ${xrdb:background:#282a36}
+background = ${xrdb:color0:#282a36}
 background-focused = ${xrdb:color12:#44475a}
-border = ${xrdb:color4:#44475a}
+border = ${xrdb:background:#44475a}
 foreground = ${xrdb:foreground:#f8f8f2}
 fg-empty = ${xrdb:color8:#f8f8f2}
 fg-focused = ${xrdb:color0:#f8f8f2}
@@ -83,7 +84,7 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-size = 2
+border-size = ${desktop.border}
 border-color = ${colors.border}
 
 padding-left = 0
@@ -92,7 +93,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Noto Sans:size=12"
+font-0 = "Noto Sans:size=11"
 font-1 = "FuraCode Nerd Font:size=11"
 
 modules-left = bspwm

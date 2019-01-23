@@ -116,14 +116,13 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" tabs
-nnoremap <leader>k :tabnext<CR>
-nnoremap <leader>j :tabprev<CR>
-nnoremap <leader>h :tabfirst<CR>
-nnoremap <leader>l :tablast<CR>
 nmap <silent> <C-m> <Plug>(pydocstring)
 
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+
+" disables opaque background
+hi Normal ctermbg=none
+hi NonText ctermbg=none

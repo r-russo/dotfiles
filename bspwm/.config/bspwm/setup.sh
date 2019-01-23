@@ -19,14 +19,14 @@ bspc config active_border_color  "$active_border_color"
 bspc config focused_border_color  "$focused_border_color"
 bspc config presel_feedback_color  "$presel_feedback_color"
 
-bspc monitor -d term 2 3 misc 5 6 games chat torrent www
+bspc monitor -d  2 3 4 5 6    
 
 bspc rule -a Firefox desktop=^10
 bspc rule -a Deluge desktop=^9
 bspc rule -a TelegramDesktop desktop=^8
 bspc rule -a Steam desktop=^7
-bspc rule -a Nitrogen state=floating
-bspc rule -a Lxappearance state=floating
+bspc rule -a Nitrogen state=floating center=true
+bspc rule -a Lxappearance state=floating center=true
 bspc rule -a Zathura state=tiled
 bspc rule -a "GNU Octave" state=floating
-bspc rule -a PCSX2 state=floating
+bspc rule -a PCSX2 state=floating center=true
