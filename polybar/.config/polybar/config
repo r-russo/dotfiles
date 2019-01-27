@@ -11,19 +11,24 @@
 [desktop]
 screen-width = 1860
 screen-height = 1080
-bar-height = 28
-border = 5
+bar-height = 32
+border = 0
 offset-x = 30
-offset-y = 1047
+offset-y = 1048
+padding = 4
 
 [colors]
 background = ${xrdb:color0:#282a36}
 background-focused = ${xrdb:color12:#44475a}
+background-label = "#2d3030"
+background-power = ${xrdb:color9:#2d3030}
 border = ${xrdb:background:#44475a}
 foreground = ${xrdb:foreground:#f8f8f2}
+foreground-power = ${xrdb:color0:#f8f8f2}
 fg-empty = ${xrdb:color8:#f8f8f2}
 fg-focused = ${xrdb:color0:#f8f8f2}
 icon = ${xrdb:color4:#6272a4}
+icon-power = ${xrdb:color0:#6272a4}
 primary = ${xrdb:color3:#bd93f9}
 secondary = ${xrdb:color6:#ffb86c}
 alert = ${xrdb:color1:#ff5555}}
@@ -88,17 +93,17 @@ border-size = ${desktop.border}
 border-color = ${colors.border}
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = "Noto Sans:size=11"
-font-1 = "FuraCode Nerd Font:size=11"
+font-0 = "Noto Sans:size=10"
+font-1 = "FuraCode Nerd Font:size=10"
 
-modules-left = bspwm
-modules-center = xwindow
-modules-right = pulseaudio mpd date powermenu
+modules-left = bspwm xwindow
+modules-center =
+modules-right = cpu memory pulseaudio mpd date powermenu
 
 ;tray-position = right
 ;tray-padding = 0
@@ -121,7 +126,7 @@ cursor-scroll = pointer
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:80:...%
+label = %title:0:120:...%
 
 [module/bspwm]
 type = internal/bspwm
@@ -144,7 +149,9 @@ label-empty-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <label-song>   <icon-prev> <icon-stop> <toggle> <icon-next>
+format-offline = 
+label-song = "   %artist% - %title%"
 
 icon-play = " "
 icon-pause = " "
@@ -152,14 +159,22 @@ icon-stop = " "
 icon-prev = " "
 icon-next = " "
 
-label-song-maxlen = 25
+label-song-maxlen = 120
 label-song-ellipsis = true
+
+background = ${colors.background-label}
+
+format-online-padding = ${desktop.padding}
+format-online-background = ${colors.background-label}
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.icon}
+format-background = ${colors.background-label}
+format-padding = ${desktop.padding}
+margin-module-left = 10
 label = %percentage:2%%
 
 [module/memory]
@@ -167,6 +182,8 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.icon}
+format-background = ${colors.background-label}
+format-padding = ${desktop.padding}
 label = %percentage_used%%
 
 [module/date]
@@ -178,6 +195,8 @@ time = %H:%M
 
 format-prefix = " "
 format-prefix-foreground = ${colors.icon}
+format-background = ${colors.background-label}
+format-padding = ${desktop.padding}
 
 label = %date% %time%
 
@@ -219,6 +238,9 @@ ramp-volume-2 = 
 
 ramp-volume-foreground = ${colors.icon}
 
+format-volume-background = ${colors.background-label}
+format-volume-padding = ${desktop.padding}
+
 [module/powermenu]
 type = custom/menu
 
@@ -227,11 +249,11 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.icon}
-label-close =  cancel
-label-close-foreground = ${colors.icon}
+label-open-foreground = ${colors.icon-power}
+label-close = 
+label-close-foreground = ${colors.icon-power}
 label-separator = |
-label-separator-foreground = ${colors.foreground}
+label-separator-foreground = ${colors.foreground-power}
 
 menu-0-0 = logout
 menu-0-0-exec = menu-open-3
@@ -254,6 +276,19 @@ menu-2-0 = power off
 menu-2-0-exec = systemctl poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+format-background = ${colors.background-power}
+menu-0-0-foreground = ${colors.foreground-power}
+menu-0-1-foreground = ${colors.foreground-power}
+menu-0-2-foreground = ${colors.foreground-power}
+menu-1-0-foreground = ${colors.foreground-power}
+menu-1-1-foreground = ${colors.foreground-power}
+menu-2-0-foreground = ${colors.foreground-power}
+menu-2-1-foreground = ${colors.foreground-power}
+menu-3-0-foreground = ${colors.foreground-power}
+menu-3-1-foreground = ${colors.foreground-power}
+menu-3-2-foreground = ${colors.foreground-power}
+format-padding = ${desktop.padding}
 
 [settings]
 screenchange-reload = true

@@ -6,6 +6,9 @@
 super + Return
     urxvt
 
+super + p
+    urxvt -name ipython -e ipython
+
 # program launcher
 super + r
     rofi -show run

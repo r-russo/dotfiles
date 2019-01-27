@@ -20,6 +20,7 @@ compton &
 dunst &
 (sleep 4 && telegram-desktop) &
 mpd &
+# ~/.config/bspwm/float_desktop.sh 10 &
 
 xset s 1800 1800 &
 xset dpms 1800 1800 3600 &
