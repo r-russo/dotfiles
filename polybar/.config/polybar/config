@@ -99,7 +99,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = "Noto Sans:size=10"
-font-1 = "FuraCode Nerd Font:size=10"
+font-1 = "FuraCode Nerd Font:size=11"
 
 modules-left = bspwm xwindow
 modules-center =
@@ -127,6 +127,7 @@ cursor-scroll = pointer
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:120:...%
+format-padding = 5
 
 [module/bspwm]
 type = internal/bspwm

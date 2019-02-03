@@ -18,8 +18,9 @@ numlockx on &
 lxpolkit &
 compton &
 dunst &
+wmname LG3D &
 (sleep 4 && telegram-desktop) &
-mpd &
+# mpd &
 # ~/.config/bspwm/float_desktop.sh 10 &
 
 xset s 1800 1800 &

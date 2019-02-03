@@ -13,6 +13,8 @@ bspc config split_ratio          0.6
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
+bspc config click_to_focus none
+bspc config swallow_first_click false
 
 bspc config normal_border_color  "$normal_border_color"
 bspc config active_border_color  "$active_border_color"
@@ -22,6 +24,7 @@ bspc config presel_feedback_color  "$presel_feedback_color"
 bspc monitor -d  2 3 4 5     
 
 bspc rule -a Firefox desktop=^10 state=tiled
+bspc rule -a Firefox:firefox desktop=^10 state=floating
 bspc rule -a Deluge desktop=^9
 bspc rule -a TelegramDesktop desktop=^8
 bspc rule -a Steam desktop=^7
