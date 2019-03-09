@@ -19,6 +19,7 @@ lxpolkit &
 compton &
 dunst &
 wmname LG3D &
+deluge &
 (sleep 4 && telegram-desktop) &
 # mpd &
 # ~/.config/bspwm/float_desktop.sh 10 &
