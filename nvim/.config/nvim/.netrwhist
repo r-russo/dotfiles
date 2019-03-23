@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/russo/.config/polybar'
+let g:netrw_dirhist_2='/home/russo/Anime'
+let g:netrw_dirhist_3='/home/russo/.config/sxhkd'
+let g:netrw_dirhist_4='/mnt/extra/Documentos/Concursos/AMB/Ecuaciones Diferenciales'
+let g:netrw_dirhist_5='/home/russo/.config/rofi'

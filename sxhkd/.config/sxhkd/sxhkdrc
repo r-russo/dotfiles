@@ -7,7 +7,7 @@ super + Return
     urxvt
 
 super + p
-    urxvt -name ipython -e ipython
+    uxrvt -name ipython -e ipython
 
 # program launcher
 super + r
@@ -18,7 +18,7 @@ super + b
     firefox
 
 super + f
-    thunar
+    urxvt -e ranger
 
 XF86Audio{Next,Prev,Stop,Play}
     mpc {next,prev,stop,toggle}

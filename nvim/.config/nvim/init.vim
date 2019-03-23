@@ -10,7 +10,7 @@ Plug 'heavenshell/vim-pydocstring'
 Plug 'benmills/vimux'
 Plug 'lervag/vimtex'
 Plug 'sirver/UltiSnips'
-Plug 'honza/vim-snippets'
+"Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
@@ -86,22 +86,24 @@ au FileType python nnoremap <buffer> <F5>
 
 " Latex
 let g:tex_flavor = 'latex'
-"let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_method = 'zathura'
 au FileType tex set spell |
                         \ nnoremap <leader>p o<Esc>o\par
 
-set conceallevel=2
-set concealcursor=nc
-let g:tex_conceal="gam"
+set conceallevel=1
+"set concealcursor=nc
+let g:tex_conceal="abdmg"
 
 let g:indentLine_conceallevel  = &conceallevel
 let g:indentLine_concealcursor = &concealcursor
 
 " Snippets
 let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-b>"
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsEditSplit="vertical"
+ let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
+let g:UltiSnipsSnippetDirectories = ['UltiSnips', '~/.config/nvim/UltiSnips']
 
 " Vimux
 let g:VimuxHeight = "40"

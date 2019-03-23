@@ -1,0 +1,75 @@
+snippet al "Align environment" b
+\begin{align}
+	${VISUAL:}$1
+\end{align}
+endsnippet
+
+snippet al* "Align environment (no label)" bA
+\begin{align*}
+	${VISUAL:}$1
+\end{align*}
+endsnippet
+
+snippet eq "Equation environment" b
+\begin{equation}
+	${VISUAL:}$1
+\end{equation}
+endsnippet
+
+snippet eq* "Equation environment (no label)" bA
+\begin{equation*}
+	${VISUAL:}$1
+\end{equation*}
+endsnippet
+
+snippet // "Fraction" iA
+\frac{$1}{$2}
+endsnippet
+
+snippet p "Paragraph" b
+\par 
+endsnippet
+
+snippet em "Emphasis" i
+\emph{$0}
+endsnippet
+
+snippet it "Itemize" b
+\begin{itemize}
+	\item $0
+\end{itemize}
+endsnippet
+
+snippet ii "New item" bA
+\item 
+endsnippet
+
+snippet en "Enumerate" b
+\begin{enumerate}
+	\item $0
+\end{enumerate}
+endsnippet
+
+snippet lm "$$ env" A
+\$$1\$$2
+endsnippet
+
+snippet pm "\[ \] env" bA
+\[
+	${VISUAL:}$1
+\]
+
+$2
+endsnippet
+
+snippet cdt "cdot" iA
+\cdot
+endsnippet
+
+snippet d( "Display parenthesis" iA
+\left($1${VISUAL}\right)$2
+endsnippet
+
+snippet pi "Pi" i
+\pi
+endsnippet

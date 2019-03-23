@@ -56,7 +56,7 @@ URxvt.background:   [background_opacity]base00
 
 URxvt.depth: 32
 URxvt.scrollstyle: plain
-URxvt.font: xft:Hack NF:size=12
+URxvt.font: xft:FantasqueSansMono NF:size=13
 URxvt.letterSpace: -1
 
 URxvt.scrollBar: false
