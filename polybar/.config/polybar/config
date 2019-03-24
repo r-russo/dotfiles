@@ -103,7 +103,7 @@ font-1 = "FuraCode Nerd Font:size=11"
 
 modules-left = bspwm xwindow
 modules-center =
-modules-right = cpu memory pulseaudio mpd date powermenu
+modules-right = spotify control_prev control_stop control_toggle control_next cpu memory pulseaudio date powermenu
 
 ;tray-position = right
 ;tray-padding = 0
@@ -167,6 +167,41 @@ background = ${colors.background-label}
 
 format-online-padding = ${desktop.padding}
 format-online-background = ${colors.background-label}
+
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/spotify.sh
+
+# exec-if = ~/.config/polybar/test_spotify.sh
+
+format-prefix = " "
+interval = 1
+format-padding = ${desktop.padding}
+format-prefix-foreground = ${colors.icon}
+
+[module/control_prev]
+type = custom/script
+exec = echo " "
+click-left = playerctl previous
+interval = 1
+
+[module/control_next]
+type = custom/script
+exec = echo " "
+click-left = playerctl next
+interval = 1
+
+[module/control_toggle]
+type = custom/script
+exec = ~/.config/polybar/spotify_toggle.sh
+click-left = playerctl play-pause
+interval = 1
+
+[module/control_stop]
+type = custom/script
+exec = echo " "
+click-left = playerctl stop
+interval = 1
 
 [module/cpu]
 type = internal/cpu
