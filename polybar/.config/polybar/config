@@ -15,7 +15,7 @@ bar-height = 32
 border = 0
 offset-x = 30
 offset-y = 1048
-padding = 4
+padding = 3
 
 [colors]
 background = ${xrdb:color0:#282a36}
@@ -32,6 +32,15 @@ icon-power = ${xrdb:color0:#6272a4}
 primary = ${xrdb:color3:#bd93f9}
 secondary = ${xrdb:color6:#ffb86c}
 alert = ${xrdb:color1:#ff5555}}
+
+color8 = ${xrdb:color8:}
+color9 = ${xrdb:color9:}
+colorA = ${xrdb:color11:}
+colorB = ${xrdb:color12:}
+colorC = ${xrdb:color13:}
+colorD = ${xrdb:color14:}
+colorE = ${xrdb:color15:}
+colorF = ${xrdb:color16:}
 
 [bar/main_laptop]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -100,6 +109,7 @@ module-margin-right = 1
 
 font-0 = "Noto Sans:size=10"
 font-1 = "FuraCode Nerd Font:size=11"
+font-2 = "Noto Sans CJK JP:size=10"
 
 modules-left = bspwm xwindow
 modules-center =
@@ -177,38 +187,42 @@ exec = ~/.config/polybar/spotify.sh
 format-prefix = " "
 interval = 1
 format-padding = ${desktop.padding}
-format-prefix-foreground = ${colors.icon}
+format-prefix-foreground = ${colors.color9}
 
 [module/control_prev]
 type = custom/script
 exec = echo " "
 click-left = playerctl previous
+exec-if = ~/.config/polybar/test_spotify.sh
 interval = 1
 
 [module/control_next]
 type = custom/script
 exec = echo " "
 click-left = playerctl next
+exec-if = ~/.config/polybar/test_spotify.sh
 interval = 1
 
 [module/control_toggle]
 type = custom/script
 exec = ~/.config/polybar/spotify_toggle.sh
 click-left = playerctl play-pause
+exec-if = ~/.config/polybar/test_spotify.sh
 interval = 1
 
 [module/control_stop]
 type = custom/script
 exec = echo " "
 click-left = playerctl stop
+exec-if = ~/.config/polybar/test_spotify.sh
 interval = 1
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.icon}
-format-background = ${colors.background-label}
+format-prefix-foreground = ${colors.colorA}
+# format-background = ${colors.background-label}
 format-padding = ${desktop.padding}
 margin-module-left = 10
 label = %percentage:2%%
@@ -217,8 +231,8 @@ label = %percentage:2%%
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.icon}
-format-background = ${colors.background-label}
+format-prefix-foreground = ${colors.colorB}
+# format-background = ${colors.background-label}
 format-padding = ${desktop.padding}
 label = %percentage_used%%
 
@@ -230,8 +244,8 @@ date = "%Y-%m-%d"
 time = %H:%M
 
 format-prefix = " "
-format-prefix-foreground = ${colors.icon}
-format-background = ${colors.background-label}
+format-prefix-foreground = ${colors.colorC}
+# format-background = ${colors.background-label}
 format-padding = ${desktop.padding}
 
 label = %date% %time%
@@ -272,9 +286,9 @@ ramp-volume-0 = 
 ramp-volume-1 = 墳
 ramp-volume-2 = 
 
-ramp-volume-foreground = ${colors.icon}
+ramp-volume-foreground = ${colors.colorD}
 
-format-volume-background = ${colors.background-label}
+; format-volume-background = ${colors.background-label}
 format-volume-padding = ${desktop.padding}
 
 [module/powermenu]
