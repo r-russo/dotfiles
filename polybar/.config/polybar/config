@@ -193,28 +193,28 @@ format-prefix-foreground = ${colors.color9}
 type = custom/script
 exec = echo " "
 click-left = playerctl previous
-exec-if = pgrep spotify
+exec-if = pgrep -x spotify
 interval = 1
 
 [module/control_next]
 type = custom/script
 exec = echo " "
 click-left = playerctl next
-exec-if = pgrep spotify
+exec-if = pgrep -x spotify
 interval = 1
 
 [module/control_toggle]
 type = custom/script
 exec = ~/.config/polybar/spotify_toggle.sh
 click-left = playerctl play-pause
-exec-if = pgrep spotify
+exec-if = pgrep -x spotify
 interval = 1
 
 [module/control_stop]
 type = custom/script
 exec = echo " "
 click-left = playerctl stop
-exec-if = pgrep spotify
+exec-if = pgrep -x spotify
 interval = 1
 
 [module/cpu]

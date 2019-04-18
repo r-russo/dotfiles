@@ -83,6 +83,7 @@ set completeopt=noinsert,menuone,noselect
 
 au FileType python nnoremap <buffer> <F5>
             \ :VimuxRunCommand('python ' . bufname("%"))<CR>
+au FileType python nnoremap <buffer> <F6> :exec '!python' shellescape(@%, 1)<cr>
 
 " Latex
 let g:tex_flavor = 'latex'
