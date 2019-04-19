@@ -77,7 +77,7 @@ font-2 = "Noto Sans CJK JP:size=10"
 
 modules-left = bspwm xwindow
 modules-center =
-modules-right = cpu memory pulseaudio date powermenu
+modules-right = network cpu memory pulseaudio date powermenu
 
 ;tray-position = right
 ;tray-padding = 0
@@ -350,6 +350,57 @@ menu-3-0-foreground = ${colors.foreground-power}
 menu-3-1-foreground = ${colors.foreground-power}
 menu-3-2-foreground = ${colors.foreground-power}
 format-padding = ${desktop.padding}
+
+[module/network]
+type = internal/network
+interface = wlp3s0
+; Available tags:
+;   <label-connected> (default)
+;   <ramp-signal>
+format-connected = <ramp-signal> <label-connected>
+
+; Available tags:
+;   <label-disconnected> (default)
+format-disconnected = <label-disconnected>
+
+; Available tags:
+;   <label-connected> (default)
+;   <label-packetloss>
+;   <animation-packetloss>
+format-packetloss = <animation-packetloss> <label-connected>
+
+; All labels support the following tokens:
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %local_ip6% [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+
+; Default: %ifname% %local_ip%
+label-connected = %essid% %local_ip%
+label-connected-foreground = ${colors.foreground}
+
+; Default: (none)
+label-disconnected = 睊
+label-disconnected-foreground = ${colors.alert}
+
+format-prefix = " "
+format-prefix-foreground = ${colors.colorB}
+
+; Default: (none)
+;label-packetloss = %essid%
+;label-packetloss-foreground = #eefafafa
+
+; Only applies if <ramp-signal> is used
+ramp-signal-0 = 😱
+ramp-signal-1 = 😠
+ramp-signal-2 = 😒
+ramp-signal-3 = 😊
+ramp-signal-4 = 😃
+ramp-signal-5 = 😈
 
 [settings]
 screenchange-reload = true
