@@ -17,6 +17,15 @@ offset-x = 30
 offset-y = 1048
 padding = 3
 
+[laptop]
+screen-width = 1366
+screen-height = 768
+bar-height = 26
+border = 0
+offset-x = 0
+offset-y = 742
+padding = 3
+
 [colors]
 background = ${xrdb:color0:#282a36}
 background-focused = ${xrdb:color12:#44475a}
@@ -43,37 +52,39 @@ colorE = ${xrdb:color15:}
 colorF = ${xrdb:color16:}
 
 [bar/main_laptop]
-;monitor = ${env:MONITOR:HDMI-1}
-width = 1366
-height = 28
-offset-x = 10
-offset-y = 10
+width = ${laptop.screen-width}
+height = ${laptop.bar-height}
+offset-x = ${laptop.offset-x}
+offset-y = ${laptop.offset-y}
 radius = 0
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-size = 3
+border-size = ${laptop.border}
 border-color = ${colors.border}
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = "Noto Sans:size=11"
-font-1 = "FuraCode Nerd Font:size=11"
+font-0 = "Noto Sans:size=10"
+font-1 = "FantasqueSansMono Nerd Font:size=11"
+font-2 = "Noto Sans CJK JP:size=10"
 
-modules-left = bspwm
-modules-center = xwindow
-modules-right = pulseaudio date powermenu
+modules-left = bspwm xwindow
+modules-center =
+modules-right = network cpu memory pulseaudio date powermenu
 
 ;tray-position = right
-;tray-padding = 2 tray-transparent = true tray-background = #0063ff
+;tray-padding = 0
+;tray-transparent = true
+;tray-background = #0063ff
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
@@ -339,6 +350,57 @@ menu-3-0-foreground = ${colors.foreground-power}
 menu-3-1-foreground = ${colors.foreground-power}
 menu-3-2-foreground = ${colors.foreground-power}
 format-padding = ${desktop.padding}
+
+[module/network]
+type = internal/network
+interface = wlp3s0
+; Available tags:
+;   <label-connected> (default)
+;   <ramp-signal>
+format-connected = <ramp-signal> <label-connected>
+
+; Available tags:
+;   <label-disconnected> (default)
+format-disconnected = <label-disconnected>
+
+; Available tags:
+;   <label-connected> (default)
+;   <label-packetloss>
+;   <animation-packetloss>
+format-packetloss = <animation-packetloss> <label-connected>
+
+; All labels support the following tokens:
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %local_ip6% [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+
+; Default: %ifname% %local_ip%
+label-connected = %essid% %local_ip%
+label-connected-foreground = ${colors.foreground}
+
+; Default: (none)
+label-disconnected = 睊
+label-disconnected-foreground = ${colors.alert}
+
+format-prefix = " "
+format-prefix-foreground = ${colors.colorB}
+
+; Default: (none)
+;label-packetloss = %essid%
+;label-packetloss-foreground = #eefafafa
+
+; Only applies if <ramp-signal> is used
+ramp-signal-0 = 😱
+ramp-signal-1 = 😠
+ramp-signal-2 = 😒
+ramp-signal-3 = 😊
+ramp-signal-4 = 😃
+ramp-signal-5 = 😈
 
 [settings]
 screenchange-reload = true
