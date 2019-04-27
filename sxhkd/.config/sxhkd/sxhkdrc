@@ -7,7 +7,7 @@ super + Return
     urxvt
 
 super + p
-    uxrvt -name ipython -e ipython
+    urxvt -name ipython -e ipython
 
 # program launcher
 super + r
