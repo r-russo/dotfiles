@@ -15,7 +15,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'chriskempson/base16-vim'
+"Plug 'chriskempson/base16-vim'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -121,11 +122,15 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nmap <silent> <C-m> <Plug>(pydocstring)
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+colorscheme nord
+
+let g:lightline = {'colorscheme': 'wombat', }
+
+" if filereadable(expand("~/.vimrc_background"))
+"   let base16colorspace=256
+"   source ~/.vimrc_background
+" endif
 
 " disables opaque background
-hi Normal ctermbg=none
-hi NonText ctermbg=none
+" hi Normal ctermbg=none
+" hi NonText ctermbg=none
