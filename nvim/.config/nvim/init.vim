@@ -5,7 +5,7 @@ Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-jedi'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'benmills/vimux'
 Plug 'lervag/vimtex'
@@ -15,7 +15,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
-"Plug 'chriskempson/base16-vim'
 Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
@@ -28,15 +27,6 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 set shortmess+=c
 let g:ncm2#matcher = 'substrfuzzy'
-
-" Jedi
-let g:jedi#auto_initialization = 1
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#smart_auto_mappings = 0
-let g:jedi#popup_on_dot = 0
-let g:jedi#completions_command = ""
-let g:jedi#show_call_signatures = "1"
 
 syntax enable
 
@@ -77,11 +67,12 @@ set nofoldenable
 set foldlevel=2
 
 filetype plugin indent on
-let mapleader=','
-let maplocalleader = ","
+let mapleader="\<Space>"
+let maplocalleader = "\<Space>"
 autocmd BufWritePost *.c,*.py call system("ctags -R")
 set completeopt=noinsert,menuone,noselect
 
+" Execute
 au FileType python nnoremap <buffer> <F5>
             \ :VimuxRunCommand('python ' . bufname("%"))<CR>
 au FileType python nnoremap <buffer> <F6> :exec '!python' shellescape(@%, 1)<cr>
@@ -93,7 +84,6 @@ au FileType tex set spell |
                         \ nnoremap <leader>p o<Esc>o\par
 
 set conceallevel=1
-"set concealcursor=nc
 let g:tex_conceal="abdmg"
 
 let g:indentLine_conceallevel  = &conceallevel
@@ -114,7 +104,8 @@ map <leader>c :VimuxInterruptRunner<CR>
 
 " Remaps
 inoremap jk <Esc>
-nnoremap <leader>w :%s/\s\+$//e <return>
+nnoremap <leader>w :w <cr>
+nnoremap <leader>W :%s/\s\+$//e <return>
 " splits
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -125,12 +116,3 @@ nmap <silent> <C-m> <Plug>(pydocstring)
 colorscheme nord
 
 let g:lightline = {'colorscheme': 'wombat', }
-
-" if filereadable(expand("~/.vimrc_background"))
-"   let base16colorspace=256
-"   source ~/.vimrc_background
-" endif
-
-" disables opaque background
-" hi Normal ctermbg=none
-" hi NonText ctermbg=none
