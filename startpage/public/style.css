@@ -10,30 +10,20 @@
 }
 
 @font-face{
-    font-family: "Noto Sans";
-    src: local("Noto Sans");
-}
-
-@font-face{
-    font-family: "Noto Sans";
-    src: local("Noto Sans");
+    font-family: "Noto Sans Condensed";
+    src: local("Noto Sans Condensed");
 }
 
 body {
-    background-color: #282a36;
+    background-color: #2e3440;
     margin: 0;
     padding: 0;
     padding-left: 10%;
     padding-right: 10%;
     font-size: 16px;
-
-   /* background-image: url(bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;*/
 }
 
 .container {
-    /*background-color: #555555;*/
     margin: 8%;
     padding: 2%;
     height: 65%;
@@ -42,21 +32,19 @@ body {
 #time {
     padding-top: 2%;
     padding-bottom: 8%;
-    color: #6272a4;
-    font-family: "Noto Sans";
-    font-size: 72px;
+    color: #4c566a;
+    font-family: "Noto Sans Condensed";
+    font-size: 100px;
     text-align: center;
 }
 
 .links {
     float: left;
-    color: #f8f8f2;
+    color: #4c566a;
     font-family: "Noto Sans";
     width: 68%;
     height: 100%;
     line-height: 1.8;
-    /* background-color: #dcdfe8; */
-    /* border: solid #bec9e8 2px; */
 }
 
 .pic {
@@ -64,7 +52,7 @@ body {
     width: 30%;
     height: 100%;
     text-align: left;
-    /* border: solid #bec9e8 2px; */
+    border: solid #4c566a 4px;
 
     background-image: url(pic.jpg);
     background-repeat: no-repeat;
@@ -82,12 +70,12 @@ body {
 }
 
 a {
-    color: #f8f8f2;
+    color: #d8dee9;
     text-decoration: none;
 }
 
 a:hover {
-    color: #ff79c6;
+    color: #81a1c1;
 }
 
 .content {

@@ -19,6 +19,7 @@ antigen bundle git
 antigen bundle heroku
 antigen bundle pip
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 antigen theme clean
 antigen apply
 
