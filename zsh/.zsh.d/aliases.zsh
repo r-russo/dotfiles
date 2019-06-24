@@ -4,3 +4,5 @@ alias y='yay'
 
 alias dots='cd ~/dotfiles'
 alias sp='cd ~/dotfiles/startpage'
+
+alias di='sudo dnf install'
