@@ -1,8 +1,10 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'sheerun/vim-polyglot'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-jedi'
+Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
 "Plug 'davidhalter/jedi-vim'
@@ -106,6 +108,8 @@ map <leader>c :VimuxInterruptRunner<CR>
 inoremap jk <Esc>
 nnoremap <leader>w :w <cr>
 nnoremap <leader>W :%s/\s\+$//e <return>
+nnoremap <leader>au :exec '!make upload'<cr>
+
 " splits
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
