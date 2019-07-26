@@ -183,7 +183,7 @@
     </keybind>
     <keybind key="W-p">
       <action name="Execute">
-        <command>alacritty -e ipython</command>
+        <command>urxvt -e ipython</command>
       </action>
     </keybind>
     <keybind key="W-Up">
@@ -232,6 +232,11 @@
         <command>rofi -show run</command>
       </action>
     </keybind>
+    <keybind key="C-S-r">
+      <action name="Execute">
+        <command>rofi -show drun</command>
+      </action>
+    </keybind>
     <keybind key="W-b">
       <action name="Execute">
         <command>firefox</command>
@@ -239,7 +244,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>alacritty</command>
+        <command>urxvt</command>
       </action>
     </keybind>
     <keybind key="W-f">
@@ -713,9 +718,6 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-    <application class="*">
-      <decor>no</decor>
-    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
