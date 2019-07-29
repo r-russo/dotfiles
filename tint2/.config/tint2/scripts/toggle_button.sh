@@ -1,8 +1,9 @@
 #!/bin/sh
 
-state="$(mpc | awk 'NR==2 {print $1}')"
+# state="$(mpc | awk 'NR==2 {print $1}')"
+state="$(playerctl status)"
 
-if [[ $state == "[playing]" ]]; then
+if [[ $state == "Playing" ]]; then
     echo ""
 else
     echo ""

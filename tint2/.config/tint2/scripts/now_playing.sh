@@ -1,7 +1,8 @@
 #!/bin/sh
 
-state="$(mpc | awk 'NR==2 {print $1}')"
+# state="$(mpc | awk 'NR==2 {print $1}')"
+state="$(playerctl status)"
 
-if [[ $state == "[playing]" || $state == "[paused]" ]]; then
-    echo "$(mpc | sed -n 1p | cut -c 1-64)"
+if [[ $state == "Playing" || $state == "Paused" ]]; then
+    echo "$(playerctl metadata artist) - $(playerctl metadata title)"
 fi

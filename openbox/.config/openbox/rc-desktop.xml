@@ -232,7 +232,7 @@
         <command>rofi -show run</command>
       </action>
     </keybind>
-    <keybind key="C-S-r">
+    <keybind key="S-W-r">
       <action name="Execute">
         <command>rofi -show drun</command>
       </action>
@@ -249,7 +249,7 @@
     </keybind>
     <keybind key="W-f">
       <action name="Execute">
-        <command>thunar</command>
+        <command>nautilus</command>
       </action>
     </keybind>
     <keybind key="C-A-Right">
