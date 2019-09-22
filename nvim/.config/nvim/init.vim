@@ -82,9 +82,8 @@ au FileType python nnoremap <buffer> <F6> :exec '!python' shellescape(@%, 1)<cr>
 
 " Latex
 let g:tex_flavor = 'latex'
-let g:vimtex_view_method = 'zathura'
-au FileType tex set spell |
-                        \ nnoremap <leader>p o<Esc>o\par
+let g:polyglot_disabled = ['latex']
+" let g:vimtex_view_method = 'zathura'
 
 set conceallevel=1
 let g:tex_conceal="abdmg"
@@ -97,7 +96,7 @@ let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsEditSplit="vertical"
- let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', '~/.config/nvim/UltiSnips']
 
 " Vimux
