@@ -16,7 +16,7 @@
 #define nord15 #B48EAD
 
 *.foreground:   nord4
-*.background:   nord0
+*.background:   [90]nord0
 *.cursorColor:  nord4
 *fading: 35
 *fadeColor: nord3
@@ -48,7 +48,7 @@ URxvt.scrollBar_right: false
 URxvt.scrollBar_floating: false
 
 URxvt.geometry: 80x24
-URxvt.internalBorder: 0
+URxvt.internalBorder: 4
 
 ! LibXft
 Xft.antialias:  1
