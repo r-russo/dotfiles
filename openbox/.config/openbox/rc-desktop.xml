@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -182,6 +181,21 @@
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>~/.local/bin/change_volume up</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>~/.local/bin/change_volume down</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>~/.local/bin/change_volume toggle</command>
+      </action>
+    </keybind>
     <keybind key="W-p">
       <action name="Execute">
         <command>urxvt -e ipython</command>
@@ -350,15 +364,6 @@
     </keybind>
     <keybind key="W-S-Down">
       <action name="DirectionalCycleWindows"/>
-    </keybind>
-    <keybind key="W-e">
-      <action name="Execute">
-        <command>kfmclient openProfile filemanagement</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>Konqueror</name>
-        </startupnotify>
-      </action>
     </keybind>
   </keyboard>
   <mouse>
