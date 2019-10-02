@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -39,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Triste-Froly</name>
+    <name>Triste-Crimson</name>
     <titleLayout>LIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -718,9 +719,9 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-      <application class="Firefox">
-          <decor>no</decor>
-      </application>
+    <application class="firefox">
+      <decor>no</decor>
+    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
