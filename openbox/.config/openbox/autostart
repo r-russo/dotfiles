@@ -21,7 +21,7 @@ telegram-desktop &
 nitrogen --restore &
 numlockx on &
 lxpolkit &
-pasystray &
+# pasystray &
 compton &
 tint2 &
 xfce4-power-manager &
