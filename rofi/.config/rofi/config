@@ -1,1 +1,2 @@
-rofi.theme: base16-tomorrow-night.rasi
+rofi.theme: onedark.rasi
+rofi.font: Noto Sans 12
