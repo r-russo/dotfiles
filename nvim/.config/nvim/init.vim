@@ -7,8 +7,8 @@ Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-jedi'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-pyclang'
 Plug 'roxma/nvim-yarp'
-"Plug 'davidhalter/jedi-vim'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'benmills/vimux'
 Plug 'lervag/vimtex'
@@ -59,6 +59,9 @@ set listchars=trail:·
 set spelllang=es
 set textwidth=79
 set colorcolumn=-1
+
+set updatetime=300
+
 set backupdir=~/tmp/vim
 set backupskip=~/tmp/*
 set directory=~/tmp/vim
