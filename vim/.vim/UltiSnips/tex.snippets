@@ -1,0 +1,14 @@
+snippet em "emphasis" w
+\emph{$1}$2
+endsnippet
+
+snippet listing "listing" wb
+\begin{listing}[ht]
+	\centering
+	\begin{$1}
+		$4
+	\end{$1}
+	\caption{$2}\label{lst:$3}
+\end{listing}
+$0
+endsnippet
