@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/russo/.config'
+let g:netrw_dirhist_5='/home/russo/.config/geany/colorschemes'
+let g:netrw_dirhist_4='/home/russo/.config/geany'
 let g:netrw_dirhist_3='/home/russo/Arduino/Reloj'
 let g:netrw_dirhist_2='/mnt/extra/Documentos/trabajo/scripts/20200319'
 let g:netrw_dirhist_1='/home/russo/tmp'

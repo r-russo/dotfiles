@@ -1,0 +1,9 @@
+configuration {
+    combi-modi: "drun,file-browser,run";
+    modi: "drun,run,file-browser,ssh";
+    theme: "slate.rasi";
+    font: "Lato 14";
+    show-icons: true;
+    terminal: "tilix";
+    lines: 8;
+}

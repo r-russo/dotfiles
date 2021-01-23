@@ -7,8 +7,8 @@ if [ ! -d "$HOME/.config" ]; then
     mkdir $HOME/.config
 fi
 
-config_folders=("alacritty" "bspwm" "compton" "dunst" "mpv" "nvim" "openbox" \
-    "polybar" "rofi" "sxhkd" "tint2" "tmux" "Xresources" "zsh")
+config_folders=("alacritty" "awesome" "bspwm" "compton" "dunst" "mpv" "nvim" "openbox" \
+    "polybar" "rofi" "sxhkd" "termite" "tint2" "tmux" "Xresources" "zsh")
 
 cd $DIR
 for folder in ${config_folders[@]}; do

@@ -1,0 +1,229 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/russo/dotfiles/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+#time	startpage/public/style.css	/^#time {$/;"	i
+--plugin-git	zsh/.zsh.d/antigen.zsh	/^  --plugin-git () {$/;"	f
+-antigen-bundle-install	zsh/.zsh.d/antigen.zsh	/^-antigen-bundle-install () {$/;"	f
+-antigen-bundle-rev	zsh/.zsh.d/antigen.zsh	/^-antigen-bundle-rev () {$/;"	f
+-antigen-bundle-short-name	zsh/.zsh.d/antigen.zsh	/^-antigen-bundle-short-name () {$/;"	f
+-antigen-cache-execute	zsh/.zsh.d/antigen.zsh	/^-antigen-cache-execute () {$/;"	f
+-antigen-cache-generate	zsh/.zsh.d/antigen.zsh	/^-antigen-cache-generate () {$/;"	f
+-antigen-cache-init	zsh/.zsh.d/antigen.zsh	/^-antigen-cache-init () {$/;"	f
+-antigen-defer-execute	zsh/.zsh.d/antigen.zsh	/^-antigen-defer-execute () {$/;"	f
+-antigen-defer-init	zsh/.zsh.d/antigen.zsh	/^-antigen-defer-init () {$/;"	f
+-antigen-echo-record	zsh/.zsh.d/antigen.zsh	/^-antigen-echo-record () {$/;"	f
+-antigen-ensure-repo	zsh/.zsh.d/antigen.zsh	/^-antigen-ensure-repo () {$/;"	f
+-antigen-env-setup	zsh/.zsh.d/antigen.zsh	/^-antigen-env-setup () {$/;"	f
+-antigen-find-bundle	zsh/.zsh.d/antigen.zsh	/^-antigen-find-bundle () {$/;"	f
+-antigen-find-record	zsh/.zsh.d/antigen.zsh	/^-antigen-find-record () {$/;"	f
+-antigen-get-bundles	zsh/.zsh.d/antigen.zsh	/^-antigen-get-bundles () {$/;"	f
+-antigen-get-clone-dir	zsh/.zsh.d/antigen.zsh	/^-antigen-get-clone-dir () {$/;"	f
+-antigen-get-cloned-bundles	zsh/.zsh.d/antigen.zsh	/^-antigen-get-cloned-bundles() {$/;"	f
+-antigen-get-themes	zsh/.zsh.d/antigen.zsh	/^-antigen-get-themes () {$/;"	f
+-antigen-hook-handler	zsh/.zsh.d/antigen.zsh	/^-antigen-hook-handler () {$/;"	f
+-antigen-interactive-mode	zsh/.zsh.d/antigen.zsh	/^-antigen-interactive-mode () {$/;"	f
+-antigen-load	zsh/.zsh.d/antigen.zsh	/^-antigen-load () {$/;"	f
+-antigen-load-env	zsh/.zsh.d/antigen.zsh	/^-antigen-load-env () {$/;"	f
+-antigen-load-env-cached	zsh/.zsh.d/antigen.zsh	/^  -antigen-load-env-cached () {$/;"	f
+-antigen-load-source	zsh/.zsh.d/antigen.zsh	/^-antigen-load-source () {$/;"	f
+-antigen-load-source-cached	zsh/.zsh.d/antigen.zsh	/^  -antigen-load-source-cached () {$/;"	f
+-antigen-lock-execute	zsh/.zsh.d/antigen.zsh	/^-antigen-lock-execute () {$/;"	f
+-antigen-lock-init	zsh/.zsh.d/antigen.zsh	/^-antigen-lock-init () {$/;"	f
+-antigen-parallel-execute	zsh/.zsh.d/antigen.zsh	/^-antigen-parallel-execute() {$/;"	f
+-antigen-parallel-init	zsh/.zsh.d/antigen.zsh	/^-antigen-parallel-init () {$/;"	f
+-antigen-parse-args	zsh/.zsh.d/antigen.zsh	/^-antigen-parse-args () {$/;"	f
+-antigen-parse-branch	zsh/.zsh.d/antigen.zsh	/^-antigen-parse-branch () {$/;"	f
+-antigen-purge-bundle	zsh/.zsh.d/antigen.zsh	/^-antigen-purge-bundle () {$/;"	f
+-antigen-reset-hooks	zsh/.zsh.d/antigen.zsh	/^-antigen-reset-hooks () {$/;"	f
+-antigen-revert-info	zsh/.zsh.d/antigen.zsh	/^-antigen-revert-info() {$/;"	f
+-antigen-set-default	zsh/.zsh.d/antigen.zsh	/^-antigen-set-default () {$/;"	f
+-antigen-theme-reset-hooks	zsh/.zsh.d/antigen.zsh	/^-antigen-theme-reset-hooks () {$/;"	f
+-antigen-update-bundle	zsh/.zsh.d/antigen.zsh	/^-antigen-update-bundle () {$/;"	f
+-antigen-update-repos	zsh/.zsh.d/antigen.zsh	/^-antigen-update-repos () {$/;"	f
+-antigen-use-oh-my-zsh	zsh/.zsh.d/antigen.zsh	/^-antigen-use-oh-my-zsh () {$/;"	f
+-antigen-use-prezto	zsh/.zsh.d/antigen.zsh	/^-antigen-use-prezto () {$/;"	f
+.container	startpage/public/style.css	/^.container {$/;"	c
+.content	startpage/public/style.css	/^.content {$/;"	c
+.links	startpage/public/style.css	/^.links {$/;"	c
+.nav	startpage/public/style.css	/^.nav {$/;"	c
+.pic	startpage/public/style.css	/^.pic {$/;"	c
+<C-h>	nvim/.config/nvim/init.vim	/^nnoremap <C-h> <C-w>h$/;"	m
+<C-j>	nvim/.config/nvim/init.vim	/^nnoremap <C-j> <C-w>j$/;"	m
+<C-k>	nvim/.config/nvim/init.vim	/^nnoremap <C-k> <C-w>k$/;"	m
+<C-l>	nvim/.config/nvim/init.vim	/^nnoremap <C-l> <C-w>l$/;"	m
+<C-m>	nvim/.config/nvim/init.vim	/^nmap <silent> <C-m> <Plug>(pydocstring)$/;"	m
+<leader>W	nvim/.config/nvim/init.vim	/^nnoremap <leader>W :%s\/\\s\\+$\/\/e <return>$/;"	m
+<leader>au	nvim/.config/nvim/init.vim	/^nnoremap <leader>au :exec '!make upload'<cr>$/;"	m
+<leader>c	nvim/.config/nvim/init.vim	/^map <leader>c :VimuxInterruptRunner<CR>$/;"	m
+<leader>w	nvim/.config/nvim/init.vim	/^nnoremap <leader>w :w <cr>$/;"	m
+EOC	zsh/.zsh.d/antigen.zsh	/^cat > $ANTIGEN_CACHE <<EOC$/;"	h
+EOF	zsh/.zsh.d/antigen.zsh	/^  cat <<EOF$/;"	h
+ERR	zsh/.zsh.d/antigen.zsh	/^ERR () {$/;"	f
+LOG	zsh/.zsh.d/antigen.zsh	/^LOG () {$/;"	f
+OB_CONFIG_FILE	scripts/themecolors.py	/^OB_CONFIG_FILE   = "~\/.themes\/minimal-border\/openbox-3\/themerc"$/;"	v
+TINT_CONFIG_FILE	scripts/themecolors.py	/^TINT_CONFIG_FILE = "~\/.config\/tint2\/tint2_template"$/;"	v
+TRACE	zsh/.zsh.d/antigen.zsh	/^TRACE () {$/;"	f
+WARN	zsh/.zsh.d/antigen.zsh	/^WARN () {$/;"	f
+_ANTIGEN_EXTENSIONS=	zsh/.zsh.d/antigen.zsh	/^  _ANTIGEN_EXTENSIONS=()$/;"	f
+_ANTIGEN_EXTENSIONS=	zsh/.zsh.d/antigen.zsh	/^typeset -g _ANTIGEN_EXTENSIONS; _ANTIGEN_EXTENSIONS=()$/;"	f
+_ANTIGEN_HOOKS=	zsh/.zsh.d/antigen.zsh	/^  _ANTIGEN_HOOKS=()$/;"	f
+_ANTIGEN_HOOKS=	zsh/.zsh.d/antigen.zsh	/^typeset -Ag _ANTIGEN_HOOKS; _ANTIGEN_HOOKS=()$/;"	f
+_ANTIGEN_HOOKS_META=	zsh/.zsh.d/antigen.zsh	/^  _ANTIGEN_HOOKS_META=()$/;"	f
+_ANTIGEN_HOOKS_META=	zsh/.zsh.d/antigen.zsh	/^typeset -Ag _ANTIGEN_HOOKS_META; _ANTIGEN_HOOKS_META=()$/;"	f
+_DEFERRED_BUNDLE=	zsh/.zsh.d/antigen.zsh	/^  typeset -ga _DEFERRED_BUNDLE; _DEFERRED_BUNDLE=()$/;"	f
+_PARALLEL_BUNDLE=	zsh/.zsh.d/antigen.zsh	/^  typeset -ga _PARALLEL_BUNDLE; _PARALLEL_BUNDLE=()$/;"	f
+_ZCACHE_BUNDLE_SOURCE=	zsh/.zsh.d/antigen.zsh	/^  _ZCACHE_BUNDLE_SOURCE=(); _ZCACHE_CAPTURE_BUNDLE=()$/;"	f
+_ZCACHE_CAPTURE_BUNDLE=	zsh/.zsh.d/antigen.zsh	/^  _ZCACHE_BUNDLE_SOURCE=(); _ZCACHE_CAPTURE_BUNDLE=()$/;"	f
+__bundle	zsh/.zsh.d/antigen.zsh	/^  __bundle() {$/;"	f
+__cleanup	zsh/.zsh.d/antigen.zsh	/^  __cleanup() {$/;"	f
+__list	zsh/.zsh.d/antigen.zsh	/^  __list() {$/;"	f
+_antigen	zsh/.zsh.d/antigen.zsh	/^_antigen () {$/;"	f
+a	startpage/public/style.css	/^a {$/;"	s
+a:hover	startpage/public/style.css	/^a:hover {$/;"	s
+alang	mpv/.config/mpv/mpv.conf	/^alang=ja,jp,jpn,en$/;"	k
+antigen	zsh/.zsh.d/antigen.zsh	/^    antigen() {$/;"	f
+antigen	zsh/.zsh.d/antigen.zsh	/^antigen () {$/;"	f
+antigen-add-hook	zsh/.zsh.d/antigen.zsh	/^antigen-add-hook () {$/;"	f
+antigen-apply	zsh/.zsh.d/antigen.zsh	/^antigen-apply () {$/;"	f
+antigen-apply-cached	zsh/.zsh.d/antigen.zsh	/^  antigen-apply-cached () {$/;"	f
+antigen-apply-defer	zsh/.zsh.d/antigen.zsh	/^  antigen-apply-defer () {$/;"	f
+antigen-apply-lock	zsh/.zsh.d/antigen.zsh	/^  antigen-apply-lock () {$/;"	f
+antigen-apply-parallel	zsh/.zsh.d/antigen.zsh	/^  antigen-apply-parallel () {$/;"	f
+antigen-apply-parallel-execute	zsh/.zsh.d/antigen.zsh	/^  antigen-apply-parallel-execute () {$/;"	f
+antigen-bundle	zsh/.zsh.d/antigen.zsh	/^antigen-bundle () {$/;"	f
+antigen-bundle-cached	zsh/.zsh.d/antigen.zsh	/^  antigen-bundle-cached () {$/;"	f
+antigen-bundle-defer	zsh/.zsh.d/antigen.zsh	/^  antigen-bundle-defer () {$/;"	f
+antigen-bundle-parallel	zsh/.zsh.d/antigen.zsh	/^    antigen-bundle-parallel () {$/;"	f
+antigen-bundle-parallel-execute	zsh/.zsh.d/antigen.zsh	/^  antigen-bundle-parallel-execute () {$/;"	f
+antigen-bundles	zsh/.zsh.d/antigen.zsh	/^antigen-bundles () {$/;"	f
+antigen-cache-gen	zsh/.zsh.d/antigen.zsh	/^antigen-cache-gen () {$/;"	f
+antigen-cleanup	zsh/.zsh.d/antigen.zsh	/^antigen-cleanup () {$/;"	f
+antigen-ext	zsh/.zsh.d/antigen.zsh	/^antigen-ext () {$/;"	f
+antigen-ext-init	zsh/.zsh.d/antigen.zsh	/^antigen-ext-init () {$/;"	f
+antigen-ext-list	zsh/.zsh.d/antigen.zsh	/^antigen-ext-list () {$/;"	f
+antigen-help	zsh/.zsh.d/antigen.zsh	/^antigen-help () {$/;"	f
+antigen-init	zsh/.zsh.d/antigen.zsh	/^antigen-init () {$/;"	f
+antigen-list	zsh/.zsh.d/antigen.zsh	/^antigen-list () {$/;"	f
+antigen-lock	zsh/.zsh.d/antigen.zsh	/^  antigen-lock () {$/;"	f
+antigen-purge	zsh/.zsh.d/antigen.zsh	/^antigen-purge () {$/;"	f
+antigen-remove-hook	zsh/.zsh.d/antigen.zsh	/^antigen-remove-hook () {$/;"	f
+antigen-reset	zsh/.zsh.d/antigen.zsh	/^antigen-reset () {$/;"	f
+antigen-restore	zsh/.zsh.d/antigen.zsh	/^antigen-restore () {$/;"	f
+antigen-revert	zsh/.zsh.d/antigen.zsh	/^antigen-revert () {$/;"	f
+antigen-selfupdate	zsh/.zsh.d/antigen.zsh	/^antigen-selfupdate () {$/;"	f
+antigen-snapshot	zsh/.zsh.d/antigen.zsh	/^antigen-snapshot () {$/;"	f
+antigen-theme	zsh/.zsh.d/antigen.zsh	/^antigen-theme () {$/;"	f
+antigen-update	zsh/.zsh.d/antigen.zsh	/^antigen-update () {$/;"	f
+antigen-use	zsh/.zsh.d/antigen.zsh	/^antigen-use () {$/;"	f
+antigen-version	zsh/.zsh.d/antigen.zsh	/^antigen-version () {$/;"	f
+apps-accessories-menu	openbox/.config/openbox/menu.xml	/^		<menu id="apps-accessories-menu"\/>$/;"	i
+apps-accessories-menu	openbox/.config/openbox/menu.xml	/^	<menu id="apps-accessories-menu" label="Accessories">$/;"	i
+apps-editors-menu	openbox/.config/openbox/menu.xml	/^		<menu id="apps-editors-menu"\/>$/;"	i
+apps-editors-menu	openbox/.config/openbox/menu.xml	/^	<menu id="apps-editors-menu" label="Editors">$/;"	i
+apps-fileman-menu	openbox/.config/openbox/menu.xml	/^		<menu id="apps-fileman-menu"\/>$/;"	i
+apps-fileman-menu	openbox/.config/openbox/menu.xml	/^	<menu id="apps-fileman-menu" label="File Managers">$/;"	i
+apps-graphics-menu	openbox/.config/openbox/menu.xml	/^		<menu id="apps-graphics-menu"\/>$/;"	i
+apps-graphics-menu	openbox/.config/openbox/menu.xml	/^	<menu id="apps-graphics-menu" label="Graphics">$/;"	i
+apps-multimedia-menu	openbox/.config/openbox/menu.xml	/^		<menu id="apps-multimedia-menu"\/>$/;"	i
+apps-multimedia-menu	openbox/.config/openbox/menu.xml	/^	<menu id="apps-multimedia-menu" label="Multimedia">$/;"	i
+apps-net-menu	openbox/.config/openbox/menu.xml	/^		<menu id="apps-net-menu"\/>$/;"	i
+apps-net-menu	openbox/.config/openbox/menu.xml	/^	<menu id="apps-net-menu" label="Internet">$/;"	i
+apps-office-menu	openbox/.config/openbox/menu.xml	/^		<menu id="apps-office-menu"\/>$/;"	i
+apps-office-menu	openbox/.config/openbox/menu.xml	/^	<menu id="apps-office-menu" label="Office">$/;"	i
+apps-term-menu	openbox/.config/openbox/menu.xml	/^		<menu id="apps-term-menu"\/>$/;"	i
+apps-term-menu	openbox/.config/openbox/menu.xml	/^	<menu id="apps-term-menu" label="Terminals">$/;"	i
+auto	mpv/.config/mpv/mpv.conf	/^sub-auto=fuzzy$/;"	k
+backend	compton/.config/compton.conf	/^backend = "glx";$/;"	k
+background	compton/.config/compton.conf	/^blur-background = true;$/;"	k
+body	startpage/public/style.css	/^body {$/;"	s
+chksum	zsh/.zsh.d/antigen.zsh	/^    chksum() { (md5sum; test $? = 127 && md5) 2>\/dev\/null | cut -d' ' -f1 }$/;"	f
+color	mpv/.config/mpv/mpv.conf	/^sub-border-color="#FF262626"$/;"	k
+color	mpv/.config/mpv/mpv.conf	/^sub-color="#FFFFFFFF"$/;"	k
+color	mpv/.config/mpv/mpv.conf	/^sub-shadow-color="#33000000"$/;"	k
+compdef	zsh/.zsh.d/antigen.zsh	/^compdef () { __deferred_compdefs=($__deferred_compdefs "$*") }$/;"	f
+config	scripts/themecolors.py	/^config = ob_config()$/;"	v
+config	scripts/themecolors.py	/^config = tint2_config()$/;"	v
+cscale	mpv/.config/mpv/mpv.conf	/^cscale=ewa_lanczossharp$/;"	k
+delta	compton/.config/compton.conf	/^fade-delta = 5;$/;"	k
+di	zsh/.zsh.d/aliases.zsh	/^alias di='sudo dnf install'$/;"	a
+dotfiles	README.md	/^# dotfiles$/;"	c
+dots	zsh/.zsh.d/aliases.zsh	/^alias dots='cd ~\/dotfiles'$/;"	a
+fading	compton/.config/compton.conf	/^fading = true;$/;"	k
+font	mpv/.config/mpv/mpv.conf	/^osd-font='Noto Sans'$/;"	k
+font	mpv/.config/mpv/mpv.conf	/^sub-font="Noto Sans"$/;"	k
+framedrop	mpv/.config/mpv/mpv.conf	/^hr-seek-framedrop=no                # Fixes audio desync$/;"	k	section:svp
+fs	mpv/.config/mpv/mpv.conf	/^fs=yes$/;"	k
+g:UltiSnipsEditSplit	nvim/.config/nvim/init.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v
+g:UltiSnipsExpandTrigger	nvim/.config/nvim/init.vim	/^let g:UltiSnipsExpandTrigger="<Tab>"$/;"	v
+g:UltiSnipsJumpBackwardTrigger	nvim/.config/nvim/init.vim	/^let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"$/;"	v
+g:UltiSnipsJumpForwardTrigger	nvim/.config/nvim/init.vim	/^let g:UltiSnipsJumpForwardTrigger="<Tab>"$/;"	v
+g:UltiSnipsSnippetDirectories	nvim/.config/nvim/init.vim	/^let g:UltiSnipsSnippetDirectories = ['UltiSnips', '~\/.config\/nvim\/UltiSnips']$/;"	v
+g:UltiSnipsSnippetsDir	nvim/.config/nvim/init.vim	/^let g:UltiSnipsSnippetsDir = "~\/.config\/nvim\/UltiSnips"$/;"	v
+g:VimuxHeight	nvim/.config/nvim/init.vim	/^let g:VimuxHeight = "40"$/;"	v
+g:VimuxOrientation	nvim/.config/nvim/init.vim	/^let g:VimuxOrientation = "h"$/;"	v
+g:indentLine_concealcursor	nvim/.config/nvim/init.vim	/^let g:indentLine_concealcursor = &concealcursor$/;"	v
+g:indentLine_conceallevel	nvim/.config/nvim/init.vim	/^let g:indentLine_conceallevel  = &conceallevel$/;"	v
+g:lightline	nvim/.config/nvim/init.vim	/^let g:lightline = {'colorscheme': 'wombat', }$/;"	v
+g:ncm2#matcher	nvim/.config/nvim/init.vim	/^let g:ncm2#matcher = 'substrfuzzy'$/;"	v
+g:polyglot_disabled	nvim/.config/nvim/init.vim	/^let g:polyglot_disabled = ['latex']$/;"	v
+g:python_host_prog	nvim/.config/nvim/init.vim	/^let g:python_host_prog = '\/usr\/bin\/python'$/;"	v
+g:tex_conceal	nvim/.config/nvim/init.vim	/^let g:tex_conceal="abdmg"$/;"	v
+g:tex_flavor	nvim/.config/nvim/init.vim	/^let g:tex_flavor = 'latex'$/;"	v
+hook]]=	zsh/.zsh.d/antigen.zsh	/^    hooks[$hooks[(I)$hook]]=()$/;"	f
+jk	nvim/.config/nvim/init.vim	/^inoremap jk <Esc>$/;"	m
+kern	compton/.config/compton.conf	/^blur-kern = "7x7box";$/;"	k
+list=	zsh/.zsh.d/antigen.zsh	/^  typeset -Ua list; list=()$/;"	f
+mapleader	nvim/.config/nvim/init.vim	/^let mapleader="\\<Space>"$/;"	v
+maplocalleader	nvim/.config/nvim/init.vim	/^let maplocalleader = "\\<Space>"$/;"	v
+ns053e2c600101	openbox/.config/openbox/menu.xml	/^<openbox_menu xmlns="http:\/\/openbox.org\/3.4\/menu">$/;"	n	uri:http://openbox.org/3.4/menu
+ns32e20ee00101	openbox/.config/openbox/rc.xml	/^<openbox_config xmlns="http:\/\/openbox.org\/3.4\/rc" xmlns:xi="http:\/\/www.w3.org\/2001\/XIncl/;"	n	uri:http://openbox.org/3.4/rc
+nsa58d3b9d0101	openbox/.config/openbox/rc-laptop.xml	/^<openbox_config xmlns="http:\/\/openbox.org\/3.4\/rc" xmlns:xi="http:\/\/www.w3.org\/2001\/XIncl/;"	n	uri:http://openbox.org/3.4/rc
+nsceae14870101	openbox/.config/openbox/rc-desktop.xml	/^<openbox_config xmlns="http:\/\/openbox.org\/3.4\/rc" xmlns:xi="http:\/\/www.w3.org\/2001\/XIncl/;"	n	uri:http://openbox.org/3.4/rc
+ob	scripts/themecolors.py	/^ob = open(os.path.expanduser(OB_CONFIG_FILE), 'w')$/;"	v
+ob_config	scripts/configs.py	/^def ob_config():$/;"	f
+offset	mpv/.config/mpv/mpv.conf	/^sub-shadow-offset=1$/;"	k
+overlay	compton/.config/compton.conf	/^paint-on-overlay = true;$/;"	k
+p	zsh/.zsh.d/aliases.zsh	/^alias p='sudo pacman'$/;"	a
+paths	mpv/.config/mpv/mpv.conf	/^sub-file-paths=Subs:Subtitles:subs$/;"	k
+pid]]=	zsh/.zsh.d/antigen.zsh	/^          pids[$pids[(I)$pid]]=()$/;"	f
+pids=	zsh/.zsh.d/antigen.zsh	/^    typeset -a pids; pids=()$/;"	f
+playback	mpv/.config/mpv/mpv.conf	/^resume-playback=no                  # Not compatible with SVP$/;"	k	section:svp
+possible	compton/.config/compton.conf	/^unredir-if-possible = true;$/;"	k
+profile	mpv/.config/mpv/mpv.conf	/^profile=gpu-hq$/;"	k
+pup	zsh/.zsh.d/aliases.zsh	/^alias pup='sudo pacman -Syu'$/;"	a
+record]]=	zsh/.zsh.d/antigen.zsh	/^      _ANTIGEN_BUNDLE_RECORD[$_ANTIGEN_BUNDLE_RECORD[(I)$record]]=()$/;"	f
+root-menu	openbox/.config/openbox/menu.xml	/^	<menu id="root-menu" label="Openbox 3">$/;"	i
+scale	mpv/.config/mpv/mpv.conf	/^scale=ewa_lanczossharp$/;"	k
+server	mpv/.config/mpv/mpv.conf	/^input-ipc-server=\/tmp\/mpvsocket     # Receives input from SVP$/;"	k	section:svp
+shadow	compton/.config/compton.conf	/^no-dnd-shadow = true;$/;"	k
+shadow	compton/.config/compton.conf	/^no-dock-shadow = true;$/;"	k
+shadow	compton/.config/compton.conf	/^shadow = false;$/;"	k
+size	mpv/.config/mpv/mpv.conf	/^osd-font-size=32$/;"	k
+size	mpv/.config/mpv/mpv.conf	/^sub-border-size=3.2$/;"	k
+size	mpv/.config/mpv/mpv.conf	/^sub-font-size=48$/;"	k
+slang	mpv/.config/mpv/mpv.conf	/^slang=en$/;"	k
+sp	zsh/.zsh.d/aliases.zsh	/^alias sp='cd ~\/dotfiles\/startpage'$/;"	a
+spacing	mpv/.config/mpv/mpv.conf	/^sub-spacing=0.5$/;"	k
+stencil	compton/.config/compton.conf	/^glx-no-stencil = true;$/;"	k
+svp	mpv/.config/mpv/mpv.conf	/^[svp]$/;"	s
+sync	mpv/.config/mpv/mpv.conf	/^video-sync=display-resample$/;"	k
+system-menu	openbox/.config/openbox/menu.xml	/^		<menu id="system-menu"\/>$/;"	i
+system-menu	openbox/.config/openbox/menu.xml	/^	<menu id="system-menu" label="System">$/;"	i
+time	startpage/public/index.html	/^                <div id="time"><\/div>$/;"	I
+tint2	scripts/themecolors.py	/^tint2 = open(os.path.expanduser(TINT_CONFIG_FILE), 'w')$/;"	v
+tint2_config	scripts/configs.py	/^def tint2_config():$/;"	f
+tscale	mpv/.config/mpv/mpv.conf	/^tscale=oversample$/;"	k
+v	zsh/.zsh.d/aliases.zsh	/^alias v='vim'$/;"	a
+vsync	compton/.config/compton.conf	/^vsync = "opengl-swc";$/;"	k
+xi	openbox/.config/openbox/rc-desktop.xml	/^<openbox_config xmlns="http:\/\/openbox.org\/3.4\/rc" xmlns:xi="http:\/\/www.w3.org\/2001\/XIncl/;"	n	uri:http://www.w3.org/2001/XInclude
+xi	openbox/.config/openbox/rc-laptop.xml	/^<openbox_config xmlns="http:\/\/openbox.org\/3.4\/rc" xmlns:xi="http:\/\/www.w3.org\/2001\/XIncl/;"	n	uri:http://www.w3.org/2001/XInclude
+xi	openbox/.config/openbox/rc.xml	/^<openbox_config xmlns="http:\/\/openbox.org\/3.4\/rc" xmlns:xi="http:\/\/www.w3.org\/2001\/XIncl/;"	n	uri:http://www.w3.org/2001/XInclude
+y	zsh/.zsh.d/aliases.zsh	/^alias y='yay'$/;"	a

@@ -16,18 +16,19 @@
 #
 #xfce-mcs-manager &
 
-setxkbmap latam &
-telegram-desktop &
-nitrogen --restore &
-numlockx on &
-lxpolkit &
-pa-applet &
-compton &
-tint2 &
-xfce4-power-manager &
-xset r rate 300 30 &
-dropbox &
-dunst &
+# setxkbmap latam &
+# telegram-desktop &
+# nitrogen --restore &
+# numlockx on &
+# lxpolkit &
+# pasystray &
+# compton &
+# tint2 &
+# xfce4-power-manager &
+# xset r rate 300 30 &
+# dropbox &
+# dunst &
+# blueman-tray &
 
 if [ "$(hostname)" = "arch" ]; then
     redshift -l -38:-57.5 &
