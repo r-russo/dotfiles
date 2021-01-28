@@ -6,4 +6,4 @@ alias dots='cd ~/dotfiles'
 alias sp='cd ~/dotfiles/startpage'
 
 alias di='sudo dnf install'
-alias v='vim'
+alias v='nvim'
