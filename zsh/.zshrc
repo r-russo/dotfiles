@@ -42,6 +42,10 @@ fi
 
 if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
 
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
 # Key bindings
 # autoload zkbd
 # function zkbd_file() {
