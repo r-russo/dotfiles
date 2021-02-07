@@ -4,5 +4,6 @@ let mapleader = ' '
 
 map <leader>d <Action>(Debug)
 map <leader>r <Action>(Run)
+map <leader>s <Action>(Stop)
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>n <Action>(NewFile)

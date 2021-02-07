@@ -20,5 +20,6 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'Chiel92/vim-autoformat'
 
 Plug 'phanviet/vim-monokai-pro'
+Plug 'Lenovsky/nuake'
 
 call plug#end()
