@@ -26,8 +26,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'frazrepo/vim-rainbow'
-Plug 'Chiel92/vim-autoformat'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jiangmiao/auto-pairs'
+Plug 'luochen1990/rainbow'
 
 call plug#end()
