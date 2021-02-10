@@ -10,18 +10,18 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set wildmenu		" display completion matches in a status line
 
-set ttimeout		" time out for key codes
-set ttimeoutlen=100	" wait up to 100ms after Esc for special key
-
 set expandtab
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
+set autoindent
 set smarttab
 set showmatch
 
 set ignorecase
 set smartcase
 set number relativenumber
+set hlsearch
 
 set splitright
 set splitbelow
