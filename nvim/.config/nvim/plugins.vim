@@ -6,9 +6,7 @@ Plug 'dense-analysis/ale'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
-" Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'sheerun/vim-polyglot'
-" Plug 'puremourning/vimspector'
 
 " Snippets
 Plug 'SirVer/ultisnips'
