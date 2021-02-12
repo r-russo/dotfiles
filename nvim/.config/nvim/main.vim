@@ -41,13 +41,6 @@ set spellfile=~/.config/nvim/spell/es.add
 set visualbell
 set t_vb=
 
-set t_Co=256
-set termguicolors
-colorscheme monokai_pro
-let g:lightline = {
-	\ 'colorscheme': 'monokai_pro',
-	\ }
-
 " let g:vimspector_enable_mappings = 'HUMAN'
 " packadd! vimspector
 

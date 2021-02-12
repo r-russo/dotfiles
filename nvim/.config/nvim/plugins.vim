@@ -18,7 +18,6 @@ Plug 'airblade/vim-gitgutter'
 
 " UI
 Plug 'itchyny/lightline.vim'
-Plug 'phanviet/vim-monokai-pro'
 
 " Editing
 Plug 'tpope/vim-commentary'
@@ -28,5 +27,9 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
+
+" Colorschemes
+Plug 'phanviet/vim-monokai-pro'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
