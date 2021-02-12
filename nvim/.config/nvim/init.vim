@@ -5,8 +5,6 @@ source ~/.config/nvim/ultisnips.vim
 source ~/.config/nvim/vimtex.vim
 source ~/.config/nvim/ale.vim
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#show_docstring = 1
 let g:python3_host_prog = '/usr/bin/python3'
 
 let g:indent_guides_enable_on_vim_startup = 1
