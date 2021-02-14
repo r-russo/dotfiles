@@ -7,3 +7,5 @@ alias sp='cd ~/dotfiles/startpage'
 
 alias di='sudo dnf install'
 alias v='nvim'
+
+alias tmux='tmux -2'
