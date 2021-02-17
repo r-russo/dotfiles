@@ -8,4 +8,4 @@ alias sp='cd ~/dotfiles/startpage'
 alias di='sudo dnf install'
 alias v='nvim'
 
-alias tmux='tmux -2'
+alias tmux='TERM=screen-256color tmux -2'

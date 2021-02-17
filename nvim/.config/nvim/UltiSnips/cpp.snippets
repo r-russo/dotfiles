@@ -1,0 +1,23 @@
+snippet it "basic auto iterator" 
+for (const auto &${2:v}: ${1:var}) {
+	${3}
+}
+${0}
+endsnippet
+
+snippet pvec "print vector"
+for (const auto &e: ${1:vector}) {
+	std::cout << e << " ";
+}
+std::cout << std::endl;
+${0}
+endsnippet
+
+snippet pmat "print matrix"
+for (const auto &v: ${1:mat}) {
+	for (const auto &e: v) {
+		std::cout << e << " ";
+	}
+	std::cout << std::endl;
+}
+endsnippet
