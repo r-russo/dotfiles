@@ -1,4 +1,4 @@
-snippet it "basic auto iterator" 
+snippet it "basic auto iterator"
 for (const auto &${2:v}: ${1:var}) {
 	${3}
 }
@@ -10,6 +10,13 @@ for (const auto &e: ${1:vector}) {
 	std::cout << e << " ";
 }
 std::cout << std::endl;
+${0}
+endsnippet
+
+snippet pmap "print map"
+for (const auto &e: ${1:map}) {
+	std::cout << e.first << " " << e.second << std::endl;
+}
 ${0}
 endsnippet
 

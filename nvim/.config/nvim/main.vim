@@ -1,4 +1,5 @@
 set nocompatible
+set encoding=utf-8
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
@@ -34,6 +35,9 @@ set undofile
 
 set laststatus=2
 set noshowmode
+
+set updatetime=300
+set shortmess+=c
 
 set spelllang=es
 set spellfile=~/.config/nvim/spell/es.add

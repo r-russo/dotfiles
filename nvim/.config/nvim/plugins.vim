@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 " Languages
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
 Plug 'sheerun/vim-polyglot'
