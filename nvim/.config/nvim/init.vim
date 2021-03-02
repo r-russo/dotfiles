@@ -5,6 +5,7 @@ source ~/.config/nvim/ultisnips.vim
 source ~/.config/nvim/vimtex.vim
 source ~/.config/nvim/ale.vim
 source ~/.config/nvim/coc.vim
+source ~/.config/nvim/mkdp.vim
 
 let g:python3_host_prog = '/usr/bin/python3'
 
