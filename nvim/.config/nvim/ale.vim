@@ -1,5 +1,5 @@
 let g:ale_linters = {
-            \ 'python': ['pylint', 'bandit', 'vulture', 'mypy'],
+            \ 'python': ['mypy', 'bandit', 'vulture', 'pylint'],
             \}
 let g:ale_fixers = {
             \ '*': ['remove_trailing_lines', 'trim_whitespace'],
