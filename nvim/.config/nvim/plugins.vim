@@ -12,7 +12,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Filesystem
-Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 
 " UI
