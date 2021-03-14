@@ -1,6 +1,9 @@
 let mapleader = ' '
 let maplocalleader="\<space>"
 
+nnoremap [b :bn<CR>
+nnoremap ]b :bp<CR>
+
 nnoremap <leader>b :Buffer<CR>
 nnoremap <leader>f :Files<CR>
 
