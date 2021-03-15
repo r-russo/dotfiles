@@ -9,3 +9,5 @@ alias di='sudo dnf install'
 alias v='nvim'
 
 alias tmux='TERM=screen-256color tmux -2'
+
+alias gu='git add . && git commit -m "update" && git push'
