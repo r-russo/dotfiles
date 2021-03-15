@@ -6,6 +6,7 @@ Plug 'dense-analysis/ale'
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
 Plug 'sheerun/vim-polyglot'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 " Snippets
 Plug 'SirVer/ultisnips'

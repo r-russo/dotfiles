@@ -1,5 +1,5 @@
 {
-    "diagnostic.enable": false,
+    // "diagnostic.enable": false,
     "diagnostic.displayByAle": true,
 
     "languageserver": {
@@ -10,7 +10,8 @@
             "initializationOptions": {
                 "cache": {
                     "directory": "/tmp/ccls"
-                }
+                },
+                "highlight": { "lsRanges" : true }
             }
         }
     },
