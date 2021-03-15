@@ -11,7 +11,7 @@ let g:peekup_open = '<leader>"'
 let g:peekup_paste_before = '<leader>P'
 let g:peekup_paste_after = '<leader>p'
 
-nnoremap <leader>aj :ALENext<CR>
-nnoremap <leader>ak :ALENext<CR>
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
-nnoremap <silent> <leader>nr :source ~/.config/nvim/init.vim<CR>
+nnoremap <leader>nr :source ~/.config/nvim/init.vim<CR>
