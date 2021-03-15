@@ -13,3 +13,5 @@ let g:peekup_paste_after = '<leader>p'
 
 nnoremap <leader>aj :ALENext<CR>
 nnoremap <leader>ak :ALENext<CR>
+
+nnoremap <silent> <leader>nr :source ~/.config/nvim/init.vim<CR>
