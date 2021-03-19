@@ -1,6 +1,9 @@
 alias p='sudo pacman'
 alias pup='sudo pacman -Syu'
 alias y='yay'
+alias du='sudo dnf update'
+alias di='sudo dnf install'
+alias dr='sudo dnf remove'
 
 alias dots='cd ~/dotfiles'
 alias sp='cd ~/dotfiles/startpage'
