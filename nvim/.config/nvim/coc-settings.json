@@ -1,6 +1,7 @@
 {
     // "diagnostic.enable": false,
     "diagnostic.displayByAle": true,
+    "pyright.disableDiagnostics": true,
 
     "languageserver": {
         "ccls": {
@@ -13,6 +14,6 @@
                 },
                 "highlight": { "lsRanges" : true }
             }
-        }
+        },
     },
 }

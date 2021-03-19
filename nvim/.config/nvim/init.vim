@@ -19,7 +19,7 @@ set t_Co=256
 set termguicolors
 let g:onedark_termcolors = 256
 let g:onedark_terminal_italics = 1
-colorscheme onedark
+colorscheme dracula
 let g:lightline = {
-	\ 'colorscheme': 'onedark',
+	\ 'colorscheme': 'dracula',
 	\ }

@@ -34,5 +34,6 @@ Plug 'junegunn/fzf.vim'
 " Colorschemes
 Plug 'phanviet/vim-monokai-pro'
 Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
