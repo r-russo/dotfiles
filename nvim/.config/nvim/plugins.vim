@@ -30,6 +30,7 @@ Plug 'luochen1990/rainbow'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
 " Colorschemes
 Plug 'phanviet/vim-monokai-pro'
