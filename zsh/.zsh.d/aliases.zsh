@@ -1,7 +1,7 @@
 alias p='sudo pacman'
 alias pup='sudo pacman -Syu'
 alias y='yay'
-alias d='sudo dnf update'
+alias u='sudo dnf update'
 alias di='sudo dnf install'
 alias dr='sudo dnf remove'
 
