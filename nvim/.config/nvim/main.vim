@@ -28,8 +28,8 @@ set hlsearch
 set splitright
 set splitbelow
 
-set textwidth=120
-set colorcolumn=120
+set textwidth=79
+set colorcolumn=79
 
 set undodir=~/.config/nvim/undo
 set undofile
