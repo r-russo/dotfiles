@@ -24,7 +24,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'frazrepo/vim-rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
 " Plug 'gennaro-tedesco/nvim-peekup'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
