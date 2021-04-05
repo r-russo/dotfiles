@@ -24,17 +24,14 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'frazrepo/vim-rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
-" Plug 'gennaro-tedesco/nvim-peekup'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
 " Colorschemes
-Plug 'phanviet/vim-monokai-pro'
 Plug 'joshdick/onedark.vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
