@@ -53,4 +53,4 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 # Gems
 export GEM_HOME="$HOME/.gems"
-export PATH="$HOME/.gems/bin:$PATH"
+export PATH="$HOME/.gems/bin"
