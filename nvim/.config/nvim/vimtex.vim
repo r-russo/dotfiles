@@ -9,7 +9,7 @@ let g:vimtex_compiler_latexmk = {
     \ ],
     \}
 
-set conceallevel=2
+autocmd FileType latex setlocal conceallevel=2
 let g:tex_conceal="abdgm"
 set encoding=utf8
 
