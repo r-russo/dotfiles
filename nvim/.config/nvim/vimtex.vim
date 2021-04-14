@@ -10,7 +10,6 @@ let g:vimtex_compiler_latexmk = {
     \}
 
 autocmd FileType tex setlocal conceallevel=2
-autocmd FileType tex,markdown setlocal spell spelllang=es_ar
 let g:tex_conceal="abdgm"
 set encoding=utf8
 

@@ -7,6 +7,8 @@ source ~/.config/nvim/ale.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/mkdp.vim
 
+autocmd FileType tex,markdown setlocal spell spelllang=es
+
 let g:python3_host_prog = '/usr/bin/python3'
 
 let g:indent_guides_enable_on_vim_startup = 1
