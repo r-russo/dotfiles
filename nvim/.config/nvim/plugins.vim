@@ -29,6 +29,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+Plug 'easymotion/vim-easymotion'
 
 " Colorschemes
 Plug 'joshdick/onedark.vim'
